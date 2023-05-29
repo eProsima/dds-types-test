@@ -2,18 +2,18 @@
 
 struct StructuresChild : Structures
 {
-	short var_short;
+    short var_short;
     unsigned short var_ushort;
 
-	long var_long;
-	unsigned long var_ulong;
+    long var_long;
+    unsigned long var_ulong;
 
-	long long var_longlong;
-	unsigned long long var_ulonglong;
+    long long var_longlong;
+    unsigned long long var_ulonglong;
 };
 
 struct MyStructureChildChild : MyStructureChild
 {
-	long long var_longlong2;
-	unsigned long long var_ulonglong2;
+    long long var_longlong2;
+    unsigned long long var_ulonglong2;
 };

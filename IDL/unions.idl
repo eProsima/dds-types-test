@@ -8,10 +8,10 @@ enum MyEnum
 @bit_bound(8)
 bitmask MyBitMask
 {
-	@position(0) flag0,
-	@position(1) flag1,
-	@position(4) flag4,
-	@position(6) flag6
+    @position(0) flag0,
+    @position(1) flag1,
+    @position(4) flag4,
+    @position(6) flag6
 };
 
 typedef long MyAlias;
@@ -30,11 +30,11 @@ union MyUnion switch (long)
 
 bitset MyBitset
 {
-	bitfield<3> a;
-	bitfield<1> b;
-	bitfield<4>;
-	bitfield<10> c;
-	bitfield<12, short> d;
+    bitfield<3> a;
+    bitfield<1> b;
+    bitfield<4>;
+    bitfield<10> c;
+    bitfield<12, short> d;
 };
 
 typedef short alias_array[2];

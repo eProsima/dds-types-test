@@ -7,15 +7,15 @@ enum MyEnum
 
 bitmask MyBitMask
 {
-	@position(0) flag0,
-	@position(1) flag1,
-	@position(4) flag4,
-	@position(6) flag6
+    @position(0) flag0,
+    @position(1) flag1,
+    @position(4) flag4,
+    @position(6) flag6
 };
 
 bitmask MyBitMaskChild : MyBitMask
 {
-	@position(7) flag7
+    @position(7) flag7
 };
 
 bitmask MyBitMaskEmptyChild : MyBitMask
@@ -28,7 +28,7 @@ bitmask MyEmptyBitMask
 
 bitmask MyEmptyBitMaskChild : MyEmptyBitMask
 {
-	@position(7) flag7
+    @position(7) flag7
 };
 
 bitmask MyEmptyBitMaskChildEmptyChild : MyEmptyBitMaskChild
@@ -37,8 +37,8 @@ bitmask MyEmptyBitMaskChildEmptyChild : MyEmptyBitMaskChild
 
 struct Enumerations
 {
-	MyEnum var_myenum;
-	MyBitMask var_mybitmask;
+    MyEnum var_myenum;
+    MyBitMask var_mybitmask;
     MyBitMaskChild var_mybitmaskchild;
     MyBitMaskEmptyChild var_mybitmaskemptychild;
     MyEmptyBitMask var_myemptybitmask;

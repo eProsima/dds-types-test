@@ -1,16 +1,16 @@
 
 bitset MyBitset
 {
-	bitfield<3> a;
-	bitfield<1> b;
-	bitfield<4> g;
-	bitfield<10> c;
-	bitfield<12, short> d, e, f;
+    bitfield<3> a;
+    bitfield<1> b;
+    bitfield<4> g;
+    bitfield<10> c;
+    bitfield<12, short> d, e, f;
 };
 
 bitset MyBitsetChild : MyBitset
 {
-	bitfield<17> z;
+    bitfield<17> z;
 };
 
 bitset MyBitsetEmptyChild : MyBitset
@@ -23,7 +23,7 @@ bitset MyEmptyBitset
 
 bitset MyEmptyBitsetChild : MyEmptyBitset
 {
-	bitfield<17> z;
+    bitfield<17> z;
 };
 
 bitset MyEmptyBitsetChildEmptyChild : MyEmptyBitsetChild

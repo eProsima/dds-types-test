@@ -8,10 +8,10 @@ enum MyEnum
 @bit_bound(8)
 bitmask MyBitMask
 {
-	@position(0) flag0,
-	@position(1) flag1,
-	@position(4) flag4,
-	@position(6) flag6
+    @position(0) flag0,
+    @position(1) flag1,
+    @position(4) flag4,
+    @position(6) flag6
 };
 
 typedef long MyAlias;
@@ -30,30 +30,30 @@ union MyUnion switch (long)
 
 bitset MyBitset
 {
-	bitfield<3> a;
-	bitfield<1> b;
-	bitfield<4>;
-	bitfield<10> c;
-	bitfield<12, short> d;
+    bitfield<3> a;
+    bitfield<1> b;
+    bitfield<4>;
+    bitfield<10> c;
+    bitfield<12, short> d;
 };
 
 struct Structures
 {
-	short var_short;
+    short var_short;
     unsigned short var_ushort;
-	long var_long;
-	unsigned long var_ulong;
-	long long var_longlong;
-	unsigned long long var_ulonglong;
-	float var_float;
-	double var_double;
-	long double var_longdouble;
-	boolean var_boolean;
-	octet var_octet;
-	char var_char8;
-	wchar var_char16;
-	string var_string8;
-	wstring var_string16;
+    long var_long;
+    unsigned long var_ulong;
+    long long var_longlong;
+    unsigned long long var_ulonglong;
+    float var_float;
+    double var_double;
+    long double var_longdouble;
+    boolean var_boolean;
+    octet var_octet;
+    char var_char8;
+    wchar var_char16;
+    string var_string8;
+    wstring var_string16;
 
     MyEnum var_enum;
     MyBitMask var_bitmask;
