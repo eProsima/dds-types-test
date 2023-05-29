@@ -1,0 +1,193 @@
+enum MyEnum
+{
+    ENUM_VALUE_1,
+    ENUM_VALUE_2,
+    ENUM_VALUE_3
+};
+
+@bit_bound(8)
+bitmask MyBitMask
+{
+	@position(0) flag0,
+	@position(1) flag1,
+	@position(4) flag4,
+	@position(6) flag6
+};
+
+typedef long MyAlias;
+
+struct MyStructure
+{
+    long field1;
+    float field2;
+};
+
+union MyUnion switch (long)
+{
+    case 0: long longValue;
+    case 1: float floatValue;
+};
+
+bitset MyBitset
+{
+	bitfield<3> a;
+	bitfield<1> b;
+	bitfield<4>;
+	bitfield<10> c;
+	bitfield<12, short> d;
+};
+
+typedef short alias_array[2];
+
+
+union SimpleUnion switch (long)
+{
+    case 0:
+        short a;
+    case 1:
+        unsigned short b;
+    case 2:
+        long c;
+    case 3:
+        unsigned long d;
+    case 4:
+        long long e;
+    case 5:
+        unsigned long long f;
+    case 6:
+        float g;
+    case 7:
+        double h;
+    case 8:
+        long double i;
+    case 9:
+        boolean j;
+    case 10:
+        octet k;
+    case 11:
+        char l;
+    case 12:
+        wchar m;
+    case 13:
+        string n;
+    case 14:
+        wstring o;
+    case 15:
+        MyEnum p;
+    case 16:
+        MyBitMask q; 
+    case 17:
+        MyAlias r;
+    case 18:
+        alias_array s;
+    case 19:
+        sequence<short> t; 
+    case 20:
+        map<long, long> u;
+    case 21:
+        MyUnion v;
+    case 22:
+        MyStructure w; 
+    case 23:
+        MyBitset x;
+};
+
+union Union_short switch (short)
+{
+    case 1:
+        long first;
+    case -2:
+        long long second;
+};
+
+union Union_unsigned_short switch (unsigned short)
+{
+    case 1:
+        long first;
+    case 2:
+        long long second;
+};
+
+union Union_long switch (long)
+{
+    case 1:
+        long first;
+    case -2:
+        long long second;
+};
+
+union Union_unsigned_long switch (unsigned long)
+{
+    case 1:
+        long first;
+    case 2:
+        long long second;
+};
+
+union Union_long_long switch (long long)
+{
+    case 1:
+        long first;
+    case -2:
+        long long second;
+};
+
+union Union_unsigned_long_long switch (unsigned long long)
+{
+    case 1:
+        long first;
+    case 2:
+        long long second;
+};
+
+const boolean discriminator_true = TRUE;
+const boolean discriminator_false = FALSE;
+union Union_boolean switch (boolean)
+{
+    case discriminator_true:
+        long first;
+    case discriminator_false:
+        long long second;
+};
+
+union Union_octet switch (octet)
+{
+    case 0:
+        long first;
+    case 1:
+        long long second;
+};
+
+const char discriminator_a = 'a';
+const char discriminator_b = 'b';
+union Union_char switch (char)
+{
+    case discriminator_a:
+        long first;
+    case discriminator_b:
+        long long second;
+};
+
+union Union_wchar switch (wchar)
+{
+    case 'a':
+        long first;
+    case 'b':
+        long long second;
+};
+
+union Union_enum switch (MyEnum)
+{
+    case ENUM_VALUE_1:
+        long first;
+    case ENUM_VALUE_2:
+        long long second;
+};
+
+union Union_alias switch (MyAlias)
+{
+    case 1:
+        long first;
+    case 2:
+        long long second;
+};

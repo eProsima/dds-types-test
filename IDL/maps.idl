@@ -1,0 +1,110 @@
+enum MyEnum
+{
+    ENUM_VALUE_1,
+    ENUM_VALUE_2,
+    ENUM_VALUE_3
+};
+
+@bit_bound(8)
+bitmask MyBitMask
+{
+	@position(0) flag0,
+	@position(1) flag1,
+	@position(4) flag4,
+	@position(6) flag6
+};
+
+typedef long MyAlias;
+
+struct MyStructure
+{
+    long field1;
+    float field2;
+};
+
+union MyUnion switch (long)
+{
+    case 0: long longValue;
+    case 1: float floatValue;
+};
+
+bitset MyBitset
+{
+	bitfield<3> a;
+	bitfield<1> b;
+	bitfield<4>;
+	bitfield<10> c;
+	bitfield<12, short> d;
+};
+
+typedef short alias_array[2];
+typedef sequence<short> alias_sequence;
+typedef map<long, long> alias_map;
+
+struct Maps
+{
+    map<long, short> var_map_short;
+    map<long, unsigned short> var_map_ushort;
+    map<long, long> var_map_long;
+    map<long, unsigned long> var_map_ulong;
+    map<long, long long> var_map_longlong;
+    map<long, unsigned long long> var_map_ulonglong;
+    map<long, float> var_map_float;
+    map<long, double> var_map_double;
+    map<long, long double> var_map_longdouble;
+    map<long, boolean> var_map_boolean;
+    map<long, octet> var_map_octet;
+    map<long, char> var_map_char;
+    map<long, wchar> var_map_wchar;
+    map<long, string> var_map_string;
+    map<long, wstring> var_map_wstring;
+    
+    map<long, MyEnum> var_map_enum;
+    map<long, MyBitMask> var_map_bitmask;
+    map<long, MyAlias> var_map_alias;
+    map<long, alias_array> var_map_short_array;
+    map<long, alias_sequence> var_map_sequence;
+    map<long, alias_map> var_map_map;
+    map<long, MyUnion> var_map_union;
+    map<long, MyStructure> var_map_structure;
+    map<long, MyBitset> var_map_bitset;
+};
+	
+struct MapsAllTypesAsKeys
+{
+    map<short, short> var_map_short;
+    map<unsigned short, unsigned short> var_map_ushort;
+    map<long, long> var_map_long;
+    map<unsigned long, unsigned long> var_map_ulong;
+    map<long long, long long> var_map_longlong;
+    map<unsigned long long, unsigned long long> var_map_ulonglong;
+    map<float, float> var_map_float;
+    map<double, double> var_map_double;
+    map<long double, long double> var_map_longdouble;
+    map<boolean, boolean> var_map_boolean;
+    map<octet, octet> var_map_octet;
+    map<char, char> var_map_char;
+    map<wchar, wchar> var_map_wchar;
+    map<long, string> var_map_string;
+    map<wstring, wstring> var_map_wstring;
+
+    map<MyEnum, MyEnum> var_map_enum;
+    map<MyBitMask, MyBitMask> var_map_bitmask;
+    map<MyAlias, MyAlias> var_map_alias;
+    map<alias_array, alias_array> var_map_short_array;
+    map<alias_sequence, alias_sequence> var_map_sequence;
+    map<alias_map, alias_map> var_map_map;
+    map<MyUnion, MyUnion> var_map_union;
+    map<MyStructure, MyStructure> var_map_structure;
+    map<MyBitset, MyBitset> var_map_bitset;
+};
+
+struct SmallMap
+{
+    map<long,long,1> var_small_map;
+};
+
+struct LargeMap
+{
+    map<long,long,41925> var_large_map;
+};

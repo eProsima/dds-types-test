@@ -1,0 +1,69 @@
+union ForwardUnion;
+struct ForwardStruct;
+
+union ForwardUnion switch (long)
+{
+    case 0:
+        long case_zero;
+    case 1:
+        long case_one;
+};
+
+struct ForwardStruct
+{
+    long field1;
+    float field2;
+};
+
+union ForwardUnionChild : ForwardUnion
+{
+    case 3:
+        long case_three;
+};
+
+struct ForwardStructChild : ForwardStruct
+{
+    long field3;
+    float field4;
+};
+
+module my_module
+{
+    union ModuleForwardUnion;
+    struct ModuleForwardStruct;
+}
+
+struct ModuleStruct
+{
+    my_module::ModuleForwardUnion var_funion;
+    my_module::ModuleForwardStruct var_fstruct;
+};
+
+module my_module
+{    
+    union ModuleForwardUnion switch (long)
+    {
+        case 0:
+            long case_zero;
+        case 1:
+            long case_one;
+    };
+
+    struct ModuleForwardStruct
+    {
+        long field1;
+        float field2;
+    };
+    
+    union ModuleForwardUnionChild : ModuleForwardUnion
+    {
+        case 3:
+            long case_three;
+    };
+
+    struct ModuleForwardStructChild : ModuleForwardStruct
+    {
+        long field3;
+        float field4;
+    };
+}

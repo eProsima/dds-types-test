@@ -1,0 +1,68 @@
+typedef short alias_int16;
+typedef unsigned short alias_uint16;
+typedef long alias_int32;
+typedef unsigned long alias_uint32;
+typedef long long alias_int64;
+typedef unsigned long long alias_uint64;
+typedef float alias_float32;
+typedef double alias_float64;
+typedef long double alias_float128;
+typedef boolean alias_bool;
+typedef octet alias_octect;
+typedef char alias_char8;
+typedef wchar alias_char16;
+typedef string alias_string8;
+typedef wstring alias_string16;
+
+enum MyEnum
+{
+    ENUM_VALUE_1,
+    ENUM_VALUE_2,
+    ENUM_VALUE_3
+};
+typedef MyEnum alias_enum;
+
+@bit_bound(8)
+bitmask MyBitMask
+{
+	@position(0) flag0,
+	@position(1) flag1,
+	@position(4) flag4,
+	@position(6) flag6
+};
+typedef MyBitMask alias_bitmask;
+
+typedef alias_int16 alias_alias;
+
+typedef short alias_array[2];
+typedef short alias_multiarray[2][2];
+
+typedef sequence<short> alias_sequence;
+
+
+typedef map<short, short> alias_map;
+
+union MyUnion switch (long)
+{
+    case 0: long longValue;
+    case 1: float floatValue;
+};
+typedef union MyUnion alias_union;
+
+struct MyStruct
+{
+    long field1;
+    float field2;
+    string field3;
+};
+typedef struct MyStruct alias_struct;
+
+bitset MyBitset
+{
+	bitfield<3> a;
+	bitfield<1> b;
+	bitfield<4>;
+	bitfield<10> c;
+	bitfield<12, short> d;
+};
+typedef MyBitset alias_bitset;

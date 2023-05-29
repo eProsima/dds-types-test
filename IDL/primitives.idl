@@ -1,0 +1,48 @@
+struct Integrals
+{
+	short var_short;
+    unsigned short var_ushort;
+
+	long var_long;
+	unsigned long var_ulong;
+
+	long long var_longlong;
+	unsigned long long var_ulonglong;
+};
+
+struct Floats
+{
+	float var_float;
+	double var_double;
+	long double var_longdouble;
+};
+
+struct Booleans
+{
+	boolean var_boolean;
+	octet var_octet;
+};
+
+struct Chars
+{
+	char var_char8;
+	wchar var_char16;
+};
+
+struct Strings
+{
+	string var_string8;
+	wstring var_string16;
+};
+
+struct SmallString
+{
+    string<1> var_large_string;
+    wstring<1> var_large_wstring;
+};
+
+struct LargeString
+{
+    string<41925> var_large_string;
+    wstring<41925> var_large_wstring;
+};

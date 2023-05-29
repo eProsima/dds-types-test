@@ -1,0 +1,166 @@
+enum MyEnum
+{
+    ENUM_VALUE_1,
+    ENUM_VALUE_2,
+    ENUM_VALUE_3
+};
+
+@bit_bound(8)
+bitmask MyBitMask
+{
+	@position(0) flag0,
+	@position(1) flag1,
+	@position(4) flag4,
+	@position(6) flag6
+};
+
+typedef long MyAlias;
+
+struct MyStructure
+{
+    long field1;
+    float field2;
+};
+
+union MyUnion switch (long)
+{
+    case 0: long longValue;
+    case 1: float floatValue;
+};
+
+bitset MyBitset
+{
+	bitfield<3> a;
+	bitfield<1> b;
+	bitfield<4>;
+	bitfield<10> c;
+	bitfield<12, short> d;
+};
+
+struct ArraySingleDimension
+{
+    short var_array_short[10];
+    unsigned short var_array_ushort[10];
+    long var_array_long[10];
+    unsigned long var_array_ulong[10];
+    long long var_array_longlong[10];
+    unsigned long long var_array_ulonglong[10];
+    float var_array_float[10];
+    double var_array_double[10];
+    long double var_array_longdouble[10];
+    boolean var_array_boolean[10];
+    octet var_array_octet[10];
+    char var_array_char[10];
+	wchar var_array_wchar[10];
+    string var_array_string[10];
+	wstring var_array_wstring[10];
+
+    MyEnum var_array_enum[10];
+    MyBitMask var_array_bitmask[10];
+    MyAlias var_array_alias[10];
+    short var_array_short_array[10][10];
+    sequence<long> var_array_sequence[10];
+    map<long, long> var_array_map[10];
+    MyUnion var_array_union[10];
+    MyStructure var_array_structure[10];
+    MyBitset var_array_bitset[10];
+};
+
+struct ArrayMultiDimension {
+    short var_array_short[10][10][10];
+    unsigned short var_array_ushort[10][10][10];
+    long var_array_long[10][10][10];
+    unsigned long var_array_ulong[10][10][10];
+    long long var_array_longlong[10][10][10];
+    unsigned long long var_array_ulonglong[10][10][10];
+    float var_array_float[10][10][10];
+    double var_array_double[10][10][10];
+    long double var_array_longdouble[10][10][10];
+    boolean var_array_boolean[10][10][10];
+    octet var_array_octet[10][10][10];
+    char var_array_char[10][10][10];
+	wchar var_array_wchar[10][10][10];
+    string var_array_string[10][10][10];
+	wstring var_array_wstring[10][10][10];
+    
+    MyEnum var_array_enum[10][10][10];
+    MyBitMask var_array_bitmask[10][10][10];
+    MyAlias var_array_alias[10][10][10];
+    sequence<long> var_array_sequence[10][10][10];
+    map<long, long> var_array_map[10][10][10];
+    MyUnion var_array_union[10][10][10];
+    MyStructure var_array_structure[10][10][10];
+    MyBitset var_array_bitset[10][10][10];
+};
+
+
+const long size_1 = 5;
+const long size_2 = 2;
+
+
+struct ArraySingleDimensionLiterals
+{
+    short var_array_short[size_1];
+    unsigned short var_array_ushort[5 * 2];
+    long var_array_long[5 + 5];
+    unsigned long var_array_ulong[size_1 * 2];
+    long long var_array_longlong[size_1 + 5];
+    unsigned long long var_array_ulonglong[size_1 * size_2];
+    float var_array_float[size_1];
+    double var_array_double[5 * 2];
+    long double var_array_longdouble[5 + 5];
+    boolean var_array_boolean[size_1];
+    octet var_array_octet[size_1 * 2];
+    char var_array_char[size_1];
+    wchar var_array_wchar[size_1 + 5];
+    string var_array_string[size_1];
+    wstring var_array_wstring[size_1 * size_2];
+
+    MyEnum var_array_enum[size_1];
+    MyBitMask var_array_bitmask[size_1 + 5];
+    MyAlias var_array_alias[size_1 * 2];
+    short var_array_short_array[size_1 * size_2][size_1 + 5];
+    sequence<long> var_array_sequence[size_1];
+    map<long, long> var_array_map[size_2];
+    MyUnion var_array_union[5 * 2];
+    MyStructure var_array_structure[size_1];
+    MyBitset var_array_bitset[size_1 + 5];
+};
+
+struct ArrayMultiDimensionLiterals
+{
+    short var_array_short[size_1][5 + 5][size_2];
+    unsigned short var_array_ushort[size_1][size_1 * 2][5];
+    long var_array_long[5 * 2][size_1][5];
+    unsigned long var_array_ulong[5 + 5][size_1 * size_2][size_1];
+    long long var_array_longlong[size_1][5 * 2][5];
+    unsigned long long var_array_ulonglong[size_1 + 5][size_1 * size_2][5 + 5];
+    float var_array_float[5 * 2][size_1][5 + 5];
+    double var_array_double[size_1][size_1 + 5][size_1];
+    long double var_array_longdouble[size_1][size_1][size_1 + 5];
+    boolean var_array_boolean[size_1 * size_2][size_1][5];
+    octet var_array_octet[size_1][size_1 * 2][size_1];
+    char var_array_char[5 + 5][size_1][5 + 5];
+    wchar var_array_wchar[size_1 * size_2][size_1 + 5][size_1];
+    string var_array_string[size_1][5 * 2][5];
+    wstring var_array_wstring[size_1 + 5][size_1 * size_2][5 * 2];
+
+    MyEnum var_array_enum[5 * 2][size_1][5 + 5];
+    MyBitMask var_array_bitmask[size_1][size_1 + 5][size_1];
+    MyAlias var_array_alias[size_1 * 2][5 * 2][size_1 * size_2];
+    sequence<long> var_array_sequence[size_1 + 5][size_1][5 * 2];
+    map<long, long> var_array_map[size_1][size_1 * 2][size_1];
+    MyUnion var_array_union[size_1 * size_2][size_1 + 5][size_1 * 2];
+    MyStructure var_array_structure[5][size_1][size_1 + 5];
+    MyBitset var_array_bitset[size_1 + 5][size_1 * 2][size_1 * size_2];
+};
+
+struct BoundedSmallArrays
+{
+    short var_array_small[1];
+};
+
+struct BoundedBigArrays
+{
+    short var_array_big[41925];
+};
