@@ -1,41 +1,15 @@
-
-bitset MyBitset
-{
-    bitfield<3> a;
-    bitfield<1> b;
-    bitfield<4> g;
-    bitfield<10> c;
-    bitfield<12, short> d, e, f;
-};
-
-bitset MyBitsetChild : MyBitset
-{
-    bitfield<17> z;
-};
-
-bitset MyBitsetEmptyChild : MyBitset
-{
-};
+#include "helpers/basic_inner_types.idl"
 
 bitset MyEmptyBitset
 {
 };
 
-bitset MyEmptyBitsetChild : MyEmptyBitset
-{
-    bitfield<17> z;
-};
-
-bitset MyEmptyBitsetChildEmptyChild : MyEmptyBitsetChild
-{
-};
-
-struct BitsetsStruct
+struct Bitset
 {
     MyBitset var_mybitset;
-    MyBitsetChild var_mybitsetchild;
-    MyBitsetEmptyChild var_mybitsetemptychild;
+};
+
+struct EmptyBitset
+{
     MyEmptyBitset var_myemptybitset;
-    MyEmptyBitsetChild var_myemptybitsetchild;
-    MyEmptyBitsetChildEmptyChild var_myemptybitsetchildemptychild;
 };

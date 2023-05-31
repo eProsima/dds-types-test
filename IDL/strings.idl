@@ -1,0 +1,29 @@
+struct String
+{
+    string var_string8;
+};
+
+struct WString
+{
+    wstring var_string16;
+};
+
+struct SmallString
+{
+    string<1> var_large_string;
+};
+
+struct SmallWString
+{
+    wstring<1> var_large_wstring;
+};
+
+struct LargeString
+{
+    string<41925> var_large_string;
+};
+
+struct LargeWString
+{
+    wstring<41925> var_large_wstring;
+};

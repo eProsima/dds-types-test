@@ -66,4 +66,70 @@ module my_module
         long field3;
         float field4;
     };
+
+
+
+    struct ModuleForwardUnionStructure
+    {
+        ModuleForwardUnion var_moduleforwardunion;
+    };
+
+    struct ModuleForwardStructStructure
+    {
+        ModuleForwardStruct var_moduleforwardstruct;
+    };
+
+    struct ModuleForwardUnionChildStructure
+    {
+        ModuleForwardUnionChild var_moduleforwardunionchild;
+    };
+
+    struct ModuleForwardStructChildStructure
+    {
+        ModuleForwardStructChild var_moduleforwardstructchild;
+    };
 }
+
+
+
+struct ForwardUnionStructure
+{
+    ForwardUnion var_forwardunion;
+};
+
+struct ForwardStructStructure
+{
+    ForwardStruct var_forwardstruct;
+};
+
+struct ForwardUnionChildStructure
+{
+    ForwardUnionChild var_forwardunionchild;
+};
+
+struct ForwardStructChildStructure
+{
+    ForwardStructChild var_forwardstructchild;
+};
+
+struct ModuleStructStructure
+{
+    ModuleStruct var_modulestruct;
+};
+
+
+
+struct ForwardUnionChildStructure
+{
+    ForwardUnionChild var_forwardunionchild;
+};
+
+
+
+struct ForwardUnionChildStructure
+{
+    ForwardUnionChild var_forwardunionchild;
+};
+
+
+

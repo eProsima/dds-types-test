@@ -1,0 +1,37 @@
+enum MyEnum
+{
+    ENUM_VALUE_1,
+    ENUM_VALUE_2,
+    ENUM_VALUE_3
+};
+
+bitmask MyBitMask
+{
+    @position(0) flag0,
+    @position(1) flag1,
+    @position(4) flag4,
+    @position(6) flag6
+};
+
+typedef long MyAlias;
+
+struct MyStructure
+{
+    long field1;
+    float field2;
+};
+
+union MyUnion switch (long)
+{
+    case 0: long longValue;
+    case 1: float floatValue;
+};
+
+bitset MyBitset
+{
+    bitfield<3> a;
+    bitfield<1> b;
+    bitfield<4>;
+    bitfield<10> c;
+    bitfield<12, short> d;
+};

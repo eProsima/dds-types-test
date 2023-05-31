@@ -1,77 +1,131 @@
-enum MyEnum
-{
-    ENUM_VALUE_1,
-    ENUM_VALUE_2,
-    ENUM_VALUE_3
-};
-
-@bit_bound(8)
-bitmask MyBitMask
-{
-    @position(0) flag0,
-    @position(1) flag1,
-    @position(4) flag4,
-    @position(6) flag6
-};
-
-typedef long MyAlias;
-
-struct MyStructure
-{
-    long field1;
-    float field2;
-};
-
-union MyUnion switch (long)
-{
-    case 0: long longValue;
-    case 1: float floatValue;
-};
-
-bitset MyBitset
-{
-    bitfield<3> a;
-    bitfield<1> b;
-    bitfield<4>;
-    bitfield<10> c;
-    bitfield<12, short> d;
-};
-
+#include "helpers/basic_inner_types.idl"
 
 typedef short alias_array[2];
 typedef sequence<short> alias_sequence;
 typedef map<long, long> alias_map;
 
-struct Sequences
+
+struct SequenceShort
 {
     sequence<short> var_sequence_short;
+};
+
+struct SequenceUShort
+{
     sequence<unsigned short> var_sequence_ushort;
+};
+
+struct SequenceLong
+{
     sequence<long> var_sequence_long;
+};
+
+struct SequenceULong
+{
     sequence<unsigned long> var_sequence_ulong;
+};
+
+struct SequenceLongLong
+{
     sequence<long long> var_sequence_longlong;
+};
+
+struct SequenceULongLong
+{
     sequence<unsigned long long> var_sequence_ulonglong;
+};
+
+struct SequenceFloat
+{
     sequence<float> var_sequence_float;
+};
+
+struct SequenceDouble
+{
     sequence<double> var_sequence_double;
+};
+
+struct SequenceLongDouble
+{
     sequence<long double> var_sequence_longdouble;
+};
+
+struct SequenceBoolean
+{
     sequence<boolean> var_sequence_boolean;
+};
+
+struct SequenceOctet
+{
     sequence<octet> var_sequence_octet;
+};
+
+struct SequenceChar
+{
     sequence<char> var_sequence_char;
+};
+
+struct SequenceWChar
+{
     sequence<wchar> var_sequence_wchar;
+};
+
+struct SequenceString
+{
     sequence<string> var_sequence_string;
+};
+
+struct SequenceWString
+{
     sequence<wstring> var_sequence_wstring;
+};
 
+struct SequenceEnum
+{
     sequence<MyEnum> var_sequence_enum;
+};
+
+struct SequenceBitMask
+{
     sequence<MyBitMask> var_sequence_bitmask;
+};
+
+struct SequenceAlias
+{
     sequence<MyAlias> var_sequence_alias;
+};
 
+struct SequenceShortArray
+{
     sequence<alias_array> var_sequence_short_array;
-    sequence<alias_sequence> var_sequence_sequence;
-    sequence<alias_map> var_sequence_map;
+};
 
+struct SequenceSequence
+{
+    sequence<alias_sequence> var_sequence_sequence;
+};
+
+struct SequenceMap
+{
+    sequence<alias_map> var_sequence_map;
+};
+
+struct SequenceUnion
+{
     sequence<MyUnion> var_sequence_union;
+};
+
+struct SequenceStructure
+{
     sequence<MyStructure> var_sequence_structure;
+};
+
+struct SequenceBitset
+{
     sequence<MyBitset> var_sequence_bitset;
 };
+
+
 
 struct BoundedSmallSequences
 {

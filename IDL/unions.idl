@@ -1,98 +1,152 @@
-enum MyEnum
-{
-    ENUM_VALUE_1,
-    ENUM_VALUE_2,
-    ENUM_VALUE_3
-};
-
-@bit_bound(8)
-bitmask MyBitMask
-{
-    @position(0) flag0,
-    @position(1) flag1,
-    @position(4) flag4,
-    @position(6) flag6
-};
-
-typedef long MyAlias;
-
-struct MyStructure
-{
-    long field1;
-    float field2;
-};
-
-union MyUnion switch (long)
-{
-    case 0: long longValue;
-    case 1: float floatValue;
-};
-
-bitset MyBitset
-{
-    bitfield<3> a;
-    bitfield<1> b;
-    bitfield<4>;
-    bitfield<10> c;
-    bitfield<12, short> d;
-};
+#include "helpers/basic_inner_types.idl"
 
 typedef short alias_array[2];
 
-
-union SimpleUnion switch (long)
+union Union_Short switch (long)
 {
     case 0:
         short a;
+};
+
+union Union_UShort switch (long)
+{   
     case 1:
         unsigned short b;
+};
+
+union Union_Long switch (long)
+{ 
     case 2:
         long c;
+};
+
+union Union_ULong switch (long)
+{ 
     case 3:
         unsigned long d;
+};
+
+union Union_LongLong switch (long)
+{ 
     case 4:
         long long e;
+};
+
+union Union_ULongLOng switch (long)
+{ 
     case 5:
         unsigned long long f;
+};
+
+union Union_Float switch (long)
+{ 
     case 6:
         float g;
+};
+
+union Union_Double switch (long)
+{ 
     case 7:
         double h;
+};
+
+union Union_LongDouble switch (long)
+{ 
     case 8:
         long double i;
+};
+
+union Union_Boolean switch (long)
+{ 
     case 9:
         boolean j;
+};
+
+union Union_Octet switch (long)
+{ 
     case 10:
         octet k;
+};
+
+union Union_Char switch (long)
+{ 
     case 11:
         char l;
+};
+
+union Union_WChar switch (long)
+{ 
     case 12:
         wchar m;
+};
+
+union Union_String switch (long)
+{ 
     case 13:
         string n;
+};
+
+union Union_WString switch (long)
+{ 
     case 14:
         wstring o;
+};
+
+union Union_MyEnum switch (long)
+{ 
     case 15:
         MyEnum p;
+};
+
+union Union_MyBitMask switch (long)
+{ 
     case 16:
         MyBitMask q; 
+};
+
+union Union_MyAlias switch (long)
+{ 
     case 17:
         MyAlias r;
+};
+
+union Union_Array switch (long)
+{ 
     case 18:
         alias_array s;
+};
+
+union Union_Sequence switch (long)
+{ 
     case 19:
         sequence<short> t; 
+};
+
+union Union_Map switch (long)
+{ 
     case 20:
         map<long, long> u;
+};
+
+union Union_MyUnion switch (long)
+{ 
     case 21:
         MyUnion v;
+};
+
+union Union_MyStructure switch (long)
+{ 
     case 22:
         MyStructure w; 
+};
+
+union Union_MyBitset switch (long)
+{ 
     case 23:
         MyBitset x;
 };
 
-union Union_short switch (short)
+union Union_Discriminator_short switch (short)
 {
     case 1:
         long first;
@@ -100,7 +154,7 @@ union Union_short switch (short)
         long long second;
 };
 
-union Union_unsigned_short switch (unsigned short)
+union Union_Discriminator_unsigned_short switch (unsigned short)
 {
     case 1:
         long first;
@@ -108,7 +162,7 @@ union Union_unsigned_short switch (unsigned short)
         long long second;
 };
 
-union Union_long switch (long)
+union Union_Discriminator_long switch (long)
 {
     case 1:
         long first;
@@ -116,7 +170,7 @@ union Union_long switch (long)
         long long second;
 };
 
-union Union_unsigned_long switch (unsigned long)
+union Union_Discriminator_unsigned_long switch (unsigned long)
 {
     case 1:
         long first;
@@ -124,7 +178,7 @@ union Union_unsigned_long switch (unsigned long)
         long long second;
 };
 
-union Union_long_long switch (long long)
+union Union_Discriminator_long_long switch (long long)
 {
     case 1:
         long first;
@@ -132,7 +186,7 @@ union Union_long_long switch (long long)
         long long second;
 };
 
-union Union_unsigned_long_long switch (unsigned long long)
+union Union_Discriminator_unsigned_long_long switch (unsigned long long)
 {
     case 1:
         long first;
@@ -142,7 +196,7 @@ union Union_unsigned_long_long switch (unsigned long long)
 
 const boolean discriminator_true = TRUE;
 const boolean discriminator_false = FALSE;
-union Union_boolean switch (boolean)
+union Union_Discriminator_boolean switch (boolean)
 {
     case discriminator_true:
         long first;
@@ -150,7 +204,7 @@ union Union_boolean switch (boolean)
         long long second;
 };
 
-union Union_octet switch (octet)
+union Union_Discriminator_octet switch (octet)
 {
     case 0:
         long first;
@@ -160,7 +214,7 @@ union Union_octet switch (octet)
 
 const char discriminator_a = 'a';
 const char discriminator_b = 'b';
-union Union_char switch (char)
+union Union_Discriminator_char switch (char)
 {
     case discriminator_a:
         long first;
@@ -168,7 +222,7 @@ union Union_char switch (char)
         long long second;
 };
 
-union Union_wchar switch (wchar)
+union Union_Discriminator_wchar switch (wchar)
 {
     case 'a':
         long first;
@@ -176,7 +230,7 @@ union Union_wchar switch (wchar)
         long long second;
 };
 
-union Union_enum switch (MyEnum)
+union Union_Discriminator_enum switch (MyEnum)
 {
     case ENUM_VALUE_1:
         long first;
@@ -184,10 +238,191 @@ union Union_enum switch (MyEnum)
         long long second;
 };
 
-union Union_alias switch (MyAlias)
+union Union_Discriminator_alias switch (MyAlias)
 {
     case 1:
         long first;
     case 2:
         long long second;
+};
+
+
+struct UnionShort
+{
+    Union_Short union_short;
+};
+
+struct UnionUShort
+{
+    Union_UShort union_ushort;
+};
+
+struct UnionLong
+{
+    Union_Long union_long;
+};
+
+struct UnionULong
+{
+    Union_ULong union_ulong;
+};
+
+struct UnionLongLong
+{
+    Union_LongLong union_long_long;
+};
+
+struct UnionULongLong
+{
+    Union_ULongLOng union_ulong_long;
+};
+
+struct UnionFloat
+{
+    Union_Float union_float;
+};
+
+struct UnionDouble
+{
+    Union_Double union_double;
+};
+
+struct UnionLongDouble
+{
+    Union_LongDouble union_long_double;
+};
+
+struct UnionBoolean
+{
+    Union_Boolean union_boolean;
+};
+
+struct UnionOctet
+{
+    Union_Octet union_octet;
+};
+
+struct UnionChar
+{
+    Union_Char union_char;
+};
+
+struct UnionWChar
+{
+    Union_WChar union_wchar;
+};
+
+struct UnionString
+{
+    Union_String union_string;
+};
+
+struct UnionWString
+{
+    Union_WString union_wstring;
+};
+
+struct UnionMyEnum
+{
+    Union_MyEnum union_my_enum;
+};
+
+struct UnionMyBitMask
+{
+    Union_MyBitMask union_my_bit_mask;
+};
+
+struct UnionMyAlias
+{
+    Union_MyAlias union_my_alias;
+};
+
+struct UnionArray
+{
+    Union_Array union_array;
+};
+
+struct UnionSequence
+{
+    Union_Sequence union_sequence;
+};
+
+struct UnionMap
+{
+    Union_Map union_map;
+};
+
+struct UnionMyUnion
+{
+    Union_MyUnion union_my_union;
+};
+
+struct UnionMyStructure
+{
+    Union_MyStructure union_my_structure;
+};
+
+struct UnionMyBitset
+{
+    Union_MyBitset union_my_bitset;
+};
+
+struct UnionDiscriminatorShort
+{
+    Union_Discriminator_short union_discriminator_short;
+};
+
+struct UnionDiscriminatorUShort
+{
+    Union_Discriminator_unsigned_short union_discriminator_ushort;
+};
+
+struct UnionDiscriminatorLong
+{
+    Union_Discriminator_long union_discriminator_long;
+};
+
+struct UnionDiscriminatorULong
+{
+    Union_Discriminator_unsigned_long union_discriminator_ulong;
+};
+
+struct UnionDiscriminatorLongLong
+{
+    Union_Discriminator_long_long union_discriminator_long_long;
+};
+
+struct UnionDiscriminatorULongLong
+{
+    Union_Discriminator_unsigned_long_long union_discriminator_ulong_long_long;
+};
+
+struct UnionDiscriminatorBoolean
+{
+    Union_Discriminator_boolean union_discriminator_boolean;
+};
+
+struct UnionDiscriminatorOctet
+{
+    Union_Discriminator_octet union_discriminator_octet;
+};
+
+struct UnionDiscriminatorChar
+{
+    Union_Discriminator_char union_discriminator_char;
+};
+
+struct UnionDiscriminatorWChar
+{
+    Union_Discriminator_wchar union_discriminator_wchar;
+};
+
+struct UnionDiscriminatorEnum
+{
+    Union_Discriminator_enum union_discriminator_enum;
+};
+
+struct UnionDiscriminatorAlias
+{
+    Union_Discriminator_alias union_discriminator_alias;
 };

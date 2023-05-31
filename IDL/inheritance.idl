@@ -1,0 +1,145 @@
+#include "helpers/basic_inner_types.idl"
+#include "bitsets.idl"
+#include "structures.idl"
+
+struct MyStructureChild : MyStructure
+{
+    short var_short;
+    unsigned short var_ushort;
+
+    long var_long;
+    unsigned long var_ulong;
+
+    long long var_longlong;
+    unsigned long long var_ulonglong;
+};
+
+struct MyStructureChildChild : MyStructureChild
+{
+    long long var_longlong2;
+    unsigned long long var_ulonglong2;
+};
+
+bitset MyBitsetChild : MyBitset
+{
+    bitfield<17> z;
+};
+
+bitset MyBitsetEmptyChild : MyBitset
+{
+};
+
+bitset MyEmptyBitsetChild : MyEmptyBitset
+{
+    bitfield<17> z;
+};
+
+bitset MyEmptyBitsetChildEmptyChild : MyEmptyBitsetChild
+{
+};
+
+struct BitsetChild
+{
+    MyBitsetChild var_mybitsetchild;
+};
+
+struct BitsetEmptyChild
+{
+    MyBitsetEmptyChild var_mybitsetemptychild;
+};
+
+struct EmptyBitsetChild
+{
+    MyEmptyBitsetChild var_myemptybitsetchild;
+};
+
+struct EmptyBitsetChildEmptyChild
+{
+    MyEmptyBitsetChildEmptyChild var_myemptybitsetchildemptychild;
+};
+
+
+
+bitmask MyBitMaskChild : MyBitMask
+{
+    @position(7) flag7
+};
+
+bitmask MyBitMaskEmptyChild : MyBitMask
+{
+};
+
+bitmask MyEmptyBitMaskChild : MyEmptyBitMask
+{
+    @position(7) flag7
+};
+
+bitmask MyEmptyBitMaskChildEmptyChild : MyEmptyBitMaskChild
+{
+};
+
+
+struct BitMaskChild
+{
+    MyBitMaskChild var_mybitmaskchild;
+};
+
+struct BitMaskEmptyChild
+{
+    MyBitMaskEmptyChild var_mybitmaskemptychild;
+};
+
+struct EmptyBitMaskChild
+{
+    MyEmptyBitMaskChild var_myemptybitmaskchild;
+};
+
+struct EmptyBitMaskChildEmptyChild
+{
+    MyEmptyBitMaskChildEmptyChild var_myemptybitmaskchildemptychild;
+};
+
+
+
+struct MyStructureChild : MyStructure
+{
+    long field3;
+    float field4;
+};
+
+struct MyStructureEmptyChild: MyStructure
+{
+};
+
+struct MyEmptyStructureChild : MyEmptyStructure
+{
+    long field3;
+    float field4;
+};
+
+struct MyEmptyStructureEmptyChild : MyEmptyStructure
+{
+};
+
+struct StructureChild
+{
+    MyStructureChild var_mystructurechild;
+};
+
+struct StructureEmptyChild
+{
+    MyStructureEmptyChild var_mystructureemptychild;
+};
+
+struct EmptyStructureChild
+{
+    MyEmptyStructureChild var_myemptystructurechild;
+};
+
+struct EmptyStructureEmptyChild
+{
+    MyEmptyStructureEmptyChild var_myemptystructureemptychild;
+};
+
+
+

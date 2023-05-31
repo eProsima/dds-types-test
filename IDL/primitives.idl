@@ -1,48 +1,64 @@
-struct Integrals
+struct Short
 {
     short var_short;
+};
+
+struct UShort
+{
     unsigned short var_ushort;
+};
 
+struct Long
+{
     long var_long;
-    unsigned long var_ulong;
+};
 
+struct ULong
+{
+    unsigned long var_ulong;
+};
+
+struct LongLong
+{
     long long var_longlong;
+};
+
+struct ULongLong
+{
     unsigned long long var_ulonglong;
 };
 
-struct Floats
+struct Float
 {
     float var_float;
+};
+
+struct Double
+{
     double var_double;
+};
+
+struct LongDouble
+{
     long double var_longdouble;
 };
 
-struct Booleans
+struct Boolean
 {
     boolean var_boolean;
+};
+
+struct Octect
+{
     octet var_octet;
 };
 
-struct Chars
+struct Char
 {
     char var_char8;
+};
+
+struct WChar
+{
     wchar var_char16;
-};
-
-struct Strings
-{
-    string var_string8;
-    wstring var_string16;
-};
-
-struct SmallString
-{
-    string<1> var_large_string;
-    wstring<1> var_large_wstring;
-};
-
-struct LargeString
-{
-    string<41925> var_large_string;
-    wstring<41925> var_large_wstring;
 };
