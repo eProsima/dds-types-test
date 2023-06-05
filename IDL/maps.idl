@@ -126,42 +126,42 @@ struct MapBitset
     
 struct MapKeyShort
 {
-    std::map<short, short> var_map_short;
+    map<short, short> var_map_short;
 };
 
 struct MapKeyUShort
 {
-    std::map<unsigned short, unsigned short> var_map_ushort;
+    map<unsigned short, unsigned short> var_map_ushort;
 };
 
 struct MapKeyLong
 {
-    std::map<long, long> var_map_long;
+    map<long, long> var_map_long;
 };
 
 struct MapKeyULong
 {
-    std::map<unsigned long, unsigned long> var_map_ulong;
+    map<unsigned long, unsigned long> var_map_ulong;
 };
 
 struct MapKeyLongLong
 {
-    std::map<long long, long long> var_map_longlong;
+    map<long long, long long> var_map_longlong;
 };
 
 struct MapKeyULongLong
 {
-    std::map<unsigned long long, unsigned long long> var_map_ulonglong;
+    map<unsigned long long, unsigned long long> var_map_ulonglong;
 };
 
 struct MapKeyString
 {
-    std::map<long, std::string> var_map_string;
+    map<long, string> var_map_string;
 };
 
 struct MapKeyWString
 {
-    std::map<std::wstring, std::wstring> var_map_wstring;
+    map<wstring, wstring> var_map_wstring;
 };
 
 struct BoundedSmallMap
