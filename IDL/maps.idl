@@ -124,8 +124,6 @@ struct MapBitset
     map<long, MyBitset> var_map_bitset;
 };
     
-
-
 struct MapKeyShort
 {
     std::map<short, short> var_map_short;
@@ -156,41 +154,6 @@ struct MapKeyULongLong
     std::map<unsigned long long, unsigned long long> var_map_ulonglong;
 };
 
-struct MapKeyFloat
-{
-    std::map<float, float> var_map_float;
-};
-
-struct MapKeyDouble
-{
-    std::map<double, double> var_map_double;
-};
-
-struct MapKeyLongDouble
-{
-    std::map<long double, long double> var_map_longdouble;
-};
-
-struct MapKeyBoolean
-{
-    std::map<bool, bool> var_map_boolean;
-};
-
-struct MapKeyOctet
-{
-    std::map<octet, octet> var_map_octet;
-};
-
-struct MapKeyChar
-{
-    std::map<char, char> var_map_char;
-};
-
-struct MapKeyWChar
-{
-    std::map<wchar, wchar> var_map_wchar;
-};
-
 struct MapKeyString
 {
     std::map<long, std::string> var_map_string;
@@ -200,63 +163,6 @@ struct MapKeyWString
 {
     std::map<std::wstring, std::wstring> var_map_wstring;
 };
-
-struct MapKeyEnum
-{
-    std::map<MyEnum, MyEnum> var_map_enum;
-};
-
-struct MapKeyBitMask
-{
-    std::map<MyBitMask, MyBitMask> var_map_bitmask;
-};
-
-struct MapKeyAlias
-{
-    std::map<MyAlias, MyAlias> var_map_alias;
-};
-
-struct MapKeyAliasArray
-{
-    std::map<alias_array, alias_array> var_map_short_array;
-};
-
-struct MapKeyAliasSequence
-{
-    std::map<alias_sequence, alias_sequence> var_map_sequence;
-};
-
-struct MapKeyAliasMap
-{
-    std::map<alias_map, alias_map> var_map_map;
-};
-
-struct MapKeyUnion
-{
-    std::map<MyUnion, MyUnion> var_map_union;
-};
-
-struct MapKeyStructure
-{
-    std::map<MyStructure, MyStructure> var_map_structure;
-};
-
-struct MapKeyBitset
-{
-    std::map<MyBitset, MyBitset> var_map_bitset;
-};
-
-
-struct MapKeyShort
-{
-    map<short, short> var_map_short;
-};
-
-struct MapKeyUShort
-{
-    map<unsigned short, unsigned short> var_map_ushort;
-};
-
 
 struct BoundedSmallMap
 {
