@@ -192,15 +192,11 @@ union Union_Discriminator_unsigned_long_long switch (unsigned long long)
         long long second;
 };
 
-const boolean discriminator_true = TRUE;
-const boolean discriminator_false = FALSE;
 union Union_Discriminator_boolean switch (boolean)
 {
     case TRUE:
-
         long first;
     case FALSE:
-
         long long second;
 };
 
@@ -212,15 +208,11 @@ union Union_Discriminator_octet switch (octet)
         long long second;
 };
 
-const char discriminator_a = 'a';
-const char discriminator_b = 'b';
 union Union_Discriminator_char switch (char)
 {
     case 'a':
-
         long first;
     case 'b':
-
         long long second;
 };
 
