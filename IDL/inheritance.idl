@@ -2,7 +2,7 @@
 #include "bitsets.idl"
 #include "structures.idl"
 
-struct MyStructureChild : MyStructure
+struct InnerStructureHelperChild : InnerStructureHelper
 {
     short var_short;
     unsigned short var_ushort;
@@ -14,18 +14,18 @@ struct MyStructureChild : MyStructure
     unsigned long long var_ulonglong;
 };
 
-struct MyStructureChildChild : MyStructureChild
+struct InnerStructureHelperChildChild : InnerStructureHelperChild
 {
     long long var_longlong2;
     unsigned long long var_ulonglong2;
 };
 
-bitset MyBitsetChild : MyBitset
+bitset InnerBitsetHelperChild : InnerBitsetHelper
 {
     bitfield<17> z;
 };
 
-bitset MyBitsetEmptyChild : MyBitset
+bitset InnerBitsetHelperEmptyChild : InnerBitsetHelper
 {
 };
 
@@ -40,12 +40,12 @@ bitset MyEmptyBitsetChildEmptyChild : MyEmptyBitsetChild
 
 struct BitsetChild
 {
-    MyBitsetChild var_mybitsetchild;
+    InnerBitsetHelperChild var_InnerBitsetHelperchild;
 };
 
 struct BitsetEmptyChild
 {
-    MyBitsetEmptyChild var_mybitsetemptychild;
+    InnerBitsetHelperEmptyChild var_InnerBitsetHelperemptychild;
 };
 
 struct EmptyBitsetChild
@@ -60,12 +60,12 @@ struct EmptyBitsetChildEmptyChild
 
 
 
-bitmask MyBitMaskChild : MyBitMask
+bitmask InnerBitMaskHelperChild : InnerBitMaskHelper
 {
     @position(7) flag7
 };
 
-bitmask MyBitMaskEmptyChild : MyBitMask
+bitmask InnerBitMaskHelperEmptyChild : InnerBitMaskHelper
 {
 };
 
@@ -81,12 +81,12 @@ bitmask MyEmptyBitMaskChildEmptyChild : MyEmptyBitMaskChild
 
 struct BitMaskChild
 {
-    MyBitMaskChild var_mybitmaskchild;
+    InnerBitMaskHelperChild var_InnerBitMaskHelperchild;
 };
 
 struct BitMaskEmptyChild
 {
-    MyBitMaskEmptyChild var_mybitmaskemptychild;
+    InnerBitMaskHelperEmptyChild var_InnerBitMaskHelperemptychild;
 };
 
 struct EmptyBitMaskChild
@@ -101,13 +101,13 @@ struct EmptyBitMaskChildEmptyChild
 
 
 
-struct MyStructureChild : MyStructure
+struct InnerStructureHelperChild : InnerStructureHelper
 {
     long field3;
     float field4;
 };
 
-struct MyStructureEmptyChild: MyStructure
+struct InnerStructureHelperEmptyChild: InnerStructureHelper
 {
 };
 
@@ -123,12 +123,12 @@ struct MyEmptyStructureEmptyChild : MyEmptyStructure
 
 struct StructureChild
 {
-    MyStructureChild var_mystructurechild;
+    InnerStructureHelperChild var_InnerStructureHelperchild;
 };
 
 struct StructureEmptyChild
 {
-    MyStructureEmptyChild var_mystructureemptychild;
+    InnerStructureHelperEmptyChild var_InnerStructureHelperemptychild;
 };
 
 struct EmptyStructureChild

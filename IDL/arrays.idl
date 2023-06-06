@@ -77,17 +77,17 @@ struct ArrayWString
 
 struct ArrayEnum
 {
-    MyEnum var_array_enum[10];
+    InnerEnumHelper var_array_enum[10];
 };
 
 struct ArrayBitMask
 {
-    MyBitMask var_array_bitmask[10];
+    InnerBitMaskHelper var_array_bitmask[10];
 };
 
 struct ArrayAlias
 {
-    MyAlias var_array_alias[10];
+    InnerAliasHelper var_array_alias[10];
 };
 
 struct ArrayShortArray
@@ -107,17 +107,17 @@ struct ArrayMap
 
 struct ArrayUnion
 {
-    MyUnion var_array_union[10];
+    InnerUnionHelper var_array_union[10];
 };
 
 struct ArrayStructure
 {
-    MyStructure var_array_structure[10];
+    InnerStructureHelper var_array_structure[10];
 };
 
 struct ArrayBitset
 {
-    MyBitset var_array_bitset[10];
+    InnerBitsetHelper var_array_bitset[10];
 };
 
 
@@ -200,17 +200,17 @@ struct ArrayMultiDimensionWString
 
 struct ArrayMultiDimensionEnum
 {
-    MyEnum var_array_enum[10][10][10];
+    InnerEnumHelper var_array_enum[10][10][10];
 };
 
 struct ArrayMultiDimensionBitMask
 {
-    MyBitMask var_array_bitmask[10][10][10];
+    InnerBitMaskHelper var_array_bitmask[10][10][10];
 };
 
 struct ArrayMultiDimensionAlias
 {
-    MyAlias var_array_alias[10][10][10];
+    InnerAliasHelper var_array_alias[10][10][10];
 };
 
 struct ArrayMultiDimensionSequence
@@ -225,17 +225,17 @@ struct ArrayMultiDimensionMap
 
 struct ArrayMultiDimensionUnion
 {
-    MyUnion var_array_union[10][10][10];
+    InnerUnionHelper var_array_union[10][10][10];
 };
 
 struct ArrayMultiDimensionStructure
 {
-    MyStructure var_array_structure[10][10][10];
+    InnerStructureHelper var_array_structure[10][10][10];
 };
 
 struct ArrayMultiDimensionBitset
 {
-    MyBitset var_array_bitset[10][10][10];
+    InnerBitsetHelper var_array_bitset[10][10][10];
 };
 
 
@@ -321,17 +321,17 @@ struct ArraySingleDimensionLiteralsWString
 
 struct ArraySingleDimensionLiteralsEnum
 {
-    MyEnum var_array_enum[size_1];
+    InnerEnumHelper var_array_enum[size_1];
 };
 
 struct ArraySingleDimensionLiteralsBitMask
 {
-    MyBitMask var_array_bitmask[size_1 + 5];
+    InnerBitMaskHelper var_array_bitmask[size_1 + 5];
 };
 
 struct ArraySingleDimensionLiteralsAlias
 {
-    MyAlias var_array_alias[size_1 * 2];
+    InnerAliasHelper var_array_alias[size_1 * 2];
 };
 
 struct ArraySingleDimensionLiteralsShortArray
@@ -351,17 +351,17 @@ struct ArraySingleDimensionLiteralsMap
 
 struct ArraySingleDimensionLiteralsUnion
 {
-    MyUnion var_array_union[5 * 2];
+    InnerUnionHelper var_array_union[5 * 2];
 };
 
 struct ArraySingleDimensionLiteralsStructure
 {
-    MyStructure var_array_structure[size_1];
+    InnerStructureHelper var_array_structure[size_1];
 };
 
 struct ArraySingleDimensionLiteralsBitset
 {
-    MyBitset var_array_bitset[size_1 + 5];
+    InnerBitsetHelper var_array_bitset[size_1 + 5];
 };
 
 
@@ -444,17 +444,17 @@ struct ArrayMultiDimensionLiteralsWString
 
 struct ArrayMultiDimensionLiteralsEnum
 {
-    MyEnum var_array_enum[5 * 2][size_1][5 + 5];
+    InnerEnumHelper var_array_enum[5 * 2][size_1][5 + 5];
 };
 
 struct ArrayMultiDimensionLiteralsBitMask
 {
-    MyBitMask var_array_bitmask[size_1][size_1 + 5][size_1];
+    InnerBitMaskHelper var_array_bitmask[size_1][size_1 + 5][size_1];
 };
 
 struct ArrayMultiDimensionLiteralsAlias
 {
-    MyAlias var_array_alias[size_1 * 2][5 * 2][size_1 * size_2];
+    InnerAliasHelper var_array_alias[size_1 * 2][5 * 2][size_1 * size_2];
 };
 
 struct ArrayMultiDimensionLiteralsSequence
@@ -469,17 +469,17 @@ struct ArrayMultiDimensionLiteralsMap
 
 struct ArrayMultiDimensionLiteralsUnion
 {
-    MyUnion var_array_union[size_1 * size_2][size_1 + 5][size_1 * 2];
+    InnerUnionHelper var_array_union[size_1 * size_2][size_1 + 5][size_1 * 2];
 };
 
 struct ArrayMultiDimensionLiteralsStructure
 {
-    MyStructure var_array_structure[5][size_1][size_1 + 5];
+    InnerStructureHelper var_array_structure[5][size_1][size_1 + 5];
 };
 
 struct ArrayMultiDimensionLiteralsBitSet
 {
-    MyBitset var_array_bitset[size_1 + 5][size_1 * 2][size_1 * size_2];
+    InnerBitsetHelper var_array_bitset[size_1 + 5][size_1 * 2][size_1 * size_2];
 };
 
 

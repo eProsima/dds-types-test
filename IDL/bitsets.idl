@@ -6,7 +6,7 @@ bitset MyEmptyBitset
 
 struct Bitset
 {
-    MyBitset var_mybitset;
+    InnerBitsetHelper var_InnerBitsetHelper;
 };
 
 struct EmptyBitset

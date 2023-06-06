@@ -15,16 +15,16 @@ typedef char alias_char8;
 typedef wchar alias_char16;
 typedef string alias_string8;
 typedef wstring alias_string16;
-typedef MyEnum alias_enum;
-typedef MyBitMask alias_bitmask;
+typedef InnerEnumHelper alias_enum;
+typedef InnerBitMaskHelper alias_bitmask;
 typedef alias_int16 alias_alias;
 typedef short alias_array[2];
 typedef short alias_multiarray[2][2];
 typedef sequence<short> alias_sequence;
 typedef map<short, short> alias_map;
-typedef union MyUnion alias_union;
-typedef struct MyStructure alias_struct;
-typedef MyBitset alias_bitset;
+typedef union InnerUnionHelper alias_union;
+typedef struct InnerStructureHelper alias_struct;
+typedef InnerBitsetHelper alias_bitset;
 
 
 
@@ -150,5 +150,5 @@ struct AliasStruct
 
 struct AliasBitset
 {
-    MyBitset value;
+    InnerBitsetHelper value;
 };

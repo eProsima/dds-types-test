@@ -1,7 +1,5 @@
 #include "helpers/basic_inner_types.idl"
 
-typedef short alias_array[2];
-
 union Union_Short switch (long)
 {
     case 0:
@@ -92,28 +90,28 @@ union Union_WString switch (long)
         wstring o;
 };
 
-union Union_MyEnum switch (long)
+union Union_InnerEnumHelper switch (long)
 { 
     case 15:
-        MyEnum p;
+        InnerEnumHelper p;
 };
 
-union Union_MyBitMask switch (long)
+union Union_InnerBitMaskHelper switch (long)
 { 
     case 16:
-        MyBitMask q; 
+        InnerBitMaskHelper q; 
 };
 
-union Union_MyAlias switch (long)
+union Union_InnerAliasHelper switch (long)
 { 
     case 17:
-        MyAlias r;
+        InnerAliasHelper r;
 };
 
 union Union_Array switch (long)
 { 
     case 18:
-        alias_array s;
+        Inner_alias_array_helper s;
 };
 
 union Union_Sequence switch (long)
@@ -128,22 +126,22 @@ union Union_Map switch (long)
         map<long, long> u;
 };
 
-union Union_MyUnion switch (long)
+union Union_InnerUnionHelper switch (long)
 { 
     case 21:
-        MyUnion v;
+        InnerUnionHelper v;
 };
 
-union Union_MyStructure switch (long)
+union Union_InnerStructureHelper switch (long)
 { 
     case 22:
-        MyStructure w; 
+        InnerStructureHelper w; 
 };
 
-union Union_MyBitset switch (long)
+union Union_InnerBitsetHelper switch (long)
 { 
     case 23:
-        MyBitset x;
+        InnerBitsetHelper x;
 };
 
 union Union_Discriminator_short switch (short)
@@ -234,7 +232,7 @@ union Union_Discriminator_wchar switch (wchar)
         long long second;
 };
 
-union Union_Discriminator_enum switch (MyEnum)
+union Union_Discriminator_enum switch (InnerEnumHelper)
 {
     case ENUM_VALUE_1:
         long first;
@@ -242,7 +240,7 @@ union Union_Discriminator_enum switch (MyEnum)
         long long second;
 };
 
-union Union_Discriminator_alias switch (MyAlias)
+union Union_Discriminator_alias switch (InnerAliasHelper)
 {
     case 1:
         long first;
@@ -326,19 +324,19 @@ struct UnionWString
     Union_WString union_wstring;
 };
 
-struct UnionMyEnum
+struct UnionInnerEnumHelper
 {
-    Union_MyEnum union_my_enum;
+    Union_InnerEnumHelper union_my_enum;
 };
 
-struct UnionMyBitMask
+struct UnionInnerBitMaskHelper
 {
-    Union_MyBitMask union_my_bit_mask;
+    Union_InnerBitMaskHelper union_my_bit_mask;
 };
 
-struct UnionMyAlias
+struct UnionInnerAliasHelper
 {
-    Union_MyAlias union_my_alias;
+    Union_InnerAliasHelper union_my_alias;
 };
 
 struct UnionArray
@@ -356,19 +354,19 @@ struct UnionMap
     Union_Map union_map;
 };
 
-struct UnionMyUnion
+struct UnionInnerUnionHelper
 {
-    Union_MyUnion union_my_union;
+    Union_InnerUnionHelper union_my_union;
 };
 
-struct UnionMyStructure
+struct UnionInnerStructureHelper
 {
-    Union_MyStructure union_my_structure;
+    Union_InnerStructureHelper union_my_structure;
 };
 
-struct UnionMyBitset
+struct UnionInnerBitsetHelper
 {
-    Union_MyBitset union_my_bitset;
+    Union_InnerBitsetHelper union_my_bitset;
 };
 
 struct UnionDiscriminatorShort

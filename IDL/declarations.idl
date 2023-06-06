@@ -1,6 +1,41 @@
 union ForwardUnion;
 struct ForwardStruct;
 
+struct ForwardUnionStructure
+{
+    ForwardUnion var_forwardunion;
+};
+
+struct ForwardStructStructure
+{
+    ForwardStruct var_forwardstruct;
+};
+
+struct ForwardUnionChildStructure
+{
+    ForwardUnionChild var_forwardunionchild;
+};
+
+struct ForwardStructChildStructure
+{
+    ForwardStructChild var_forwardstructchild;
+};
+
+struct ModuleStructStructure
+{
+    ModuleStruct var_modulestruct;
+};
+
+struct ForwardUnionChildStructure
+{
+    ForwardUnionChild var_forwardunionchild;
+};
+
+struct ForwardUnionChildStructure
+{
+    ForwardUnionChild var_forwardunionchild;
+};
+
 union ForwardUnion switch (long)
 {
     case 0:
@@ -67,8 +102,6 @@ module my_module
         float field4;
     };
 
-
-
     struct ModuleForwardUnionStructure
     {
         ModuleForwardUnion var_moduleforwardunion;
@@ -89,47 +122,3 @@ module my_module
         ModuleForwardStructChild var_moduleforwardstructchild;
     };
 }
-
-
-
-struct ForwardUnionStructure
-{
-    ForwardUnion var_forwardunion;
-};
-
-struct ForwardStructStructure
-{
-    ForwardStruct var_forwardstruct;
-};
-
-struct ForwardUnionChildStructure
-{
-    ForwardUnionChild var_forwardunionchild;
-};
-
-struct ForwardStructChildStructure
-{
-    ForwardStructChild var_forwardstructchild;
-};
-
-struct ModuleStructStructure
-{
-    ModuleStruct var_modulestruct;
-};
-
-
-
-struct ForwardUnionChildStructure
-{
-    ForwardUnionChild var_forwardunionchild;
-};
-
-
-
-struct ForwardUnionChildStructure
-{
-    ForwardUnionChild var_forwardunionchild;
-};
-
-
-

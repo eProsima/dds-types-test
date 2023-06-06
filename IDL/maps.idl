@@ -1,9 +1,5 @@
 #include "helpers/basic_inner_types.idl"
 
-typedef short alias_array[2];
-typedef sequence<short> alias_sequence;
-typedef map<long, long> alias_map;
-
 struct MapShort
 {
     map<long, short> var_map_short;
@@ -81,47 +77,47 @@ struct MapWString
 
 struct MapEnum
 {
-    map<long, MyEnum> var_map_enum;
+    map<long, InnerEnumHelper> var_map_enum;
 };
 
 struct MapBitMask
 {
-    map<long, MyBitMask> var_map_bitmask;
+    map<long, InnerBitMaskHelper> var_map_bitmask;
 };
 
 struct MapAlias
 {
-    map<long, MyAlias> var_map_alias;
+    map<long, InnerAliasHelper> var_map_alias;
 };
 
 struct MapShortArray
 {
-    map<long, alias_array> var_map_short_array;
+    map<long, Inner_alias_array_helper> var_map_short_array;
 };
 
 struct MapSequence
 {
-    map<long, alias_sequence> var_map_sequence;
+    map<long, Inner_alias_sequence_helper> var_map_sequence;
 };
 
 struct MapMap
 {
-    map<long, alias_map> var_map_map;
+    map<long, Inner_alias_map_helper> var_map_map;
 };
 
 struct MapUnion
 {
-    map<long, MyUnion> var_map_union;
+    map<long, InnerUnionHelper> var_map_union;
 };
 
 struct MapStructure
 {
-    map<long, MyStructure> var_map_structure;
+    map<long, InnerStructureHelper> var_map_structure;
 };
 
 struct MapBitset
 {
-    map<long, MyBitset> var_map_bitset;
+    map<long, InnerBitsetHelper> var_map_bitset;
 };
     
 struct MapKeyShort

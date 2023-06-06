@@ -6,12 +6,12 @@ bitmask MyEmptyBitMask
 
 struct EnumStructure
 {
-    MyEnum var_myenum;
+    InnerEnumHelper var_InnerEnumHelper;
 };
 
 struct BitMaskStructure
 {
-       MyBitMask var_mybitmask;
+       InnerBitMaskHelper var_InnerBitMaskHelper;
 };
 
 struct MyEmptyBitMaskStructure

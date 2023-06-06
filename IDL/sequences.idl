@@ -1,10 +1,5 @@
 #include "helpers/basic_inner_types.idl"
 
-typedef short alias_array[2];
-typedef sequence<short> alias_sequence;
-typedef map<long, long> alias_map;
-
-
 struct SequenceShort
 {
     sequence<short> var_sequence_short;
@@ -82,47 +77,47 @@ struct SequenceWString
 
 struct SequenceEnum
 {
-    sequence<MyEnum> var_sequence_enum;
+    sequence<InnerEnumHelper> var_sequence_enum;
 };
 
 struct SequenceBitMask
 {
-    sequence<MyBitMask> var_sequence_bitmask;
+    sequence<InnerBitMaskHelper> var_sequence_bitmask;
 };
 
 struct SequenceAlias
 {
-    sequence<MyAlias> var_sequence_alias;
+    sequence<InnerAliasHelper> var_sequence_alias;
 };
 
 struct SequenceShortArray
 {
-    sequence<alias_array> var_sequence_short_array;
+    sequence<Inner_alias_array_helper> var_sequence_short_array;
 };
 
 struct SequenceSequence
 {
-    sequence<alias_sequence> var_sequence_sequence;
+    sequence<Inner_alias_sequence_helper> var_sequence_sequence;
 };
 
 struct SequenceMap
 {
-    sequence<alias_map> var_sequence_map;
+    sequence<Inner_alias_map_helper> var_sequence_map;
 };
 
 struct SequenceUnion
 {
-    sequence<MyUnion> var_sequence_union;
+    sequence<InnerUnionHelper> var_sequence_union;
 };
 
 struct SequenceStructure
 {
-    sequence<MyStructure> var_sequence_structure;
+    sequence<InnerStructureHelper> var_sequence_structure;
 };
 
 struct SequenceBitset
 {
-    sequence<MyBitset> var_sequence_bitset;
+    sequence<InnerBitsetHelper> var_sequence_bitset;
 };
 
 

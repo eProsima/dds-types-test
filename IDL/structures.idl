@@ -18,15 +18,15 @@ struct Structures
     string var_string8;
     wstring var_string16;
 
-    MyEnum var_enum;
-    MyBitMask var_bitmask;
-    MyAlias var_alias;
+    InnerEnumHelper var_enum;
+    InnerBitMaskHelper var_bitmask;
+    InnerAliasHelper var_alias;
     short var_array_short[10];
     sequence<long> var_sequence;
     map<long, long> var_map;
-    MyUnion var_union;
-    MyStructure var_structure;
-    MyBitset var_bitset;
+    InnerUnionHelper var_union;
+    InnerStructureHelper var_structure;
+    InnerBitsetHelper var_bitset;
 };
 
 struct MyEmptyStructure
