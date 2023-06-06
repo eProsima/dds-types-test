@@ -198,9 +198,11 @@ const boolean discriminator_true = TRUE;
 const boolean discriminator_false = FALSE;
 union Union_Discriminator_boolean switch (boolean)
 {
-    case discriminator_true:
+    case TRUE:
+
         long first;
-    case discriminator_false:
+    case FALSE:
+
         long long second;
 };
 
@@ -216,9 +218,11 @@ const char discriminator_a = 'a';
 const char discriminator_b = 'b';
 union Union_Discriminator_char switch (char)
 {
-    case discriminator_a:
+    case 'a':
+
         long first;
-    case discriminator_b:
+    case 'b':
+
         long long second;
 };
 

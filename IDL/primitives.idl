@@ -48,7 +48,8 @@ struct Boolean
     boolean var_boolean;
 };
 
-struct Octect
+struct Octet
+
 {
     octet var_octet;
 };
