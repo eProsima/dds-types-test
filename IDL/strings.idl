@@ -1,29 +1,29 @@
-struct String
+struct StringStruct
 {
     string var_string8;
 };
 
-struct WString
+struct WStringStruct
 {
     wstring var_string16;
 };
 
-struct SmallString
+struct SmallStringStruct
 {
-    string<1> var_large_string;
+    string<1> var_small_string;
 };
 
-struct SmallWString
+struct SmallWStringStruct
 {
-    wstring<1> var_large_wstring;
+    wstring<1> var_small_wstring;
 };
 
-struct LargeString
+struct LargeStringStruct
 {
     string<41925> var_large_string;
 };
 
-struct LargeWString
+struct LargeWStringStruct
 {
     wstring<41925> var_large_wstring;
 };

@@ -1,6 +1,4 @@
 #include "helpers/basic_inner_types.idl"
-#include "bitsets.idl"
-#include "structures.idl"
 
 struct InnerStructureHelperChild : InnerStructureHelper
 {
@@ -29,12 +27,16 @@ bitset InnerBitsetHelperEmptyChild : InnerBitsetHelper
 {
 };
 
-bitset MyEmptyBitsetChild : MyEmptyBitset
+bitset EmptyBitset
+{
+};
+
+bitset EmptyBitsetChild : EmptyBitset
 {
     bitfield<17> z;
 };
 
-bitset MyEmptyBitsetChildEmptyChild : MyEmptyBitsetChild
+bitset EmptyBitsetChildEmptyChild : EmptyBitsetChild
 {
 };
 
@@ -48,16 +50,15 @@ struct BitsetEmptyChild
     InnerBitsetHelperEmptyChild var_InnerBitsetHelperemptychild;
 };
 
-struct EmptyBitsetChild
+struct EmptyBitsetChildStruct
 {
-    MyEmptyBitsetChild var_myemptybitsetchild;
+    EmptyBitsetChild var_myemptybitsetchild;
 };
 
-struct EmptyBitsetChildEmptyChild
+struct EmptyBitsetChildEmptyChildStruct
 {
-    MyEmptyBitsetChildEmptyChild var_myemptybitsetchildemptychild;
+    EmptyBitsetChildEmptyChild var_myemptybitsetchildemptychild;
 };
-
 
 
 bitmask InnerBitMaskHelperChild : InnerBitMaskHelper
@@ -69,76 +70,48 @@ bitmask InnerBitMaskHelperEmptyChild : InnerBitMaskHelper
 {
 };
 
-bitmask MyEmptyBitMaskChild : MyEmptyBitMask
-{
-    @position(7) flag7
-};
-
-bitmask MyEmptyBitMaskChildEmptyChild : MyEmptyBitMaskChild
-{
-};
-
-
-struct BitMaskChild
+struct BitMaskChildStruct
 {
     InnerBitMaskHelperChild var_InnerBitMaskHelperchild;
 };
 
-struct BitMaskEmptyChild
+struct BitMaskEmptyChildStruct
 {
     InnerBitMaskHelperEmptyChild var_InnerBitMaskHelperemptychild;
-};
-
-struct EmptyBitMaskChild
-{
-    MyEmptyBitMaskChild var_myemptybitmaskchild;
-};
-
-struct EmptyBitMaskChildEmptyChild
-{
-    MyEmptyBitMaskChildEmptyChild var_myemptybitmaskchildemptychild;
-};
-
-
-
-struct InnerStructureHelperChild : InnerStructureHelper
-{
-    long field3;
-    float field4;
 };
 
 struct InnerStructureHelperEmptyChild: InnerStructureHelper
 {
 };
 
-struct MyEmptyStructureChild : MyEmptyStructure
+struct EmptyStructureChild : EmptyStructure
 {
     long field3;
     float field4;
 };
 
-struct MyEmptyStructureEmptyChild : MyEmptyStructure
+struct EmptyStructureEmptyChild : EmptyStructure
 {
 };
 
-struct StructureChild
+struct StructureChildStruct
 {
     InnerStructureHelperChild var_InnerStructureHelperchild;
 };
 
-struct StructureEmptyChild
+struct StructureEmptyChildStruct
 {
     InnerStructureHelperEmptyChild var_InnerStructureHelperemptychild;
 };
 
-struct EmptyStructureChild
+struct EmptyStructureChildStruct
 {
-    MyEmptyStructureChild var_myemptystructurechild;
+    EmptyStructureChild var_myemptystructurechild;
 };
 
-struct EmptyStructureEmptyChild
+struct EmptyStructureEmptyChildStruct
 {
-    MyEmptyStructureEmptyChild var_myemptystructureemptychild;
+    EmptyStructureEmptyChild var_myemptystructureemptychild;
 };
 
 

@@ -1,6 +1,6 @@
 #include "helpers/basic_inner_types.idl"
 
-bitset MyEmptyBitset
+bitset EmptyBitset
 {
 };
 
@@ -11,5 +11,5 @@ struct Bitset
 
 struct EmptyBitset
 {
-    MyEmptyBitset var_myemptybitset;
+    EmptyBitset var_myemptybitset;
 };

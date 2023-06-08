@@ -1,65 +1,64 @@
-struct Short
+struct ShortStructStruct
 {
     short var_short;
 };
 
-struct UShort
+struct UShortStruct
 {
     unsigned short var_ushort;
 };
 
-struct Long
+struct LongStruct
 {
     long var_long;
 };
 
-struct ULong
+struct ULongStruct
 {
     unsigned long var_ulong;
 };
 
-struct LongLong
+struct LongLongStruct
 {
     long long var_longlong;
 };
 
-struct ULongLong
+struct ULongLongStruct
 {
     unsigned long long var_ulonglong;
 };
 
-struct Float
+struct FloatStruct
 {
     float var_float;
 };
 
-struct Double
+struct DoubleStruct
 {
     double var_double;
 };
 
-struct LongDouble
+struct LongDoubleStruct
 {
     long double var_longdouble;
 };
 
-struct Boolean
+struct BooleanStruct
 {
     boolean var_boolean;
 };
 
-struct Octet
-
+struct OctetStruct
 {
     octet var_octet;
 };
 
-struct Char
+struct CharStruct
 {
     char var_char8;
 };
 
-struct WChar
+struct WCharStruct
 {
     wchar var_char16;
 };
