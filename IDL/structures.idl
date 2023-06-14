@@ -1,129 +1,156 @@
 #include "helpers/basic_inner_types.idl"
 
+struct ShortStruct
+{
+    short var_short;
+};
+
+struct UnsignedShortStruct
+{
+    unsigned short var_ushort;
+};
+
+struct LongStruct
+{
+    long var_long;
+};
+
+struct UnsignedLongStruct
+{
+    unsigned long var_ulong;
+};
+
+struct LongLongStruct
+{
+    long long var_longlong;
+};
+
+struct UnsignedLongLongStruct
+{
+    unsigned long long var_ulonglong;
+};
+
+struct FloatStruct
+{
+    float var_float;
+};
+
+struct DoubleStruct
+{
+    double var_double;
+};
+
+struct LongDoubleStruct
+{
+    long double var_longdouble;
+};
+
+struct BooleanStruct
+{
+    boolean var_boolean;
+};
+
+struct OctetStruct
+{
+    octet var_octet;
+};
+
+struct Char8Struct
+{
+    char var_char8;
+};
+
+struct Char16Struct
+{
+    wchar var_char16;
+};
+
+struct String8Struct
+{
+    string var_string8;
+};
+
+struct String16Struct
+{
+    wstring var_string16;
+};
+
+struct EnumStruct
+{
+    InnerEnumHelper var_enum;
+};
+
+struct BitMaskStruct
+{
+    InnerBitMaskHelper var_bitmask;
+};
+
+struct AliasStruct
+{
+    InnerAliasHelper var_alias;
+};
+
+struct ShortArrayStruct
+{
+    short var_array_short[10];
+};
+
+struct SequenceStruct
+{
+    sequence<long> var_sequence;
+};
+
+struct MapStruct
+{
+    map<long, long> var_map;
+};
+
+struct UnionStruct
+{
+    InnerUnionHelper var_union;
+};
+
+struct StructureStruct
+{
+    InnerStructureHelper var_structure;
+};
+
+struct BitsetStruct
+{
+    InnerBitsetHelper var_bitset;
+};
+
+struct EmptyStructure
+{
+};
+
+
+
 struct Structures
 {
-    struct ShortStruct
-    {
-        short var_short;
-    };
-
-    struct UnsignedShortStruct
-    {
-        unsigned short var_ushort;
-    };
-
-    struct LongStruct
-    {
-        long var_long;
-    };
-
-    struct UnsignedLongStruct
-    {
-        unsigned long var_ulong;
-    };
-
-    struct LongLongStruct
-    {
-        long long var_longlong;
-    };
-
-    struct UnsignedLongLongStruct
-    {
-        unsigned long long var_ulonglong;
-    };
-
-    struct FloatStruct
-    {
-        float var_float;
-    };
-
-    struct DoubleStruct
-    {
-        double var_double;
-    };
-
-    struct LongDoubleStruct
-    {
-        long double var_longdouble;
-    };
-
-    struct BooleanStruct
-    {
-        bool var_boolean;
-    };
-
-    struct OctetStruct
-    {
-        unsigned char var_octet;
-    };
-
-    struct Char8Struct
-    {
-        char var_char8;
-    };
-
-    struct Char16Struct
-    {
-        wchar_t var_char16;
-    };
-
-    struct String8Struct
-    {
-        string var_string8;
-    };
-
-    struct String16Struct
-    {
-        wstring var_string16;
-    };
-
-    struct EnumStruct
-    {
-        InnerEnumHelper var_enum;
-    };
-
-    struct BitMaskStruct
-    {
-        InnerBitMaskHelper var_bitmask;
-    };
-
-    struct AliasStruct
-    {
-        InnerAliasHelper var_alias;
-    };
-
-    struct ShortArrayStruct
-    {
-        short var_array_short[10];
-    };
-
-    struct SequenceStruct
-    {
-        vector<long> var_sequence;
-    };
-
-    struct MapStruct
-    {
-        map<long, long> var_map;
-    };
-
-    struct UnionStruct
-    {
-        InnerUnionHelper var_union;
-    };
-
-    struct StructureStruct
-    {
-        InnerStructureHelper var_structure;
-    };
-
-    struct BitsetStruct
-    {
-        InnerBitsetHelper var_bitset;
-    };
-
-    struct EmptyStructure
-    {
-    };
-
+    ShortStruct var_ShortStruct;
+    UnsignedShortStruct var_UnsignedShortStruct;
+    LongStruct var_LongStruct;
+    UnsignedLongStruct var_UnsignedLongStruct;
+    LongLongStruct var_LongLongStruct;
+    UnsignedLongLongStruct var_UnsignedLongLongStruct;
+    FloatStruct var_FloatStruct;
+    DoubleStruct var_DoubleStruct;
+    LongDoubleStruct var_LongDoubleStruct;
+    BooleanStruct var_BooleanStruct;
+    OctetStruct var_OctetStruct;
+    Char8Struct var_Char8Struct;
+    Char16Struct var_Char16Struct;
+    String8Struct var_String8Struct;
+    String16Struct var_String16Struct;
+    EnumStruct var_EnumStruct;
+    BitMaskStruct var_BitMaskStruct;
+    AliasStruct var_AliasStruct;
+    ShortArrayStruct var_ShortArrayStruct;
+    SequenceStruct var_SequenceStruct;
+    MapStruct var_MapStruct;
+    UnionStruct var_UnionStruct;
+    StructureStruct var_StructureStruct;
+    BitsetStruct var_BitsetStruct;
+    EmptyStructure var_EmptyStructure;
 };

@@ -1,7 +1,5 @@
 #include "helpers/basic_inner_types.idl"
 
-
-
 struct EnumStructure
 {
     InnerEnumHelper var_InnerEnumHelper;
@@ -9,7 +7,5 @@ struct EnumStructure
 
 struct BitMaskStructure
 {
-       InnerBitMaskHelper var_InnerBitMaskHelper;
+    InnerBitMaskHelper var_InnerBitMaskHelper;
 };
-
-

@@ -36,6 +36,8 @@ bitset InnerBitsetHelper
     bitfield<12, short> d;
 };
 
+typedef string<10> Inner_alias_bounded_string_helper;
+typedef wstring<10> Inner_alias_bounded_wstring_helper;
 typedef short Inner_alias_array_helper[2];
 typedef sequence<short> Inner_alias_sequence_helper;
 typedef map<long, long> Inner_alias_map_helper;

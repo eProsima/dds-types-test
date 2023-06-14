@@ -47,7 +47,7 @@ struct ArrayLongDouble
 
 struct ArrayBoolean
 {
-    bool var_array_boolean[10];
+    boolean var_array_boolean[10];
 };
 
 struct ArrayOctet
@@ -170,7 +170,7 @@ struct ArrayMultiDimensionLongDouble
 
 struct ArrayMultiDimensionBoolean
 {
-    bool var_array_boolean[10][10][10];
+    boolean var_array_boolean[10][10][10];
 };
 
 struct ArrayMultiDimensionOctet
@@ -185,17 +185,17 @@ struct ArrayMultiDimensionChar
 
 struct ArrayMultiDimensionWChar
 {
-    wchar_t var_array_wchar[10][10][10];
+    wchar var_array_wchar[10][10][10];
 };
 
 struct ArrayMultiDimensionString
 {
-    std::string var_array_string[10][10][10];
+    string var_array_string[10][10][10];
 };
 
 struct ArrayMultiDimensionWString
 {
-    std::wstring var_array_wstring[10][10][10];
+    wstring var_array_wstring[10][10][10];
 };
 
 struct ArrayMultiDimensionEnum
@@ -215,12 +215,12 @@ struct ArrayMultiDimensionAlias
 
 struct ArrayMultiDimensionSequence
 {
-    std::vector<long> var_array_sequence[10][10][10];
+    sequence<long> var_array_sequence[10][10][10];
 };
 
 struct ArrayMultiDimensionMap
 {
-    std::map<long, long> var_array_map[10][10][10];
+    map<long, long> var_array_map[10][10][10];
 };
 
 struct ArrayMultiDimensionUnion
@@ -291,7 +291,7 @@ struct ArraySingleDimensionLiteralsLongDouble
 
 struct ArraySingleDimensionLiteralsBoolean
 {
-    bool var_array_boolean[size_1];
+    boolean var_array_boolean[size_1];
 };
 
 struct ArraySingleDimensionLiteralsOctet
@@ -414,7 +414,7 @@ struct ArrayMultiDimensionLiteralsLongDouble
 
 struct ArrayMultiDimensionLiteralsBoolean
 {
-    bool var_array_boolean[size_1 * size_2][size_1][5];
+    boolean var_array_boolean[size_1 * size_2][size_1][5];
 };
 
 struct ArrayMultiDimensionLiteralsOctet
@@ -492,3 +492,4 @@ struct BoundedBigArrays
 {
     short var_array_big[41925];
 };
+

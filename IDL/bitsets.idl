@@ -4,12 +4,12 @@ bitset EmptyBitset
 {
 };
 
-struct Bitset
+struct BitsetStruct
 {
     InnerBitsetHelper var_InnerBitsetHelper;
 };
 
-struct EmptyBitset
+struct EmptyBitsetStruct
 {
     EmptyBitset var_myemptybitset;
 };
