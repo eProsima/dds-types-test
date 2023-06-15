@@ -1,15 +1,6 @@
 #include "helpers/basic_inner_types.idl"
 
-bitset EmptyBitset
-{
-};
-
 struct BitsetStruct
 {
     InnerBitsetHelper var_InnerBitsetHelper;
-};
-
-struct EmptyBitsetStruct
-{
-    EmptyBitset var_myemptybitset;
 };

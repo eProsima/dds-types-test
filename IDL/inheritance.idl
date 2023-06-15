@@ -2,117 +2,40 @@
 
 struct InnerStructureHelperChild : InnerStructureHelper
 {
-    short var_short;
-    unsigned short var_ushort;
-
-    long var_long;
-    unsigned long var_ulong;
-
-    long long var_longlong;
-    unsigned long long var_ulonglong;
+    long long var_child_longlong;
+    unsigned long long var_child_ulonglong;
 };
 
 struct InnerStructureHelperChildChild : InnerStructureHelperChild
 {
-    long long var_longlong2;
-    unsigned long long var_ulonglong2;
+    long long var_child_childlonglong2;
+    unsigned long long var_childchild_ulonglong2;
+};
+
+struct InnerStructureHelperEmptyChild : InnerStructureHelper
+{
+};
+
+
+struct StructuresInheritanceStruct
+{
+    InnerStructureHelperChild var_InnerStructureHelperChild;
+    InnerStructureHelperChildChild var_InnerStructureHelperChildChild;
+    InnerStructureHelperEmptyChild var_InnerStructureHelperEmptyChild;
 };
 
 bitset InnerBitsetHelperChild : InnerBitsetHelper
 {
-    bitfield<17> z;
+    bitfield<17> child_w;
 };
 
-bitset InnerBitsetHelperEmptyChild : InnerBitsetHelper
+bitset InnerBitsetHelperChildChild : InnerBitsetHelperChild
 {
+    bitfield<18> childchild_z;
 };
 
-bitset EmptyBitset
+struct BitsetsChildInheritanceStruct
 {
+    InnerBitsetHelperChild var_InnerBitsetHelperChild;
+    InnerBitsetHelperChildChild var_InnerBitsetHelperChildChild;
 };
-
-bitset EmptyBitsetChild : EmptyBitset
-{
-    bitfield<17> z;
-};
-
-bitset EmptyBitsetChildEmptyChild : EmptyBitsetChild
-{
-};
-
-struct BitsetChild
-{
-    InnerBitsetHelperChild var_InnerBitsetHelperchild;
-};
-
-struct BitsetEmptyChild
-{
-    InnerBitsetHelperEmptyChild var_InnerBitsetHelperemptychild;
-};
-
-struct EmptyBitsetChildStruct
-{
-    EmptyBitsetChild var_myemptybitsetchild;
-};
-
-struct EmptyBitsetChildEmptyChildStruct
-{
-    EmptyBitsetChildEmptyChild var_myemptybitsetchildemptychild;
-};
-
-
-bitmask InnerBitMaskHelperChild : InnerBitMaskHelper
-{
-    @position(7) flag7
-};
-
-bitmask InnerBitMaskHelperEmptyChild : InnerBitMaskHelper
-{
-};
-
-struct BitMaskChildStruct
-{
-    InnerBitMaskHelperChild var_InnerBitMaskHelperchild;
-};
-
-struct BitMaskEmptyChildStruct
-{
-    InnerBitMaskHelperEmptyChild var_InnerBitMaskHelperemptychild;
-};
-
-struct InnerStructureHelperEmptyChild: InnerStructureHelper
-{
-};
-
-struct EmptyStructureChild : EmptyStructure
-{
-    long field3;
-    float field4;
-};
-
-struct EmptyStructureEmptyChild : EmptyStructure
-{
-};
-
-struct StructureChildStruct
-{
-    InnerStructureHelperChild var_InnerStructureHelperchild;
-};
-
-struct StructureEmptyChildStruct
-{
-    InnerStructureHelperEmptyChild var_InnerStructureHelperemptychild;
-};
-
-struct EmptyStructureChildStruct
-{
-    EmptyStructureChild var_myemptystructurechild;
-};
-
-struct EmptyStructureEmptyChildStruct
-{
-    EmptyStructureEmptyChild var_myemptystructureemptychild;
-};
-
-
-
