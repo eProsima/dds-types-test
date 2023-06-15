@@ -1,39 +1,22 @@
-union ForwardUnion;
 struct ForwardStruct;
+union ForwardUnion;
+typedef sequence<ForwardStruct> RecursiveUnboundedSeqForwardStruct;
+typedef sequence<ForwardStruct, 10> RecursiveBoundedSeqForwardStruct;
+typedef sequence<ForwardUnion> RecursiveUnboundedSeqForwardUnion;
+typedef sequence<ForwardUnion, 10> RecursiveBoundedSeqForwardUnion;
 
-struct ForwardUnionStructure
+struct ForwardDeclarationsStruct
 {
-    ForwardUnion var_forwardunion;
+    ForwardStruct var_ForwardStruct;
+    ForwardUnion var_ForwardUnion;
 };
 
-struct ForwardStructStructure
+struct ForwardDeclarationsRecursiveStruct
 {
-    ForwardStruct var_forwardstruct;
-};
-
-struct ForwardUnionChildStructure
-{
-    ForwardUnionChild var_forwardunionchild;
-};
-
-struct ForwardStructChildStructure
-{
-    ForwardStructChild var_forwardstructchild;
-};
-
-struct ModuleStructStructure
-{
-    ModuleStruct var_modulestruct;
-};
-
-struct ForwardUnionChildStructure
-{
-    ForwardUnionChild var_forwardunionchild;
-};
-
-struct ForwardUnionChildStructure
-{
-    ForwardUnionChild var_forwardunionchild;
+    RecursiveUnboundedSeqForwardStruct var_RecursiveUnboundedSeqForwardStruct;
+    RecursiveBoundedSeqForwardStruct var_RecursiveBoundedSeqForwardStruct;
+    RecursiveUnboundedSeqForwardUnion var_RecursiveUnboundedSeqForwardUnion;
+    RecursiveBoundedSeqForwardUnion var_RecursiveBoundedSeqForwardUnion;
 };
 
 union ForwardUnion switch (long)
@@ -46,79 +29,49 @@ union ForwardUnion switch (long)
 
 struct ForwardStruct
 {
-    long field1;
-    float field2;
+    short var_short;
+    long var_long;
 };
 
-union ForwardUnionChild : ForwardUnion
+module declarations_module
 {
-    case 3:
-        long case_three;
+    struct ModuledForwardStruct;
+    union ModuledForwardUnion;
+    typedef sequence<ModuledForwardStruct> ModuledRecursiveUnboundedSeqForwardStruct;
+    typedef sequence<ModuledForwardStruct, 10> ModuledRecursiveBoundedSeqForwardStruct;
+    typedef sequence<ModuledForwardUnion> ModuledRecursiveUnboundedSeqForwardUnion;
+    typedef sequence<ModuledForwardUnion, 10> ModuledRecursiveBoundedSeqForwardUnion;
 };
 
-struct ForwardStructChild : ForwardStruct
+struct ModuledForwardDeclarationsStruct
 {
-    long field3;
-    float field4;
+    declarations_module::ModuledForwardStruct var_ModuledForwardStruct;
+    declarations_module::ModuledForwardUnion var_ModuledForwardUnion;
 };
 
-module my_module
+struct ModuledForwardDeclarationsRecursiveStruct
 {
-    union ModuleForwardUnion;
-    struct ModuleForwardStruct;
-}
+    declarations_module::ModuledRecursiveUnboundedSeqForwardStruct var_ModuledRecursiveUnboundedSeqForwardStruct;
+    declarations_module::ModuledRecursiveBoundedSeqForwardStruct var_ModuledRecursiveBoundedSeqForwardStruct;
 
-struct ModuleStruct
-{
-    my_module::ModuleForwardUnion var_funion;
-    my_module::ModuleForwardStruct var_fstruct;
+
+    declarations_module::ModuledRecursiveUnboundedSeqForwardUnion var_ModuledRecursiveUnboundedSeqForwardUnion;
+    declarations_module::ModuledRecursiveBoundedSeqForwardUnion var_ModuledRecursiveBoundedSeqForwardUnion;
 };
 
-module my_module
-{    
-    union ModuleForwardUnion switch (long)
+module declarations_module
+{
+    struct ModuledForwardStruct
+    {
+        short var_short;
+        long var_long;
+    };
+
+    union ModuledForwardUnion switch (long)
     {
         case 0:
             long case_zero;
         case 1:
             long case_one;
     };
-
-    struct ModuleForwardStruct
-    {
-        long field1;
-        float field2;
-    };
-    
-    union ModuleForwardUnionChild : ModuleForwardUnion
-    {
-        case 3:
-            long case_three;
-    };
-
-    struct ModuleForwardStructChild : ModuleForwardStruct
-    {
-        long field3;
-        float field4;
-    };
-
-    struct ModuleForwardUnionStructure
-    {
-        ModuleForwardUnion var_moduleforwardunion;
-    };
-
-    struct ModuleForwardStructStructure
-    {
-        ModuleForwardStruct var_moduleforwardstruct;
-    };
-
-    struct ModuleForwardUnionChildStructure
-    {
-        ModuleForwardUnionChild var_moduleforwardunionchild;
-    };
-
-    struct ModuleForwardStructChildStructure
-    {
-        ModuleForwardStructChild var_moduleforwardstructchild;
-    };
-}
+};
