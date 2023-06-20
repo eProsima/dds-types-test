@@ -162,7 +162,7 @@ struct MapKeyULongLong
 
 struct MapKeyString
 {
-    map<long, string> var_map_string;
+    map<string, string> var_map_string;
 };
 
 struct MapKeyWString
