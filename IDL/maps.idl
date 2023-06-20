@@ -75,6 +75,16 @@ struct MapWString
     map<long, wstring> var_map_wstring;
 };
 
+struct MapBoundedString
+{
+    map<long, Inner_alias_bounded_string_helper> var_map_bounded_string;
+};
+
+struct MapBoundedWString
+{
+    map<long, Inner_alias_bounded_wstring_helper> var_map_bounded_wstring;
+};
+
 struct MapEnum
 {
     map<long, InnerEnumHelper> var_map_enum;
