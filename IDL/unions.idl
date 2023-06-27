@@ -90,6 +90,18 @@ union Union_WString switch (long)
         wstring o;
 };
 
+union Union_BoundedString switch (long)
+{ 
+    case 13:
+        Inner_alias_bounded_string_helper bn;
+};
+
+union Union_BoundedWString switch (long)
+{ 
+    case 14:
+        Inner_alias_bounded_wstring_helper bo;
+};
+
 union Union_InnerEnumHelper switch (long)
 { 
     case 15:

@@ -65,14 +65,24 @@ struct Char16Struct
     wchar var_char16;
 };
 
-struct String8Struct
+struct StringStruct
 {
-    string var_string8;
+    string var_string;
 };
 
-struct String16Struct
+struct WStringStruct
 {
-    wstring var_string16;
+    wstring var_wstring;
+};
+
+struct BoundedStringStruct
+{
+    Inner_alias_bounded_string_helper var_bounded_string;
+};
+
+struct BoundedWStringStruct
+{
+    Inner_alias_bounded_wstring_helper var_bounded_wstring;
 };
 
 struct EnumStruct
@@ -141,8 +151,8 @@ struct Structures
     OctetStruct var_OctetStruct;
     Char8Struct var_Char8Struct;
     Char16Struct var_Char16Struct;
-    String8Struct var_String8Struct;
-    String16Struct var_String16Struct;
+    StringStruct var_StringStruct;
+    WStringStruct var_WStringStruct;
     EnumStruct var_EnumStruct;
     BitMaskStruct var_BitMaskStruct;
     AliasStruct var_AliasStruct;
