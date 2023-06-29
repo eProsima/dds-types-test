@@ -1196,3 +1196,145 @@ struct MapInnerAliasBoundedStringHelperInnerBitsetHelper
     map<Inner_alias_bounded_string_helper, InnerBitsetHelper> var_map_inneraliasboundedstringhelper_innerbitsethelper;
 };
 
+
+
+struct MapInnerAliasBoundedWStringHelperShort
+{
+    map<Inner_alias_bounded_wstring_helper, short> var_map_inneraliasboundedwstringhelper_short;
+};
+
+struct MapInnerAliasBoundedWStringHelperUShort
+{
+    map<Inner_alias_bounded_wstring_helper, unsigned short> var_map_inneraliasboundedwstringhelper_ushort;
+};
+
+struct MapInnerAliasBoundedWStringHelperLong
+{
+    map<Inner_alias_bounded_wstring_helper, long> var_map_inneraliasboundedwstringhelper_long;
+};
+
+struct MapInnerAliasBoundedWStringHelperULong
+{
+    map<Inner_alias_bounded_wstring_helper, unsigned long> var_map_inneraliasboundedwstringhelper_ulong;
+};
+
+struct MapInnerAliasBoundedWStringHelperLongLong
+{
+    map<Inner_alias_bounded_wstring_helper, long long> var_map_inneraliasboundedwstringhelper_longlong;
+};
+
+struct MapInnerAliasBoundedWStringHelperULongLong
+{
+    map<Inner_alias_bounded_wstring_helper, unsigned long long> var_map_inneraliasboundedwstringhelper_ulonglong;
+};
+
+struct MapInnerAliasBoundedWStringHelperFloat
+{
+    map<Inner_alias_bounded_wstring_helper, float> var_map_inneraliasboundedwstringhelper_float;
+};
+
+struct MapInnerAliasBoundedWStringHelperDouble
+{
+    map<Inner_alias_bounded_wstring_helper, double> var_map_inneraliasboundedwstringhelper_double;
+};
+
+struct MapInnerAliasBoundedWStringHelperLongDouble
+{
+    map<Inner_alias_bounded_wstring_helper, long double> var_map_inneraliasboundedwstringhelper_longdouble;
+};
+
+struct MapInnerAliasBoundedWStringHelperBoolean
+{
+    map<Inner_alias_bounded_wstring_helper, boolean> var_map_inneraliasboundedwstringhelper_boolean;
+};
+
+struct MapInnerAliasBoundedWStringHelperOctet
+{
+    map<Inner_alias_bounded_wstring_helper, octet> var_map_inneraliasboundedwstringhelper_octet;
+};
+
+struct MapInnerAliasBoundedWStringHelperChar
+{
+    map<Inner_alias_bounded_wstring_helper, char> var_map_inneraliasboundedwstringhelper_char;
+};
+
+struct MapInnerAliasBoundedWStringHelperWChar
+{
+    map<Inner_alias_bounded_wstring_helper, wchar> var_map_inneraliasboundedwstringhelper_wchar;
+};
+
+struct MapInnerAliasBoundedWStringHelperString
+{
+    map<Inner_alias_bounded_wstring_helper, string> var_map_inneraliasboundedwstringhelper_string;
+};
+
+struct MapInnerAliasBoundedWStringHelperWString
+{
+    map<Inner_alias_bounded_wstring_helper, wstring> var_map_inneraliasboundedwstringhelper_wstring;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerAliasBoundedStringHelper
+{
+    map<Inner_alias_bounded_wstring_helper, Inner_alias_bounded_string_helper> var_map_inneraliasboundedwstringhelper_inneraliasboundedstringhelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerAliasBoundedWStringHelper
+{
+    map<Inner_alias_bounded_wstring_helper, Inner_alias_bounded_wstring_helper> var_map_inneraliasboundedwstringhelper_inneraliasboundedwstringhelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerEnumHelper
+{
+    map<Inner_alias_bounded_wstring_helper, InnerEnumHelper> var_map_inneraliasboundedwstringhelper_innerenumhelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerBitMaskHelper
+{
+    map<Inner_alias_bounded_wstring_helper, InnerBitMaskHelper> var_map_inneraliasboundedwstringhelper_innerbitmaskhelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerAliasHelper
+{
+    map<Inner_alias_bounded_wstring_helper, InnerAliasHelper> var_map_inneraliasboundedwstringhelper_inneraliashelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerAliasArrayHelper
+{
+    map<Inner_alias_bounded_wstring_helper, Inner_alias_array_helper> var_map_inneraliasboundedwstringhelper_inneraliasarrayhelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerAliasSequenceHelper
+{
+    map<Inner_alias_bounded_wstring_helper, Inner_alias_sequence_helper> var_map_inneraliasboundedwstringhelper_inneraliassequencehelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerAliasMapHelper
+{
+    map<Inner_alias_bounded_wstring_helper, Inner_alias_map_helper> var_map_inneraliasboundedwstringhelper_inneraliasmaphelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerUnionHelper
+{
+    map<Inner_alias_bounded_wstring_helper, InnerUnionHelper> var_map_inneraliasboundedwstringhelper_innerunionhelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerStructureHelper
+{
+    map<Inner_alias_bounded_wstring_helper, InnerStructureHelper> var_map_inneraliasboundedwstringhelper_innerstructurehelper;
+};
+
+struct MapInnerAliasBoundedWStringHelperInnerBitsetHelper
+{
+    map<Inner_alias_bounded_wstring_helper, InnerBitsetHelper> var_map_inneraliasboundedwstringhelper_innerbitsethelper;
+};
+
+
+struct BoundedSmallMap
+{
+    map<long,long,1> var_small_map;
+};
+
+struct BoundedLargeMap
+{
+    map<long,long,41925> var_large_map;
+};

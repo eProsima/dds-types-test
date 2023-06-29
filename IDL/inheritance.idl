@@ -16,12 +16,22 @@ struct InnerStructureHelperEmptyChild : InnerStructureHelper
 {
 };
 
+struct InnerEmptyStructureHelperChild : InnerEmptyStructureHelper
+{
+    long long var_child_longlong;
+    unsigned long long var_child_ulonglong;
+};
+
+
+
 
 struct StructuresInheritanceStruct
 {
     InnerStructureHelperChild var_InnerStructureHelperChild;
     InnerStructureHelperChildChild var_InnerStructureHelperChildChild;
     InnerStructureHelperEmptyChild var_InnerStructureHelperEmptyChild;
+    InnerEmptyStructureHelperChild var_InnerEmptyStructureHelperChild;
+
 };
 
 bitset InnerBitsetHelperChild : InnerBitsetHelper

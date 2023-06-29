@@ -21,6 +21,10 @@ struct InnerStructureHelper
     float field2;
 };
 
+struct InnerEmptyStructureHelper
+{
+};
+
 union InnerUnionHelper switch (long)
 {
     case 0: long longValue;

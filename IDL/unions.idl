@@ -328,6 +328,16 @@ struct UnionWString
     Union_WString var_union_wstring;
 };
 
+struct UnionBoundedString
+{
+    Union_BoundedString var_union_bounded_string;
+};
+
+struct UnionBoundedWString
+{
+    Union_BoundedWString var_union_bounded_wstring;
+};
+
 struct UnionInnerEnumHelper
 {
     Union_InnerEnumHelper var_union_my_enum;
