@@ -29,6 +29,7 @@ union InnerUnionHelper switch (long)
 {
     case 0: long longValue;
     case 1: float floatValue;
+    default: short shortValue;
 };
 
 bitset InnerBitsetHelper
