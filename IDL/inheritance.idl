@@ -1,0 +1,51 @@
+#include "helpers/basic_inner_types.idl"
+
+struct InnerStructureHelperChild : InnerStructureHelper
+{
+    long long var_child_longlong;
+    unsigned long long var_child_ulonglong;
+};
+
+struct InnerStructureHelperChildChild : InnerStructureHelperChild
+{
+    long long var_child_childlonglong2;
+    unsigned long long var_childchild_ulonglong2;
+};
+
+struct InnerStructureHelperEmptyChild : InnerStructureHelper
+{
+};
+
+struct InnerEmptyStructureHelperChild : InnerEmptyStructureHelper
+{
+    long long var_child_longlong;
+    unsigned long long var_child_ulonglong;
+};
+
+
+
+
+struct StructuresInheritanceStruct
+{
+    InnerStructureHelperChild var_InnerStructureHelperChild;
+    InnerStructureHelperChildChild var_InnerStructureHelperChildChild;
+    InnerStructureHelperEmptyChild var_InnerStructureHelperEmptyChild;
+    InnerEmptyStructureHelperChild var_InnerEmptyStructureHelperChild;
+
+};
+
+bitset InnerBitsetHelperChild : InnerBitsetHelper
+{
+    bitfield<17> child_w;
+};
+
+bitset InnerBitsetHelperChildChild : InnerBitsetHelperChild
+{
+    bitfield<18> childchild_z;
+};
+
+struct BitsetsChildInheritanceStruct
+{
+    InnerBitsetHelperChild var_InnerBitsetHelperChild;
+    InnerBitsetHelperChildChild var_InnerBitsetHelperChildChild;
+};

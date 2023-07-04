@@ -1,0 +1,11 @@
+#include "helpers/basic_inner_types.idl"
+
+struct EnumStructure
+{
+    InnerEnumHelper var_InnerEnumHelper;
+};
+
+struct BitMaskStructure
+{
+    InnerBitMaskHelper var_InnerBitMaskHelper;
+};

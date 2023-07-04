@@ -1,0 +1,77 @@
+struct ForwardStruct;
+union ForwardUnion;
+typedef sequence<ForwardStruct> RecursiveUnboundedSeqForwardStruct;
+typedef sequence<ForwardStruct, 10> RecursiveBoundedSeqForwardStruct;
+typedef sequence<ForwardUnion> RecursiveUnboundedSeqForwardUnion;
+typedef sequence<ForwardUnion, 10> RecursiveBoundedSeqForwardUnion;
+
+struct ForwardDeclarationsStruct
+{
+    ForwardStruct var_ForwardStruct;
+    ForwardUnion var_ForwardUnion;
+};
+
+struct ForwardDeclarationsRecursiveStruct
+{
+    RecursiveUnboundedSeqForwardStruct var_RecursiveUnboundedSeqForwardStruct;
+    RecursiveBoundedSeqForwardStruct var_RecursiveBoundedSeqForwardStruct;
+    RecursiveUnboundedSeqForwardUnion var_RecursiveUnboundedSeqForwardUnion;
+    RecursiveBoundedSeqForwardUnion var_RecursiveBoundedSeqForwardUnion;
+};
+
+union ForwardUnion switch (long)
+{
+    case 0:
+        long case_zero;
+    case 1:
+        long case_one;
+};
+
+struct ForwardStruct
+{
+    short var_short;
+    long var_long;
+};
+
+module declarations_module
+{
+    struct ModuledForwardStruct;
+    union ModuledForwardUnion;
+    typedef sequence<ModuledForwardStruct> ModuledRecursiveUnboundedSeqForwardStruct;
+    typedef sequence<ModuledForwardStruct, 10> ModuledRecursiveBoundedSeqForwardStruct;
+    typedef sequence<ModuledForwardUnion> ModuledRecursiveUnboundedSeqForwardUnion;
+    typedef sequence<ModuledForwardUnion, 10> ModuledRecursiveBoundedSeqForwardUnion;
+};
+
+struct ModuledForwardDeclarationsStruct
+{
+    declarations_module::ModuledForwardStruct var_ModuledForwardStruct;
+    declarations_module::ModuledForwardUnion var_ModuledForwardUnion;
+};
+
+struct ModuledForwardDeclarationsRecursiveStruct
+{
+    declarations_module::ModuledRecursiveUnboundedSeqForwardStruct var_ModuledRecursiveUnboundedSeqForwardStruct;
+    declarations_module::ModuledRecursiveBoundedSeqForwardStruct var_ModuledRecursiveBoundedSeqForwardStruct;
+
+
+    declarations_module::ModuledRecursiveUnboundedSeqForwardUnion var_ModuledRecursiveUnboundedSeqForwardUnion;
+    declarations_module::ModuledRecursiveBoundedSeqForwardUnion var_ModuledRecursiveBoundedSeqForwardUnion;
+};
+
+module declarations_module
+{
+    struct ModuledForwardStruct
+    {
+        short var_short;
+        long var_long;
+    };
+
+    union ModuledForwardUnion switch (long)
+    {
+        case 0:
+            long case_zero;
+        case 1:
+            long case_one;
+    };
+};
