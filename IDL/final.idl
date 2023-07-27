@@ -75,3 +75,25 @@ struct WCharStruct
 {
     wchar var_char16;
 };
+
+@final
+struct EmptyStruct
+{
+};
+
+@final
+struct EmptyInheritanceStruct : EmptyStruct
+{
+    string var_str;
+};
+
+@final
+struct InheritanceStruct : ShortStruct
+{
+    string var_str;
+};
+
+@final
+struct InheritanceEmptyStruct : ShortStruct
+{
+};

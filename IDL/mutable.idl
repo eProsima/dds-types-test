@@ -1,5 +1,5 @@
 @mutable
-struct ShortStructStruct
+struct ShortStruct
 {
     short var_short;
 };
@@ -74,4 +74,26 @@ struct CharStruct
 struct WCharStruct
 {
     wchar var_char16;
+};
+
+@mutable
+struct EmptyStruct
+{
+};
+
+@mutable
+struct EmptyInheritanceStruct : EmptyStruct
+{
+    string var_str;
+};
+
+@mutable
+struct InheritanceStruct : ShortStruct
+{
+    string var_str;
+};
+
+@mutable
+struct InheritanceEmptyStruct : ShortStruct
+{
 };
