@@ -13,6 +13,15 @@ bitmask InnerBitMaskHelper
     @position(6) flag6
 };
 
+@bit_bound(8)
+bitmask InnerBoundedBitMaskHelper
+{
+    @position(0) bflag0,
+    @position(1) bflag1,
+    @position(4) bflag4,
+    @position(6) bflag6
+};
+
 typedef long InnerAliasHelper;
 
 struct InnerStructureHelper

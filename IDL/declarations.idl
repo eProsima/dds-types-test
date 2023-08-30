@@ -5,6 +5,12 @@ typedef sequence<ForwardStruct, 10> RecursiveBoundedSeqForwardStruct;
 typedef sequence<ForwardUnion> RecursiveUnboundedSeqForwardUnion;
 typedef sequence<ForwardUnion, 10> RecursiveBoundedSeqForwardUnion;
 
+@annotation ForwardAnnotation
+{
+    short value;
+    string name;
+};
+
 struct ForwardDeclarationsStruct
 {
     ForwardStruct var_ForwardStruct;
@@ -61,6 +67,7 @@ struct ModuledForwardDeclarationsRecursiveStruct
 
 module declarations_module
 {
+    @ForwardAnnotation(value=1,name="ForwardAnnotation")
     struct ModuledForwardStruct
     {
         short var_short;
