@@ -81,19 +81,19 @@ struct EmptyStruct
 {
 };
 
-@extensibility("APPENDABLE")
+@extensibility(APPENDABLE)
 struct EmptyInheritanceStruct : EmptyStruct
 {
     string var_str;
 };
 
-@extensibility("APPENDABLE")
+@extensibility(APPENDABLE)
 struct InheritanceStruct : ShortStruct
 {
     string var_str;
 };
 
-@extensibility("APPENDABLE")
+@extensibility(APPENDABLE)
 struct InheritanceEmptyStruct : ShortStruct
 {
 };
