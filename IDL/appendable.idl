@@ -1,99 +1,99 @@
 @appendable
-struct ShortStructStruct
+struct AppendableShortStruct
 {
     short var_short;
 };
 
 @appendable
-struct UShortStruct
+struct AppendableUShortStruct
 {
     unsigned short var_ushort;
 };
 
 @appendable
-struct LongStruct
+struct AppendableLongStruct
 {
     long var_long;
 };
 
 @appendable
-struct ULongStruct
+struct AppendableULongStruct
 {
     unsigned long var_ulong;
 };
 
 @appendable
-struct LongLongStruct
+struct AppendableLongLongStruct
 {
     long long var_longlong;
 };
 
 @appendable
-struct ULongLongStruct
+struct AppendableULongLongStruct
 {
     unsigned long long var_ulonglong;
 };
 
 @appendable
-struct FloatStruct
+struct AppendableFloatStruct
 {
     float var_float;
 };
 
 @appendable
-struct DoubleStruct
+struct AppendableDoubleStruct
 {
     double var_double;
 };
 
 @appendable
-struct LongDoubleStruct
+struct AppendableLongDoubleStruct
 {
     long double var_longdouble;
 };
 
 @appendable
-struct BooleanStruct
+struct AppendableBooleanStruct
 {
     boolean var_boolean;
 };
 
 @appendable
-struct OctetStruct
+struct AppendableOctetStruct
 {
     octet var_octet;
 };
 
 @appendable
-struct CharStruct
+struct AppendableCharStruct
 {
     char var_char8;
 };
 
 @appendable
-struct WCharStruct
+struct AppendableWCharStruct
 {
     wchar var_char16;
 };
 
 @appendable
-struct EmptyStruct
+struct AppendableEmptyStruct
 {
 };
 
-@extensibility(APPENDABLE)
-struct EmptyInheritanceStruct : EmptyStruct
-{
-    string var_str;
-};
-
-@extensibility(APPENDABLE)
-struct InheritanceStruct : ShortStruct
+@appendable
+struct AppendableEmptyInheritanceStruct : AppendableEmptyStruct
 {
     string var_str;
 };
 
-@extensibility(APPENDABLE)
-struct InheritanceEmptyStruct : ShortStruct
+@appendable
+struct AppendableInheritanceStruct : AppendableShortStruct
+{
+    string var_str;
+};
+
+@appendable
+struct AppendableInheritanceEmptyStruct : AppendableShortStruct
 {
 };
