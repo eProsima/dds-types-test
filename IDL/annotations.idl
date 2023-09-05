@@ -18,6 +18,8 @@
     string var_string;
     wstring var_wstring;
     InnerEnumHelper var_enum default ENUM_VALUE_1;
+    enum DeclaredEnum {ONE, TWO};
+    DeclaredEnum value default TWO;
 };
 
 @AnnotationTest(
