@@ -1,99 +1,99 @@
 @final
-struct ShortStructStruct
+struct FinalShortStruct
 {
     short var_short;
 };
 
 @final
-struct UShortStruct
+struct FinalUShortStruct
 {
     unsigned short var_ushort;
 };
 
 @final
-struct LongStruct
+struct FinalLongStruct
 {
     long var_long;
 };
 
 @final
-struct ULongStruct
+struct FinalULongStruct
 {
     unsigned long var_ulong;
 };
 
 @final
-struct LongLongStruct
+struct FinalLongLongStruct
 {
     long long var_longlong;
 };
 
 @final
-struct ULongLongStruct
+struct FinalULongLongStruct
 {
     unsigned long long var_ulonglong;
 };
 
 @final
-struct FloatStruct
+struct FinalFloatStruct
 {
     float var_float;
 };
 
 @final
-struct DoubleStruct
+struct FinalDoubleStruct
 {
     double var_double;
 };
 
 @final
-struct LongDoubleStruct
+struct FinalLongDoubleStruct
 {
     long double var_longdouble;
 };
 
 @final
-struct BooleanStruct
+struct FinalBooleanStruct
 {
     boolean var_boolean;
 };
 
 @final
-struct OctetStruct
+struct FinalOctetStruct
 {
     octet var_octet;
 };
 
 @final
-struct CharStruct
+struct FinalCharStruct
 {
     char var_char8;
 };
 
 @final
-struct WCharStruct
+struct FinalWCharStruct
 {
     wchar var_char16;
 };
 
 @final
-struct EmptyStruct
+struct FinalEmptyStruct
 {
 };
 
-@extensibility(FINAL)
-struct EmptyInheritanceStruct : EmptyStruct
-{
-    string var_str;
-};
-
-@extensibility(FINAL)
-struct InheritanceStruct : ShortStruct
+@final
+struct FinalEmptyInheritanceStruct : FinalEmptyStruct
 {
     string var_str;
 };
 
-@extensibility(FINAL)
-struct InheritanceEmptyStruct : ShortStruct
+@final
+struct FinalInheritanceStruct : FinalShortStruct
+{
+    string var_str;
+};
+
+@final
+struct InheritanceEmptyStruct : FinalShortStruct
 {
 };

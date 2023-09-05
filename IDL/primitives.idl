@@ -1,4 +1,4 @@
-struct ShortStructStruct
+struct ShortStruct
 {
     short var_short;
 };

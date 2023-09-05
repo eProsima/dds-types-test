@@ -1,166 +1,164 @@
 #include "helpers/basic_inner_types.idl"
 
-struct ShortStruct
+struct StructShort
 {
     short var_short;
 };
 
-struct UnsignedShortStruct
+struct StructUnsignedShort
 {
     unsigned short var_ushort;
 };
 
-struct LongStruct
+struct StructLong
 {
     long var_long;
 };
 
-struct UnsignedLongStruct
+struct StructUnsignedLong
 {
     unsigned long var_ulong;
 };
 
-struct LongLongStruct
+struct StructLongLong
 {
     long long var_longlong;
 };
 
-struct UnsignedLongLongStruct
+struct StructUnsignedLongLong
 {
     unsigned long long var_ulonglong;
 };
 
-struct FloatStruct
+struct StructFloat
 {
     float var_float;
 };
 
-struct DoubleStruct
+struct StructDouble
 {
     double var_double;
 };
 
-struct LongDoubleStruct
+struct StructLongDouble
 {
     long double var_longdouble;
 };
 
-struct BooleanStruct
+struct StructBoolean
 {
     boolean var_boolean;
 };
 
-struct OctetStruct
+struct StructOctet
 {
     octet var_octet;
 };
 
-struct Char8Struct
+struct StructChar8
 {
     char var_char8;
 };
 
-struct Char16Struct
+struct StructChar16
 {
     wchar var_char16;
 };
 
-struct StringStruct
+struct StructString
 {
     string var_string;
 };
 
-struct WStringStruct
+struct StructWString
 {
     wstring var_wstring;
 };
 
-struct BoundedStringStruct
+struct StructBoundedString
 {
     Inner_alias_bounded_string_helper var_bounded_string;
 };
 
-struct BoundedWStringStruct
+struct StructBoundedWString
 {
     Inner_alias_bounded_wstring_helper var_bounded_wstring;
 };
 
-struct EnumStruct
+struct StructEnum
 {
     InnerEnumHelper var_enum;
 };
 
-struct BitMaskStruct
+struct StructBitMask
 {
     InnerBitMaskHelper var_bitmask;
 };
 
-struct AliasStruct
+struct StructAlias
 {
     InnerAliasHelper var_alias;
 };
 
-struct ShortArrayStruct
+struct StructShortArray
 {
     short var_array_short[10];
 };
 
-struct SequenceStruct
+struct StructSequence
 {
     sequence<long> var_sequence;
 };
 
-struct MapStruct
+struct StructMap
 {
     map<long, long> var_map;
 };
 
-struct UnionStruct
+struct StructUnion
 {
     InnerUnionHelper var_union;
 };
 
-struct StructureStruct
+struct StructStructure
 {
     InnerStructureHelper var_structure;
 };
 
-struct BitsetStruct
+struct StructBitset
 {
     InnerBitsetHelper var_bitset;
 };
 
-struct EmptyStructure
+struct StructEmpty
 {
 };
 
-
-
 struct Structures
 {
-    ShortStruct var_ShortStruct;
-    UnsignedShortStruct var_UnsignedShortStruct;
-    LongStruct var_LongStruct;
-    UnsignedLongStruct var_UnsignedLongStruct;
-    LongLongStruct var_LongLongStruct;
-    UnsignedLongLongStruct var_UnsignedLongLongStruct;
-    FloatStruct var_FloatStruct;
-    DoubleStruct var_DoubleStruct;
-    LongDoubleStruct var_LongDoubleStruct;
-    BooleanStruct var_BooleanStruct;
-    OctetStruct var_OctetStruct;
-    Char8Struct var_Char8Struct;
-    Char16Struct var_Char16Struct;
-    StringStruct var_StringStruct;
-    WStringStruct var_WStringStruct;
-    EnumStruct var_EnumStruct;
-    BitMaskStruct var_BitMaskStruct;
-    AliasStruct var_AliasStruct;
-    ShortArrayStruct var_ShortArrayStruct;
-    SequenceStruct var_SequenceStruct;
-    MapStruct var_MapStruct;
-    UnionStruct var_UnionStruct;
-    StructureStruct var_StructureStruct;
-    BitsetStruct var_BitsetStruct;
-    EmptyStructure var_EmptyStructure;
+    StructShort var_StructShort;
+    StructUnsignedShort var_StructUnsignedShort;
+    StructLong var_StructLong;
+    StructUnsignedLong var_StructUnsignedLong;
+    StructLongLong var_StructLongLong;
+    StructUnsignedLongLong var_StructUnsignedLongLong;
+    StructFloat var_StructFloat;
+    StructDouble var_StructDouble;
+    StructLongDouble var_StructLongDouble;
+    StructBoolean var_StructBoolean;
+    StructOctet var_StructOctet;
+    StructChar8 var_StructChar8;
+    StructChar16 var_StructChar16;
+    StructString var_StructString;
+    StructWString var_StructWString;
+    StructEnum var_StructEnum;
+    StructBitMask var_StructBitMask;
+    StructAlias var_StructAlias;
+    StructShortArray var_StructShortArray;
+    StructSequence var_StructSequence;
+    StructMap var_StructMap;
+    StructUnion var_StructUnion;
+    StructStructure var_StructStructure;
+    StructBitset var_StructBitset;
+    StructEmpty var_StructEmpty;
 };

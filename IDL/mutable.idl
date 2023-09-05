@@ -1,99 +1,99 @@
 @mutable
-struct ShortStruct
+struct MutableShortStruct
 {
     short var_short;
 };
 
 @mutable
-struct UShortStruct
+struct MutableUShortStruct
 {
     unsigned short var_ushort;
 };
 
 @mutable
-struct LongStruct
+struct MutableLongStruct
 {
     long var_long;
 };
 
 @mutable
-struct ULongStruct
+struct MutableULongStruct
 {
     unsigned long var_ulong;
 };
 
 @mutable
-struct LongLongStruct
+struct MutableLongLongStruct
 {
     long long var_longlong;
 };
 
 @mutable
-struct ULongLongStruct
+struct MutableULongLongStruct
 {
     unsigned long long var_ulonglong;
 };
 
 @mutable
-struct FloatStruct
+struct MutableFloatStruct
 {
     float var_float;
 };
 
 @mutable
-struct DoubleStruct
+struct MutableDoubleStruct
 {
     double var_double;
 };
 
 @mutable
-struct LongDoubleStruct
+struct MutableLongDoubleStruct
 {
     long double var_longdouble;
 };
 
 @mutable
-struct BooleanStruct
+struct MutableBooleanStruct
 {
     boolean var_boolean;
 };
 
 @mutable
-struct OctetStruct
+struct MutableOctetStruct
 {
     octet var_octet;
 };
 
 @mutable
-struct CharStruct
+struct MutableCharStruct
 {
     char var_char8;
 };
 
 @mutable
-struct WCharStruct
+struct MutableWCharStruct
 {
     wchar var_char16;
 };
 
 @mutable
-struct EmptyStruct
+struct MutableEmptyStruct
 {
 };
 
 @extensibility(MUTABLE)
-struct EmptyInheritanceStruct : EmptyStruct
-{
-    string var_str;
-};
-
-@extensibility(MUTABLE)
-struct InheritanceStruct : ShortStruct
+struct MutableEmptyInheritanceStruct : MutableEmptyStruct
 {
     string var_str;
 };
 
 @extensibility(MUTABLE)
-struct InheritanceEmptyStruct : ShortStruct
+struct MutableInheritanceStruct : MutableShortStruct
+{
+    string var_str;
+};
+
+@extensibility(MUTABLE)
+struct MutableInheritanceEmptyStruct : MutableShortStruct
 {
 };
