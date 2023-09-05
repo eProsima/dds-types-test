@@ -41,7 +41,7 @@ bitset InnerBitsetHelperChild : InnerBitsetHelper
 
 bitset InnerBitsetHelperChildChild : InnerBitsetHelperChild
 {
-    bitfield<18> childchild_z;
+    bitfield<17> childchild_z;
 };
 
 struct BitsetsChildInheritanceStruct

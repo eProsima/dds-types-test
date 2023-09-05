@@ -17,6 +17,7 @@
     wchar var_char16;
     string var_string;
     wstring var_wstring;
+    InnerEnumHelper var_enum default ENUM_VALUE_1;
 };
 
 @AnnotationTest(
@@ -38,19 +39,4 @@
     )
 struct AnnotatedStruct
 {
-    short var_short;
-    unsigned short var_ushort;
-    long var_long;
-    unsigned long var_ulong;
-    long long var_longlong;
-    unsigned long long var_ulonglong;
-    float var_float;
-    double var_double;
-    long double var_longdouble;
-    boolean var_boolean;
-    octet var_octet;
-    char var_char8;
-    wchar var_char16;
-    string var_string;
-    wstring var_wstring;
 };

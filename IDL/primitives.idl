@@ -62,3 +62,42 @@ struct WCharStruct
 {
     wchar var_char16;
 };
+
+struct Int8Struct
+{
+    int8 var_int8;
+};
+struct Uint8Struct
+{
+    uint8 var_uint8;
+};
+
+struct Int16Struct
+{
+    int16 var_int16;
+};
+
+struct Uint16Struct
+{
+    uint16 var_uint16;
+};
+
+struct Int32Struct
+{
+    int32 var_int32;
+};
+
+struct Uint32Struct
+{
+    uint32 var_uint32;
+};
+
+struct Int64Struct
+{
+    int64 var_int64;
+};
+
+struct Uint64Struct
+{
+    uint64 var_uint64;
+};
