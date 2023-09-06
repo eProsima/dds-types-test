@@ -9,3 +9,8 @@ struct BitMaskStructure
 {
     InnerBitMaskHelper var_InnerBitMaskHelper;
 };
+
+struct BoundedBitMaskStructure
+{
+    InnerBoundedBitMaskHelper var_InnerBoundedBitMaskHelper;
+};

@@ -1,0 +1,48 @@
+#include "helpers/basic_inner_types.idl"
+
+@annotation AnnotationTest
+{
+    short var_short;
+    unsigned short var_ushort;
+    long var_long;
+    unsigned long var_ulong;
+    long long var_longlong;
+    unsigned long long var_ulonglong;
+    float var_float;
+    double var_double;
+    long double var_longdouble;
+    boolean var_boolean;
+    octet var_octet;
+    char var_char8;
+    wchar var_char16;
+    string var_string;
+    wstring var_wstring;
+    enum InnerEnumHelper
+    {
+        ONE,
+        TWO
+    };
+    InnerEnumHelper value default TWO;
+};
+
+@AnnotationTest(
+    var_short = 1,
+    var_ushort = 1,
+    var_long = 1,
+    var_ulong = 1,
+    var_longlong = 1,
+    var_ulonglong = 1,
+    var_float = 1,
+    var_double = 1,
+    var_longdouble = 1,
+    var_boolean = true,
+    var_octet = 0,
+    var_char8 = "a",
+    var_char16 = L"a",
+    var_string = "a",
+    var_wstring = L"a",
+    value = ONE
+    )
+struct AnnotatedStruct
+{
+};
