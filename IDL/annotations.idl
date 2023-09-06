@@ -17,9 +17,12 @@
     wchar var_char16;
     string var_string;
     wstring var_wstring;
-    InnerEnumHelper var_enum default ENUM_VALUE_1;
-    enum DeclaredEnum {ONE, TWO};
-    DeclaredEnum value default TWO;
+    enum InnerEnumHelper
+    {
+        ONE,
+        TWO
+    };
+    InnerEnumHelper value default TWO;
 };
 
 @AnnotationTest(
@@ -37,7 +40,8 @@
     var_char8 = "a",
     var_char16 = L"a",
     var_string = "a",
-    var_wstring = L"a"
+    var_wstring = L"a",
+    value = ONE
     )
 struct AnnotatedStruct
 {
