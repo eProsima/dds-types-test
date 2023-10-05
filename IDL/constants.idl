@@ -44,8 +44,7 @@ module const_module1
 module const_module2
 {
     const short const_moduled = 22;
-    const const_moduled::alias_short_moduled alias_const_moduled = 2;
-
+    const const_module1::alias_short_moduled alias_const_moduled = 2;
 
     struct Module2ConstsLiteralsStruct
     {
