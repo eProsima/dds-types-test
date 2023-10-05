@@ -1,3 +1,5 @@
+#include "helpers/basic_inner_types.idl"
+
 const short const_short = 1;
 const unsigned short const_ushort = 1;
 const long const_long = 1;
@@ -22,21 +24,34 @@ const uint64 const_uint64 = 1;
 const string const_string = "11";
 const wstring const_wstring = L"11";
 
-module const_module
+
+typedef short alias_short;
+const alias_short alias_const = 1;
+
+
+module const_module1
 {
     const short const_moduled = 11;
+    typedef short alias_short_moduled;
+    const alias_short_moduled alias_const_moduled = 1;
+
     struct ModuleConstsLiteralsStruct
     {
-        short module_array_literal_const_short[const_moduled];
+        short module1_array_literal_const_moduled[const_moduled];
+        short module1_array_literal_const_alias_const_moduled[alias_const_moduled];
     };
 };
 
 module const_module2
 {
     const short const_moduled = 22;
+    typedef short alias_short_moduled;
+    const alias_short_moduled alias_const_moduled = 2;
+
     struct Module2ConstsLiteralsStruct
     {
-        short module2_array_literal_const_short[const_moduled];
+        short module2_array_literal_const_moduled[const_moduled];
+        short module2_array_literal_const_alias_const_moduled[alias_const_moduled];
     };
 };
 
@@ -66,7 +81,13 @@ struct ConstsLiteralsStruct
     string array_literal_const_string[const_string];
     wstring array_literal_const_wstring[const_wstring];
 
-    short array_moduled_literal_const[const_module::const_moduled];
+    short array_literal_const_inner_const_helper[inner_const_helper];
+
+    short array_moduled1_literal_const[const_module::const_moduled];
     short array_moduled2_literal_const[const_module2::const_moduled];
+
+    short array_literal_const_alias_const[alias_const];
+    short array_moduled1_literal_alias_const_moduled[const_module1::alias_const_moduled];
+    short array_moduled2_literal_alias_const_moduled[const_module2::alias_const_moduled];
 };
  
