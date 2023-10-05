@@ -24,7 +24,6 @@ const uint64 const_uint64 = 1;
 const string const_string = "11";
 const wstring const_wstring = L"11";
 
-
 typedef short alias_short;
 const alias_short alias_const = 1;
 
@@ -83,7 +82,7 @@ struct ConstsLiteralsStruct
 
     short array_literal_const_inner_const_helper[inner_const_helper];
 
-    short array_moduled1_literal_const[const_module::const_moduled];
+    short array_moduled1_literal_const[const_module1::const_moduled];
     short array_moduled2_literal_const[const_module2::const_moduled];
 
     short array_literal_const_alias_const[alias_const];
