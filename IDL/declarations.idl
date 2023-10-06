@@ -74,9 +74,11 @@ module declarations_module
         long var_long;
     };
 
+    const long long_const = 0;
+
     union ModuledForwardUnion switch (long)
     {
-        case 0:
+        case long_const:
             long case_zero;
         case 1:
             long case_one;
