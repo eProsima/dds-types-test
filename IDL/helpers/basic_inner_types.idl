@@ -50,6 +50,7 @@ bitset InnerBitsetHelper
     bitfield<12, short> d;
 };
 
+const short inner_const_helper = 1;
 typedef string<10> Inner_alias_bounded_string_helper;
 typedef wstring<10> Inner_alias_bounded_wstring_helper;
 typedef short Inner_alias_array_helper[2];
