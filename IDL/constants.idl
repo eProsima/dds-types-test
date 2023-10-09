@@ -1,38 +1,38 @@
 #include "helpers/basic_inner_types.idl"
 
-const short const_short = 1;
-const unsigned short const_ushort = 1;
-const long const_long = 1;
-const unsigned long const_ulong = 1;
-const long long const_longlong = 1;
-const unsigned long long const_ulonglong = 1;
-const float const_float = 1.1;
-const double const_double = 1.1;
-const long double const_longdouble = 1.1;
+const short const_short = 10;
+const unsigned short const_ushort = 10;
+const long const_long = 10;
+const unsigned long const_ulong = 10;
+const long long const_longlong = 10;
+const unsigned long long const_ulonglong = 10;
+const float const_float = 10.1;
+const double const_double = 10.1;
+const long double const_longdouble = 10.1;
 const boolean const_boolean = true;
-const octet const_octet = 1;
-const char const_char8 = '1';
-const wchar const_char16 = L'1';
-const int8 const_int8 = 1;
-const uint8 const_uint8 = 1;
-const int16 const_int16 = 1;
-const uint16 const_uint16 = 1;
-const int32 const_int32 = 1;
-const uint32 const_uint32 = 1;
-const int64 const_int64 = 1;
-const uint64 const_uint64 = 1;
+const octet const_octet = 10;
+const char const_char8 = '10';
+const wchar const_char16 = L'10';
+const int8 const_int8 = 10;
+const uint8 const_uint8 = 10;
+const int16 const_int16 = 10;
+const uint16 const_uint16 = 10;
+const int32 const_int32 = 10;
+const uint32 const_uint32 = 10;
+const int64 const_int64 = 10;
+const uint64 const_uint64 = 10;
 const string const_string = "11";
 const wstring const_wstring = L"11";
 
 typedef short alias_short;
-const alias_short alias_const = 1;
+const alias_short alias_const = 10;
 
 
 module const_module1
 {
     const short const_moduled = 11;
     typedef short alias_short_moduled;
-    const alias_short_moduled alias_const_moduled = 1;
+    const alias_short_moduled alias_const_moduled = 10;
 
     struct ModuleConstsLiteralsStruct
     {
