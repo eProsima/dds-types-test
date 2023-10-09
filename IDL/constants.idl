@@ -79,7 +79,7 @@ struct ConstsLiteralsStruct
     short array_literals_operations5_const[const_short * const_long];
     short array_literals_operations6_const[const_short / const_long];
     short array_literals_operations7_const[const_short * const_module2::const_moduled];
-    short array_literals_operations8_const[const_module2::const_moduled % const_module1::const_moduled];
+    short array_literals_operations8_const[const_module1::const_moduled % const_module2::const_moduled];
 
     short array_literal_const_inner_const_helper[inner_const_helper];
 
