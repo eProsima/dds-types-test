@@ -50,6 +50,8 @@ module const_module2
     {
         short module2_array_literal_const_moduled[const_moduled];
         short module2_array_literal_const_alias_const_moduled[alias_const_moduled];
+        short module2_array_literal_const_scoped_moduled[const_module2::const_moduled];
+        short module2_array_literal_module1_const_moduled[const_module1::const_moduled];
     };
 };
 
@@ -61,13 +63,6 @@ struct ConstsLiteralsStruct
     unsigned long array_literal_const_ulong[const_ulong];
     long long array_literal_const_longlong[const_longlong];
     unsigned long long array_literal_const_ulonglong[const_ulonglong];
-    float array_literal_const_float[const_float];
-    double array_literal_const_double[const_double];
-    long double array_literal_const_longdouble[const_longdouble];
-    boolean array_literal_const_boolean[const_boolean];
-    octet array_literal_const_octet[const_octet];
-    char array_literal_const_char8[const_char8];
-    wchar array_literal_const_char16[const_char16];
     int8 array_literal_const_int8[const_int8];
     uint8 array_literal_const_uint8[const_uint8];
     int16 array_literal_const_int16[const_int16];
@@ -76,8 +71,6 @@ struct ConstsLiteralsStruct
     uint32 array_literal_const_uint32[const_uint32];
     int64 array_literal_const_int64[const_int64];
     uint64 array_literal_const_uint64[const_uint64];
-    string array_literal_const_string[const_string];
-    wstring array_literal_const_wstring[const_wstring];
 
     short array_literal_const_inner_const_helper[inner_const_helper];
 
