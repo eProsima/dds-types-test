@@ -1,0 +1,7 @@
+#include "helpers/basic_inner_types.idl"
+
+struct ExternalStructure
+{
+    @external
+    InnerStructureHelper var_structure;
+};
