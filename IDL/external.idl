@@ -1,7 +1,117 @@
 #include "helpers/basic_inner_types.idl"
 
-struct ExternalStructure
+struct short_external
 {
-    @external
-    InnerStructureHelper var_structure;
+    @external short value;
+};
+
+struct ushort_external
+{
+    @external unsigned short value;
+};
+
+struct long_external
+{
+    @external long value;
+};
+
+struct ulong_external
+{
+    @external unsigned long value;
+};
+
+struct longlong_external
+{
+    @external long long value;
+};
+
+struct ulonglong_external
+{
+    @external unsigned long long value;
+};
+
+struct float_external
+{
+    @external float value;
+};
+
+struct double_external
+{
+    @external double value;
+};
+
+struct longdouble_external
+{
+    @external long double value;
+};
+
+struct boolean_external
+{
+    @external boolean value;
+};
+
+struct octet_external
+{
+    @external octet value;
+};
+
+struct char_external
+{
+    @external char value;
+};
+
+struct wchar_external
+{
+    @external wchar value;
+};
+
+struct sequence_short_external
+{
+    @external sequence<short> value;
+};
+
+struct string_unbounded_external
+{
+    @external string value;
+};
+
+struct string_bounded_external
+{
+    @external string<8> value;
+};
+
+struct map_short_external
+{
+    @external map<long, short> value;
+};
+
+struct array_short_external
+{
+    @external short value[10];
+};
+
+struct struct_external
+{
+    @external InnerStructureHelper value;
+};
+
+struct InnerStructExternal
+{
+    short s;
+    @external long l;
+};
+
+struct ext_struct_external
+{
+    InnerStructExternal value;
+};
+
+struct ext_and_inner_struct_external
+{
+    @external InnerStructExternal value;
+};
+
+struct struct_external_optional
+{
+    @external @optional InnerStructureHelper value;
 };
