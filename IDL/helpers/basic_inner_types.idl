@@ -24,16 +24,19 @@ bitmask InnerBoundedBitMaskHelper
 
 typedef long InnerAliasHelper;
 
+@nested
 struct InnerStructureHelper
 {
     long field1;
     float field2;
 };
 
+@nested
 struct InnerEmptyStructureHelper
 {
 };
 
+@nested
 union InnerUnionHelper switch (long)
 {
     case 0: long longValue;

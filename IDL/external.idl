@@ -115,3 +115,51 @@ struct struct_external_optional
 {
     @external @optional InnerStructureHelper value;
 };
+
+union recursive_union;
+
+@nested
+struct recursive_union_container
+{
+    long l;
+    @external recursive_union ext;
+};
+
+@nested
+union recursive_union switch (octet)
+{
+    case 1:
+        long l;
+    case 2:
+        recursive_union_container c;
+};
+
+struct recursive_test_1
+{
+    short s;
+    recursive_union u;
+};
+
+struct recursive_structure;
+
+@nested
+union recursive_structure_container switch (octet)
+{
+    case 1:
+        long l;
+    case 2:
+        @external recursive_structure ext;
+};
+
+@nested
+struct recursive_structure
+{
+    short s;
+    recursive_structure_container c;
+};
+
+struct recursive_test_2
+{
+    octet o;
+    recursive_structure s;
+};
