@@ -11,12 +11,6 @@ typedef sequence<ForwardUnion, 10> RecursiveBoundedSeqForwardUnion;
     string name;
 };
 
-struct ForwardDeclarationsStruct
-{
-    ForwardStruct var_ForwardStruct;
-    ForwardUnion var_ForwardUnion;
-};
-
 struct ForwardDeclarationsRecursiveStruct
 {
     RecursiveUnboundedSeqForwardStruct var_RecursiveUnboundedSeqForwardStruct;
@@ -47,12 +41,6 @@ module declarations_module
     typedef sequence<ModuledForwardStruct, 10> ModuledRecursiveBoundedSeqForwardStruct;
     typedef sequence<ModuledForwardUnion> ModuledRecursiveUnboundedSeqForwardUnion;
     typedef sequence<ModuledForwardUnion, 10> ModuledRecursiveBoundedSeqForwardUnion;
-};
-
-struct ModuledForwardDeclarationsStruct
-{
-    declarations_module::ModuledForwardStruct var_ModuledForwardStruct;
-    declarations_module::ModuledForwardUnion var_ModuledForwardUnion;
 };
 
 struct ModuledForwardDeclarationsRecursiveStruct

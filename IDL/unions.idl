@@ -7,151 +7,151 @@ union Union_Short switch (long)
 };
 
 union Union_UShort switch (long)
-{   
+{
     case 1:
         unsigned short b;
 };
 
 union Union_Long switch (long)
-{ 
+{
     case 2:
         long c;
 };
 
 union Union_ULong switch (long)
-{ 
+{
     case 3:
         unsigned long d;
 };
 
 union Union_LongLong switch (long)
-{ 
+{
     case 4:
         long long e;
 };
 
 union Union_ULongLOng switch (long)
-{ 
+{
     case 5:
         unsigned long long f;
 };
 
 union Union_Float switch (long)
-{ 
+{
     case 6:
         float g;
 };
 
 union Union_Double switch (long)
-{ 
+{
     case 7:
         double h;
 };
 
 union Union_LongDouble switch (long)
-{ 
+{
     case 8:
         long double i;
 };
 
 union Union_Boolean switch (long)
-{ 
+{
     case 9:
         boolean j;
 };
 
 union Union_Octet switch (long)
-{ 
+{
     case 10:
         octet k;
 };
 
 union Union_Char switch (long)
-{ 
+{
     case 11:
         char l;
 };
 
 union Union_WChar switch (long)
-{ 
+{
     case 12:
         wchar m;
 };
 
 union Union_String switch (long)
-{ 
+{
     case 13:
         string n;
 };
 
 union Union_WString switch (long)
-{ 
+{
     case 14:
         wstring o;
 };
 
 union Union_BoundedString switch (long)
-{ 
+{
     case 13:
         Inner_alias_bounded_string_helper bn;
 };
 
 union Union_BoundedWString switch (long)
-{ 
+{
     case 14:
         Inner_alias_bounded_wstring_helper bo;
 };
 
 union Union_InnerEnumHelper switch (long)
-{ 
+{
     case 15:
         InnerEnumHelper p;
 };
 
 union Union_InnerBitMaskHelper switch (long)
-{ 
+{
     case 16:
-        InnerBitMaskHelper q; 
+        InnerBitMaskHelper q;
 };
 
 union Union_InnerAliasHelper switch (long)
-{ 
+{
     case 17:
         InnerAliasHelper r;
 };
 
 union Union_Array switch (long)
-{ 
+{
     case 18:
         Inner_alias_array_helper s;
 };
 
 union Union_Sequence switch (long)
-{ 
+{
     case 19:
-        sequence<short> t; 
+        sequence<short> t;
 };
 
 union Union_Map switch (long)
-{ 
+{
     case 20:
         map<long, long> u;
 };
 
 union Union_InnerUnionHelper switch (long)
-{ 
+{
     case 21:
         InnerUnionHelper v;
 };
 
 union Union_InnerStructureHelper switch (long)
-{ 
+{
     case 22:
-        InnerStructureHelper w; 
+        InnerStructureHelper w;
 };
 
 union Union_InnerBitsetHelper switch (long)
-{ 
+{
     case 23:
         InnerBitsetHelper x;
 };

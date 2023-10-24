@@ -344,7 +344,6 @@ struct string_unbounded_align_4_optional
     @optional string value;
 };
 
-
 struct string_bounded_optional
 {
     @optional string<8> value;
@@ -390,7 +389,6 @@ struct map_short_align_4_optional
     unsigned long align;
     @optional map<long, short> value;
 };
-
 
 struct array_short_optional
 {
