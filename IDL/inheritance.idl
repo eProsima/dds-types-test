@@ -49,7 +49,7 @@ bitset InnerBitsetHelperChildChild : InnerBitsetHelperChild
 bitset BitsetAliasInheritanceBitset : inner_bitset_helper_alias
 {
     bitfield<10> new_bitfield;
-}
+};
 
 struct BitsetsChildInheritanceStruct
 {
