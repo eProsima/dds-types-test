@@ -22,8 +22,10 @@ struct InnerEmptyStructureHelperChild : InnerEmptyStructureHelper
     unsigned long long var_child_ulonglong;
 };
 
-
-
+struct StructAliasInheritanceStruct : inner_structure_helper_alias
+{
+    short new_member;
+};
 
 struct StructuresInheritanceStruct
 {
