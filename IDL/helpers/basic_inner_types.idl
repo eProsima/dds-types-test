@@ -60,3 +60,4 @@ typedef short Inner_alias_array_helper[2];
 typedef sequence<short> Inner_alias_sequence_helper;
 typedef map<long, long> Inner_alias_map_helper;
 typedef InnerStructureHelper inner_structure_helper_alias;
+typedef InnerBitsetHelper inner_bitset_helper_alias;
