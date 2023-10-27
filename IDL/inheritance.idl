@@ -22,8 +22,10 @@ struct InnerEmptyStructureHelperChild : InnerEmptyStructureHelper
     unsigned long long var_child_ulonglong;
 };
 
-
-
+struct StructAliasInheritanceStruct : inner_structure_helper_alias
+{
+    short new_member;
+};
 
 struct StructuresInheritanceStruct
 {
@@ -44,8 +46,14 @@ bitset InnerBitsetHelperChildChild : InnerBitsetHelperChild
     bitfield<17> childchild_z;
 };
 
+bitset BitsetAliasInheritanceBitset : inner_bitset_helper_alias
+{
+    bitfield<10> new_bitfield;
+}
+
 struct BitsetsChildInheritanceStruct
 {
     InnerBitsetHelperChild var_InnerBitsetHelperChild;
     InnerBitsetHelperChildChild var_InnerBitsetHelperChildChild;
+    BitsetAliasInheritanceBitset var_BitsetAliasInheritanceBitset;
 };
