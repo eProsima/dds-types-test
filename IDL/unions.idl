@@ -242,6 +242,8 @@ union Union_Discriminator_enum switch (InnerEnumHelper)
         long first;
     case ENUM_VALUE_2:
         long long second;
+    default:
+        octet third;
 };
 
 union Union_Discriminator_alias switch (InnerAliasHelper)
