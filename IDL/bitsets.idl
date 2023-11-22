@@ -2,7 +2,7 @@
 
 bitset InnerTypedBitsetHelper
 {
-    bitfield<1, bool> boolean_bitfield;
+    bitfield<1, boolean> boolean_bitfield;
     bitfield<8, octet> byte_bitfield;
     bitfield<8, int8> int8_bitfield;
     bitfield<8, uint8> uint8_bitfield;
