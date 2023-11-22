@@ -50,6 +50,7 @@ bitset InnerBitsetHelper
     bitfield<1> b;
     bitfield<4>;
     bitfield<10> c;
+    bitfield<3>;
     bitfield<12, short> d;
 };
 
