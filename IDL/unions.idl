@@ -198,9 +198,9 @@ union Union_Discriminator_long_long switch (long long)
 
 union Union_Discriminator_unsigned_long_long switch (unsigned long long)
 {
-    case 1:
-        long first;
     case 2:
+        long first;
+    case 1:
         long long second;
 };
 
@@ -244,6 +244,15 @@ union Union_Discriminator_enum switch (InnerEnumHelper)
         long long second;
     default:
         octet third;
+};
+
+union Union_Discriminator_enum_labels switch (InnerEnumHelper)
+{
+    case ENUM_VALUE_3:
+    case ENUM_VALUE_1:
+        short first;
+    case ENUM_VALUE_2:
+        short second;
 };
 
 union Union_Discriminator_alias switch (InnerAliasHelper)
@@ -438,6 +447,11 @@ struct UnionDiscriminatorWChar
 struct UnionDiscriminatorEnum
 {
     Union_Discriminator_enum var_union_discriminator_enum;
+};
+
+struct UnionDiscriminatorEnumLabel
+{
+    Union_Discriminator_enum_labels var_union_discriminator_enum;
 };
 
 struct UnionDiscriminatorAlias
