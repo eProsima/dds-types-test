@@ -41,6 +41,11 @@ module declarations_module
     typedef sequence<ModuledForwardStruct, 10> ModuledRecursiveBoundedSeqForwardStruct;
     typedef sequence<ModuledForwardUnion> ModuledRecursiveUnboundedSeqForwardUnion;
     typedef sequence<ModuledForwardUnion, 10> ModuledRecursiveBoundedSeqForwardUnion;
+
+    struct ForwardStruct
+    {
+        unsigned long long var_u_long_long;
+    };
 };
 
 struct ModuledForwardDeclarationsRecursiveStruct
@@ -71,4 +76,10 @@ module declarations_module
         case 1:
             long case_one;
     };
+};
+
+struct ModuledCommonNameStructure
+{
+    ForwardStruct global_struct;
+    declarations_module::ForwardStruct namespaced_struct;
 };
