@@ -78,7 +78,7 @@ module declarations_module
     };
 };
 
-struct common_name_namespace_struct
+struct ModuledCommonNameStructure
 {
     ForwardStruct global_struct;
     declarations_module::ForwardStruct namespaced_struct;
