@@ -22,7 +22,8 @@
         ONE,
         TWO
     };
-    InnerEnumHelper value default TWO;
+    InnerEnumHelper enum_value;
+    InnerEnumHelper enum_default_value default TWO;
 };
 
 @annotation EmptyAnnotationTest
@@ -41,11 +42,11 @@
     var_longdouble = 1,
     var_boolean = true,
     var_octet = 0,
-    var_char8 = "a",
-    var_char16 = L"a",
+    var_char8 = 'a',
+    var_char16 = L'a',
     var_string = "a",
     var_wstring = L"a",
-    value = ONE
+    enum_value = ONE
     )
 struct AnnotatedStruct
 {
