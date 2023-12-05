@@ -1,16 +1,11 @@
-#include "helpers/basic_inner_types.idl"
+enum TestEnum
+{
+    ENUM_VALUE_1,
+    ENUM_VALUE_2,
+    ENUM_VALUE_3
+};
 
 struct EnumStructure
 {
-    InnerEnumHelper var_InnerEnumHelper;
-};
-
-struct BitMaskStructure
-{
-    InnerBitMaskHelper var_InnerBitMaskHelper;
-};
-
-struct BoundedBitMaskStructure
-{
-    InnerBoundedBitMaskHelper var_InnerBoundedBitMaskHelper;
+    TestEnum var_InnerEnumHelper;
 };

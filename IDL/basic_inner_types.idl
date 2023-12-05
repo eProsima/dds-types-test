@@ -1,0 +1,21 @@
+enum InnerEnumHelper
+{
+    ENUM_VALUE_1,
+    ENUM_VALUE_2,
+    ENUM_VALUE_3
+};
+
+typedef long InnerAliasHelper;
+
+@nested
+struct InnerStructureHelper
+{
+    long field1;
+    float field2;
+};
+
+const short inner_const_helper = 1;
+typedef string<10> Inner_alias_bounded_string_helper;
+typedef short Inner_alias_array_helper[2];
+typedef sequence<short> Inner_alias_sequence_helper;
+typedef InnerStructureHelper inner_structure_helper_alias;

@@ -1,4 +1,4 @@
-#include "helpers/basic_inner_types.idl"
+#include "basic_inner_types.idl"
 
 const short const_short = 87;
 const unsigned short const_ushort = 43;
@@ -12,7 +12,6 @@ const long double const_longdouble = 46.1;
 const boolean const_boolean = true;
 const octet const_octet = 7;
 const char const_char8 = 'A';
-const wchar const_char16 = L'B';
 const int8 const_int8 = 53;
 const uint8 const_uint8 = 11;
 const int16 const_int16 = 27;
@@ -22,38 +21,9 @@ const uint32 const_uint32 = 64;
 const int64 const_int64 = 17;
 const uint64 const_uint64 = 19;
 const string const_string = "AAA";
-const wstring const_wstring = L"BBB";
 
 typedef short alias_short;
 const alias_short alias_const = 55;
-
-
-module const_module1
-{
-    const short const_moduled = 11;
-    typedef short alias_short_moduled;
-    const alias_short_moduled alias_const_moduled = 10;
-
-    struct ModuleConstsLiteralsStruct
-    {
-        short module1_array_literal_const_moduled[const_moduled];
-        short module1_array_literal_const_alias_const_moduled[alias_const_moduled];
-    };
-};
-
-module const_module2
-{
-    const short const_moduled = 22;
-    const const_module1::alias_short_moduled alias_const_moduled = 2;
-
-    struct Module2ConstsLiteralsStruct
-    {
-        short module2_array_literal_const_moduled[const_moduled];
-        short module2_array_literal_const_alias_const_moduled[alias_const_moduled];
-        short module2_array_literal_const_scoped_moduled[const_module2::const_moduled];
-        short module2_array_literal_module1_const_moduled[const_module1::const_moduled];
-    };
-};
 
 struct ConstsLiteralsStruct
 {
@@ -74,20 +44,11 @@ struct ConstsLiteralsStruct
 
     short array_literals_operations1_const[const_short + const_long];
     short array_literals_operations2_const[const_short - const_long];
-    short array_literals_operations3_const[const_short + const_module2::const_moduled];
-    short array_literals_operations4_const[const_module2::const_moduled - const_module1::const_moduled];
     short array_literals_operations5_const[const_short * const_long];
     short array_literals_operations6_const[const_short / const_long];
-    short array_literals_operations7_const[const_short * const_module2::const_moduled];
-    short array_literals_operations8_const[const_module1::const_moduled % const_module2::const_moduled];
 
     short array_literal_const_inner_const_helper[inner_const_helper];
 
-    short array_moduled1_literal_const[const_module1::const_moduled];
-    short array_moduled2_literal_const[const_module2::const_moduled];
-
     short array_literal_const_alias_const[alias_const];
-    short array_moduled1_literal_alias_const_moduled[const_module1::alias_const_moduled];
-    short array_moduled2_literal_alias_const_moduled[const_module2::alias_const_moduled];
 };
- 
+

@@ -47,12 +47,6 @@ struct AppendableDoubleStruct
 };
 
 @appendable
-struct AppendableLongDoubleStruct
-{
-    long double var_longdouble;
-};
-
-@appendable
 struct AppendableBooleanStruct
 {
     boolean var_boolean;
@@ -71,17 +65,6 @@ struct AppendableCharStruct
 };
 
 @appendable
-struct AppendableWCharStruct
-{
-    wchar var_char16;
-};
-
-@appendable
-struct AppendableEmptyStruct
-{
-};
-
-@appendable
 struct AppendableEmptyInheritanceStruct : AppendableEmptyStruct
 {
     string var_str;
@@ -91,9 +74,4 @@ struct AppendableEmptyInheritanceStruct : AppendableEmptyStruct
 struct AppendableInheritanceStruct : AppendableShortStruct
 {
     string var_str;
-};
-
-@appendable
-struct AppendableInheritanceEmptyStruct : AppendableShortStruct
-{
 };

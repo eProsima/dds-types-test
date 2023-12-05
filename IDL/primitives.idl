@@ -38,11 +38,6 @@ struct DoubleStruct
     double var_double;
 };
 
-struct LongDoubleStruct
-{
-    long double var_longdouble;
-};
-
 struct BooleanStruct
 {
     boolean var_boolean;
@@ -56,11 +51,6 @@ struct OctetStruct
 struct CharStruct
 {
     char var_char8;
-};
-
-struct WCharStruct
-{
-    wchar var_char16;
 };
 
 struct Int8Struct

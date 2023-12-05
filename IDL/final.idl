@@ -47,12 +47,6 @@ struct FinalDoubleStruct
 };
 
 @final
-struct FinalLongDoubleStruct
-{
-    long double var_longdouble;
-};
-
-@final
 struct FinalBooleanStruct
 {
     boolean var_boolean;
@@ -71,17 +65,6 @@ struct FinalCharStruct
 };
 
 @final
-struct FinalWCharStruct
-{
-    wchar var_char16;
-};
-
-@final
-struct FinalEmptyStruct
-{
-};
-
-@final
 struct FinalEmptyInheritanceStruct : FinalEmptyStruct
 {
     string var_str;
@@ -91,9 +74,4 @@ struct FinalEmptyInheritanceStruct : FinalEmptyStruct
 struct FinalInheritanceStruct : FinalShortStruct
 {
     string var_str;
-};
-
-@final
-struct InheritanceEmptyStruct : FinalShortStruct
-{
 };

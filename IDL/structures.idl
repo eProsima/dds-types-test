@@ -1,4 +1,4 @@
-#include "helpers/basic_inner_types.idl"
+#include "basic_inner_types.idl"
 
 struct StructShort
 {
@@ -40,11 +40,6 @@ struct StructDouble
     double var_double;
 };
 
-struct StructLongDouble
-{
-    long double var_longdouble;
-};
-
 struct StructBoolean
 {
     boolean var_boolean;
@@ -60,39 +55,14 @@ struct StructChar8
     char var_char8;
 };
 
-struct StructChar16
-{
-    wchar var_char16;
-};
-
 struct StructString
 {
     string var_string;
 };
 
-struct StructWString
-{
-    wstring var_wstring;
-};
-
-struct StructBoundedString
-{
-    Inner_alias_bounded_string_helper var_bounded_string;
-};
-
-struct StructBoundedWString
-{
-    Inner_alias_bounded_wstring_helper var_bounded_wstring;
-};
-
 struct StructEnum
 {
     InnerEnumHelper var_enum;
-};
-
-struct StructBitMask
-{
-    InnerBitMaskHelper var_bitmask;
 };
 
 struct StructAlias
@@ -110,28 +80,9 @@ struct StructSequence
     sequence<long> var_sequence;
 };
 
-struct StructMap
-{
-    map<long, long> var_map;
-};
-
-struct StructUnion
-{
-    InnerUnionHelper var_union;
-};
-
 struct StructStructure
 {
     InnerStructureHelper var_structure;
-};
-
-struct StructBitset
-{
-    InnerBitsetHelper var_bitset;
-};
-
-struct StructEmpty
-{
 };
 
 struct Structures
@@ -144,21 +95,13 @@ struct Structures
     StructUnsignedLongLong var_StructUnsignedLongLong;
     StructFloat var_StructFloat;
     StructDouble var_StructDouble;
-    StructLongDouble var_StructLongDouble;
     StructBoolean var_StructBoolean;
     StructOctet var_StructOctet;
     StructChar8 var_StructChar8;
-    StructChar16 var_StructChar16;
     StructString var_StructString;
-    StructWString var_StructWString;
     StructEnum var_StructEnum;
-    StructBitMask var_StructBitMask;
     StructAlias var_StructAlias;
     StructShortArray var_StructShortArray;
     StructSequence var_StructSequence;
-    StructMap var_StructMap;
-    StructUnion var_StructUnion;
     StructStructure var_StructStructure;
-    StructBitset var_StructBitset;
-    StructEmpty var_StructEmpty;
 };
