@@ -1,3 +1,5 @@
+#include "helpers/basic_inner_types.idl"
+
 @annotation AnnotationTest
 {
     short var_short;
@@ -22,6 +24,11 @@
     };
     InnerEnumHelper enum_value;
     InnerEnumHelper enum_default_value default TWO;
+    const short inner_const_helper = 10;
+    typedef string<10> Inner_alias_bounded_string_helper;
+    Inner_alias_bounded_string_helper var_string_10;
+    Inner_alias_bounded_string_helper var_default_string_10 default "Hello";
+    Inner_alias_bounded_wstring_helper var_wstring_alias;
 };
 
 @annotation EmptyAnnotationTest
