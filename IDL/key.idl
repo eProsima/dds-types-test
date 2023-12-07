@@ -83,13 +83,13 @@ struct KeyedEmptyStruct
 
 struct KeyedEmptyInheritanceStruct : KeyedEmptyStruct
 {
-    @key string key_str;
+    string key_str;
     string var_str;
 };
 
 struct KeyedInheritanceStruct : KeyedShortStruct
 {
-    @key string key_str;
+    string key_str;
     string var_str;
 };
 
