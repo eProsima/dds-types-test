@@ -1,48 +1,36 @@
 @mutable
 struct FixId
 {
-    @id(100)
-    octet o;
-    @id(300)
-    short s;
-    @id(500)
-    long l;
+    @id(100) octet o;
+    @id(300) short s;
+    @id(500) long l;
     long long ll;
 };
 
 @mutable
 struct FixHashidDefault
 {
-    @hashid
-    octet o;
-    @hashid
-    short s;
-    @hashid
-    long l;
+    @hashid octet o;
+    @hashid short s;
+    @hashid long l;
     long long ll;
 };
 
 @mutable
 struct FixHashid
 {
-    @hashid("octet")
-    octet o;
-    @hashid("short")
-    short s;
-    @hashid("long")
-    long l;
+    @hashid("octet") octet o;
+    @hashid("short") short s;
+    @hashid("long") long l;
     long long ll;
 };
 
 @mutable
 struct FixMix
 {
-    @id(100)
-    octet o;
-    @hashid
-    short s;
-    @hashid("long")
-    long l;
+    @id(100) octet o;
+    @hashid short s;
+    @hashid("long") long l;
     long long ll;
 };
 
@@ -51,12 +39,9 @@ struct FixMix
 struct AutoidDefault
 {
     char c;
-    @id(100)
-    octet o;
-    @hashid
-    short s;
-    @hashid("long")
-    long l;
+    @id(100) octet o;
+    @hashid short s;
+    @hashid("long") long l;
     long long ll;
 };
 
@@ -65,12 +50,9 @@ struct AutoidDefault
 struct AutoidSequential
 {
     char c;
-    @id(100)
-    octet o;
-    @hashid
-    short s;
-    @hashid("long")
-    long l;
+    @id(100) octet o;
+    @hashid short s;
+    @hashid("long") long l;
     long long ll;
 };
 
@@ -79,12 +61,9 @@ struct AutoidSequential
 struct AutoidHash
 {
     char c;
-    @id(100)
-    octet o;
-    @hashid
-    short s;
-    @hashid("long")
-    long l;
+    @id(100) octet o;
+    @hashid short s;
+    @hashid("long") long l;
     long long ll;
 };
 
@@ -92,25 +71,24 @@ struct AutoidHash
 struct DerivedAutoidDefault : AutoidDefault
 {
     char cd;
-    @id(101)
-    octet od;
-    @hashid
-    short sd;
-    @hashid("long2")
-    long ld;
+    @id(101) octet od;
+    @hashid short sd;
+    @hashid("long2") long ld;
     long long lld;
 };
 
 @autoid(SEQUENTIAL)
-struct DerivedAutoidSequential : AutoidSequential
+struct DerivedEmptyAutoidSequential : AutoidSequential
+{
+};
+
+@autoid(SEQUENTIAL)
+struct DerivedAutoidSequential : DerivedEmptyAutoidSequential
 {
     char cd;
-    @id(101)
-    octet od;
-    @hashid
-    short sd;
-    @hashid("long2")
-    long ld;
+    @id(101) octet od;
+    @hashid short sd;
+    @hashid("long2") long ld;
     long long lld;
 };
 
@@ -118,11 +96,8 @@ struct DerivedAutoidSequential : AutoidSequential
 struct DerivedAutoidHash : AutoidHash
 {
     char cd;
-    @id(101)
-    octet od;
-    @hashid
-    short sd;
-    @hashid("long2")
-    long ld;
+    @id(101) octet od;
+    @hashid short sd;
+    @hashid("long2") long ld;
     long long lld;
 };
