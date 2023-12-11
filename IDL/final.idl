@@ -97,3 +97,8 @@ struct FinalInheritanceStruct : FinalShortStruct
 struct InheritanceEmptyStruct : FinalShortStruct
 {
 };
+
+struct FinalExtensibilityInheritance : FinalShortStruct
+{
+    long var_long;
+};

@@ -97,3 +97,8 @@ struct MutableInheritanceStruct : MutableShortStruct
 struct MutableInheritanceEmptyStruct : MutableShortStruct
 {
 };
+
+struct MutableExtensibilityInheritance : MutableShortStruct
+{
+    long var_long;
+};
