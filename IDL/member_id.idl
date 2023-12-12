@@ -8,6 +8,15 @@ struct FixId
 };
 
 @mutable
+struct FixHexId
+{
+    @id(0x100) octet ho;
+    @id(0x300) short hs;
+    @id(0x500) long hl;
+    long long ll;
+};
+
+@mutable
 struct FixHashidDefault
 {
     @hashid octet o;
@@ -29,6 +38,7 @@ struct FixHashid
 struct FixMix
 {
     @id(100) octet o;
+    @id(0x200) octet ho;
     @hashid short s;
     @hashid("long") long l;
     long long ll;
