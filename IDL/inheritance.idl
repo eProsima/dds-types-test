@@ -19,7 +19,7 @@ struct InnerStructureHelperEmptyChild : InnerStructureHelper
 struct InnerStructureHelperEmptyChildChild : InnerStructureHelperEmptyChild
 {
     char var_char;
-}
+};
 
 struct InnerEmptyStructureHelperChild : InnerEmptyStructureHelper
 {
