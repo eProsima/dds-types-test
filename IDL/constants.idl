@@ -21,8 +21,6 @@ const int32 const_int32 = 74;
 const uint32 const_uint32 = 64;
 const int64 const_int64 = 17;
 const uint64 const_uint64 = 19;
-const string const_string = "AAA";
-const wstring const_wstring = L"BBB";
 
 typedef short alias_short;
 const alias_short alias_const = 55;
@@ -38,6 +36,8 @@ module const_module1
     {
         short module1_array_literal_const_moduled[const_moduled];
         short module1_array_literal_const_alias_const_moduled[alias_const_moduled];
+        alias_short var1;
+        alias_short_moduled var2;
     };
 };
 
