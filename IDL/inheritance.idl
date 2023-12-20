@@ -48,7 +48,7 @@ bitset InnerBitsetHelperChild : InnerBitsetHelper
 
 bitset InnerBitsetHelperChildChild : InnerBitsetHelperChild
 {
-    bitfield<17> childchild_z;
+    bitfield<14> childchild_z;
 };
 
 bitset BitsetAliasInheritanceBitset : inner_bitset_helper_alias
