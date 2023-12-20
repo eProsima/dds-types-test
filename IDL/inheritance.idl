@@ -37,8 +37,9 @@ struct StructuresInheritanceStruct
     InnerStructureHelperChild var_InnerStructureHelperChild;
     InnerStructureHelperChildChild var_InnerStructureHelperChildChild;
     InnerStructureHelperEmptyChild var_InnerStructureHelperEmptyChild;
+    InnerStructureHelperEmptyChildChild var_InnerStructureHelperEmptyChildChild;
     InnerEmptyStructureHelperChild var_InnerEmptyStructureHelperChild;
-
+    StructAliasInheritanceStruct var_StructAliasInheritanceStruct;
 };
 
 bitset InnerBitsetHelperChild : InnerBitsetHelper

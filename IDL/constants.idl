@@ -21,6 +21,7 @@ const int32 const_int32 = 74;
 const uint32 const_uint32 = 64;
 const int64 const_int64 = 17;
 const uint64 const_uint64 = 19;
+// String consts are included in basic_inner_types.idl
 
 typedef short alias_short;
 const alias_short alias_const = 55;
