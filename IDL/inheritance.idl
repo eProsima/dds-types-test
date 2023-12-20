@@ -16,6 +16,11 @@ struct InnerStructureHelperEmptyChild : InnerStructureHelper
 {
 };
 
+struct InnerStructureHelperEmptyChildChild : InnerStructureHelperEmptyChild
+{
+    char var_char;
+};
+
 struct InnerEmptyStructureHelperChild : InnerEmptyStructureHelper
 {
     long long var_child_longlong;
@@ -32,8 +37,9 @@ struct StructuresInheritanceStruct
     InnerStructureHelperChild var_InnerStructureHelperChild;
     InnerStructureHelperChildChild var_InnerStructureHelperChildChild;
     InnerStructureHelperEmptyChild var_InnerStructureHelperEmptyChild;
+    InnerStructureHelperEmptyChildChild var_InnerStructureHelperEmptyChildChild;
     InnerEmptyStructureHelperChild var_InnerEmptyStructureHelperChild;
-
+    StructAliasInheritanceStruct var_StructAliasInheritanceStruct;
 };
 
 bitset InnerBitsetHelperChild : InnerBitsetHelper
@@ -43,7 +49,7 @@ bitset InnerBitsetHelperChild : InnerBitsetHelper
 
 bitset InnerBitsetHelperChildChild : InnerBitsetHelperChild
 {
-    bitfield<17> childchild_z;
+    bitfield<14> childchild_z;
 };
 
 bitset BitsetAliasInheritanceBitset : inner_bitset_helper_alias

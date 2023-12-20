@@ -62,3 +62,7 @@ typedef sequence<short> Inner_alias_sequence_helper;
 typedef map<long, long> Inner_alias_map_helper;
 typedef InnerStructureHelper inner_structure_helper_alias;
 typedef InnerBitsetHelper inner_bitset_helper_alias;
+
+// String consts are checked here to avoid generating the related TypeObjectTest.
+const string const_string = "AAA";
+const wstring const_wstring = L"BBB";
