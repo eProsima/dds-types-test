@@ -1,3 +1,5 @@
+#include "helpers/basic_inner_types.idl"
+
 @final
 struct FinalShortStruct
 {
@@ -74,6 +76,12 @@ struct FinalCharStruct
 struct FinalWCharStruct
 {
     wchar var_char16;
+};
+
+@final
+struct FinalUnionStruct
+{
+    InnerUnionHelper var_union;
 };
 
 @final
