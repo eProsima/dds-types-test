@@ -1,3 +1,5 @@
+#include "helpers/basic_inner_types.idl"
+
 @appendable
 struct AppendableShortStruct
 {
@@ -74,6 +76,12 @@ struct AppendableCharStruct
 struct AppendableWCharStruct
 {
     wchar var_char16;
+};
+
+@appendable
+struct AppendableUnionStruct
+{
+    InnerUnionHelper var_union;
 };
 
 @appendable

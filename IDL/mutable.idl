@@ -1,3 +1,5 @@
+#include "helpers/basic_inner_types.idl"
+
 @mutable
 struct MutableShortStruct
 {
@@ -74,6 +76,12 @@ struct MutableCharStruct
 struct MutableWCharStruct
 {
     wchar var_char16;
+};
+
+@mutable
+struct MutableUnionStruct
+{
+    InnerUnionHelper var_union;
 };
 
 @mutable

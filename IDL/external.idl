@@ -132,6 +132,8 @@ union recursive_union switch (octet)
         long l;
     case 2:
         recursive_union_container c;
+    case 3:
+        short s;
 };
 
 struct recursive_test_1
@@ -149,6 +151,8 @@ union recursive_structure_container switch (octet)
         long l;
     case 2:
         @external recursive_structure ext;
+    case 3:
+        short s;
 };
 
 @nested
