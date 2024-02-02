@@ -1,8 +1,19 @@
 #include "helpers/basic_inner_types.idl"
 
+module Test
+{
+    enum InnerEnumHelper
+    {
+        ENUM_VALUE_1,
+        ENUM_VALUE_2,
+        ENUM_VALUE_3
+    };
+};
+
 struct EnumStructure
 {
     InnerEnumHelper var_InnerEnumHelper;
+    Test::InnerEnumHelper var_scoped_InnerEnumHelper;
 };
 
 struct BitMaskStructure
