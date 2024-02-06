@@ -130,15 +130,15 @@ struct SequenceBitset
     sequence<InnerBitsetHelper> var_sequence_bitset;
 };
 
-
-
 struct BoundedSmallSequences
 {
     sequence<short, 1> var_sequence_small;
+    sequence<string, 5> var_unbounded_string_small_bounded_sequence;
 };
 
 struct BoundedBigSequences
 {
     sequence<short, 41925> var_sequence_big;
+    sequence<string, 256> var_unbounded_string_large_bounded_sequence;
 };
 
