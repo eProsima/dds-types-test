@@ -1196,8 +1196,6 @@ struct MapInnerAliasBoundedStringHelperInnerBitsetHelper
     map<Inner_alias_bounded_string_helper, InnerBitsetHelper> var_map_inneraliasboundedstringhelper_innerbitsethelper;
 };
 
-
-
 struct MapInnerAliasBoundedWStringHelperShort
 {
     map<Inner_alias_bounded_wstring_helper, short> var_map_inneraliasboundedwstringhelper_short;
@@ -1332,9 +1330,13 @@ struct MapInnerAliasBoundedWStringHelperInnerBitsetHelper
 struct BoundedSmallMap
 {
     map<long,long,1> var_small_map;
+    map<string, long, 5> var_unbounded_string_long_bounded_small_map;
+    map<long, string, 5> var_long_unbounded_string_bounded_small_map;
 };
 
 struct BoundedLargeMap
 {
     map<long,long,41925> var_large_map;
+    map<string, long, 255> var_unbounded_string_long_bounded_large_map;
+    map<long, string, 255> var_long_unbounded_string_bounded_large_map;
 };
