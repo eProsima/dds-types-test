@@ -165,7 +165,7 @@ struct Structures
     StructEmpty var_StructEmpty;
 };
 
-struct StructShortBIS
+struct StructShortBis
 {
     short var_short;
 };
@@ -174,48 +174,48 @@ struct ContentSeqStruct {
   sequence<StructShort> var_seq;
 };
 
-struct ContentBISSeqStruct {
-  sequence<StructShortBIS> var_seq;
+struct ContentSeqStructBis {
+  sequence<StructShortBis> var_seq;
 };
 
 struct ContentBigSeqStruct {
   sequence<StructShort, 1000> var_seq;
 };
 
-struct ContentBISBigSeqStruct {
-  sequence<StructShortBIS, 1000> var_seq;
+struct ContentBigSeqStructBis {
+  sequence<StructShortBis, 1000> var_seq;
 };
 
 struct ContentMapStruct {
   map<short, StructShort> var_map;
 };
 
-struct ContentBISMapStruct {
-  map<short, StructShortBIS> var_map;
+struct ContentMapStructBis {
+  map<short, StructShortBis> var_map;
 };
 
 struct ContentBigMapStruct {
   map<short, StructShort, 1000> var_map;
 };
 
-struct ContentBISBigMapStruct {
-  map<short, StructShortBIS, 1000> var_map;
+struct ContentBigMapStructBis {
+  map<short, StructShortBis, 1000> var_map;
 };
 
 struct ContentArrayStruct {
   StructShort var_array[10];
 };
 
-struct ContentBISArrayStruct {
-  StructShortBIS var_array[10];
+struct ContentArrayStructBis {
+  StructShortBis var_array[10];
 };
 
 struct ContentBigArrayStruct {
   StructShort var_array[1000];
 };
 
-struct ContentBISBigArrayStruct {
-  StructShortBIS var_array[1000];
+struct ContentBigArrayStructBis {
+  StructShortBis var_array[1000];
 };
 
 module testing_1
