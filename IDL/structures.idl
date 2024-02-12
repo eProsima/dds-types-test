@@ -162,3 +162,37 @@ struct Structures
     StructBitset var_StructBitset;
     StructEmpty var_StructEmpty;
 };
+
+module testing_1
+{
+    struct foo
+    {
+        long a;
+        long b;
+    };
+};
+
+module testing_2
+{
+    struct foo
+    {
+        boolean d;
+    };
+};
+
+struct bar
+{
+    double e;
+};
+
+struct root1
+{
+    testing_1::foo foo_struct;
+    float c;
+};
+
+struct root2
+{
+    testing_2::foo foo_struct;
+    bar bar_struct;
+};
