@@ -22,7 +22,7 @@ typedef short alias_array[2];
 typedef short alias_multiarray[2][2];
 typedef sequence<short> alias_sequence;
 typedef map<short, short> alias_map;
-typedef InnerEnumHelper alias_union;
+typedef InnerUnionHelper alias_union;
 typedef InnerStructureHelper alias_structure;
 typedef InnerBitsetHelper alias_bitset;
 
