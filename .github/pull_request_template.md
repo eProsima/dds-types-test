@@ -14,8 +14,9 @@
 
 ## Contributor Checklist
 - [ ] Commit messages follow the project guidelines. <!-- External contributors should sign the DCO. Fast DDS developers must also refer to the internal Redmine task. -->
-- [ ] Any new/modified type has been properly reflected on `test/feature/dynamic_types/dds_types_tests` tests in a separate Pull Request. <!-- It is mandatory to test new/modified tests with the Dynamic Type API -->
-- [ ] Any new/modified type has been properly updated on `test/dds/xtypes` tests using `update_header_and_create_cases.py` script in a separate Pull Request. <!-- It is mandatory to update the test source code using the script -->
+- [ ] Any new/modified type has been properly reflected on `test/feature/dynamic_types/dds_types_tests` tests in a Pull Request. <!-- It is mandatory to test new/modified tests with the Dynamic Type API -->
+- [ ] Any new/modified type has been properly updated on `test/dds/xtypes` tests using `update_header_and_create_cases.py` script in a Pull Request. <!-- It is mandatory to update the test source code using the script -->
+- [ ] For any new IDL file, Fast DDS `update_generated_code_from_idl.sh` script adding a new line in `file_needing_output_dir` list in a Pull Request. <!-- It is mandatory to generate always the code for new IDL files -->
 
 ## Reviewer Checklist
 - [ ] The PR has a milestone assigned.
