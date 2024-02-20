@@ -151,6 +151,8 @@ struct Structures
     StructChar16 var_StructChar16;
     StructString var_StructString;
     StructWString var_StructWString;
+    StructBoundedString var_StructBoundedString;
+    StructBoundedWString var_StructBoundedWString;
     StructEnum var_StructEnum;
     StructBitMask var_StructBitMask;
     StructAlias var_StructAlias;
