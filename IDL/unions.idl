@@ -230,9 +230,9 @@ union Union_Discriminator_char switch (char)
 
 union Union_Discriminator_wchar switch (wchar)
 {
-    case 'a':
+    case L'a':
         long first;
-    case 'b':
+    case L'b':
         long long second;
 };
 
