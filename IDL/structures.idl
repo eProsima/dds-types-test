@@ -198,3 +198,9 @@ struct root2
     testing_2::foo foo_struct;
     bar bar_struct;
 };
+
+struct root
+{
+    root1 var_root1;
+    root2 var_root2;
+};
