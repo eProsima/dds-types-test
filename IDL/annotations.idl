@@ -59,3 +59,19 @@ struct AnnotatedStruct
 struct EmptyAnnotatedStruct
 {
 };
+
+@annotation BasicAnnotationsTest
+{
+    short var_basic_short;
+};
+
+@BasicAnnotationsTest(
+    var_basic_short = 1
+    )
+struct BasicAnnotationsStruct
+{
+    @BasicAnnotationsTest(
+        var_basic_short = 1
+        )
+    short basic_annotations_member;
+};
