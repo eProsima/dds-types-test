@@ -522,12 +522,6 @@ struct ArrayMultiDimensionLiteralsBitSet
     InnerBitsetHelper var_array_bitset[size_1 + 5][size_1 * 2][size_1 * size_2];
 };
 
-
-struct BoundedSmallArrays
-{
-    short var_array_small[1];
-};
-
 struct BoundedBigArrays
 {
     short var_array_big[41925];
