@@ -91,4 +91,3 @@ struct ConstsLiteralsStruct
     short array_moduled1_literal_alias_const_moduled[const_module1::alias_const_moduled];
     short array_moduled2_literal_alias_const_moduled[const_module2::alias_const_moduled];
 };
- 
