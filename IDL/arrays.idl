@@ -532,4 +532,3 @@ struct BoundedBigArrays
 {
     short var_array_big[41925];
 };
-
