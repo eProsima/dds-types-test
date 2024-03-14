@@ -151,6 +151,8 @@ struct Structures
     StructChar16 var_StructChar16;
     StructString var_StructString;
     StructWString var_StructWString;
+    StructBoundedString var_StructBoundedString;
+    StructBoundedWString var_StructBoundedWString;
     StructEnum var_StructEnum;
     StructBitMask var_StructBitMask;
     StructAlias var_StructAlias;
@@ -195,4 +197,10 @@ struct root2
 {
     testing_2::foo foo_struct;
     bar bar_struct;
+};
+
+struct root
+{
+    root1 var_root1;
+    root2 var_root2;
 };

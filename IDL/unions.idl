@@ -230,9 +230,9 @@ union Union_Discriminator_char switch (char)
 
 union Union_Discriminator_wchar switch (wchar)
 {
-    case 'a':
+    case L'a':
         long first;
-    case 'b':
+    case L'b':
         long long second;
 };
 
@@ -421,7 +421,7 @@ struct UnionDiscriminatorLongLong
 
 struct UnionDiscriminatorULongLong
 {
-    Union_Discriminator_unsigned_long_long var_union_discriminator_ulong_long_long;
+    Union_Discriminator_unsigned_long_long var_union_discriminator_ulong_long;
 };
 
 struct UnionDiscriminatorBoolean
