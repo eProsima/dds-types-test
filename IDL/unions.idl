@@ -263,6 +263,35 @@ union Union_Discriminator_alias switch (InnerAliasHelper)
         long long second;
 };
 
+union Union_Several_Fields switch (long)
+{
+    case 0:
+        InnerStructureHelper a;
+    case 1:
+        InnerEmptyStructureHelper b;
+    case 2:
+        Inner_alias_bounded_string_helper c;
+    case 3:
+        Inner_alias_array_helper d;
+    case 4:
+        Inner_alias_sequence_helper e;
+};
+
+union Union_Several_Fields_With_Default switch (long)
+{
+    case 0:
+        InnerStructureHelper a;
+    case 1:
+        InnerEmptyStructureHelper b;
+    case 2:
+        Inner_alias_bounded_string_helper c;
+    case 3:
+        Inner_alias_array_helper d;
+    case 4:
+        Inner_alias_sequence_helper e;
+    default:
+        sequence<short, 30> f;
+};
 
 struct UnionShort
 {
@@ -457,4 +486,14 @@ struct UnionDiscriminatorEnumLabel
 struct UnionDiscriminatorAlias
 {
     Union_Discriminator_alias var_union_discriminator_alias;
+};
+
+struct UnionSeveralFields
+{
+    Union_Several_Fields var_union_several_fields;
+};
+
+struct UnionSeveralFieldsWithDefault
+{
+    Union_Several_Fields_With_Default var_union_several_fields_with_default;
 };
