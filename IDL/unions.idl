@@ -293,6 +293,88 @@ union Union_Several_Fields_With_Default switch (long)
         sequence<short, 30> f;
 };
 
+struct StructForUnionTest
+{
+    short var_short;
+};
+
+struct StructForUnionTestBis
+{
+    short var_short;
+};
+
+union ContentUnionSeq switch (long)
+{
+    case 0:
+        sequence<StructForUnionTest> a;
+};
+
+union ContentUnionSeqBis switch (long)
+{
+    case 0:
+        sequence<StructForUnionTestBis> a;
+};
+
+union ContentUnionBigSeq switch (long)
+{
+    case 0:
+        sequence<StructForUnionTest, 1000> a;
+};
+
+union ContentUnionBigSeqBis switch (long)
+{
+    case 0:
+        sequence<StructForUnionTestBis, 1000> a;
+};
+
+union ContentUnionMap switch (long)
+{
+    case 0:
+        map<short, StructForUnionTest> a;
+};
+
+union ContentUnionMapBis switch (long)
+{
+    case 0:
+        map<short, StructForUnionTestBis> a;
+};
+
+union ContentUnionBigMap switch (long)
+{
+    case 0:
+        map<short, StructForUnionTest, 1000> a;
+};
+
+union ContentUnionBigMapBis switch (long)
+{
+    case 0:
+        map<short, StructForUnionTestBis, 1000> a;
+};
+
+union ContentUnionArray switch (long)
+{
+    case 0:
+        StructForUnionTest a[10];
+};
+
+union ContentUnionArrayBis switch (long)
+{
+    case 0:
+        StructForUnionTestBis a[10];
+};
+
+union ContentUnionBigArray switch (long)
+{
+    case 0:
+        StructForUnionTest a[1000];
+};
+
+union ContentUnionBigArrayBis switch (long)
+{
+    case 0:
+        StructForUnionTestBis a[1000];
+};
+
 struct UnionShort
 {
     Union_Short var_union_short;
