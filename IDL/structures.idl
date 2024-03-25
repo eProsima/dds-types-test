@@ -170,51 +170,51 @@ struct StructShortBis
     short var_short;
 };
 
-struct ContentSeqStruct {
+struct ContentStructSeqStruct {
   sequence<StructShort> var_seq;
 };
 
-struct ContentSeqStructBis {
+struct ContentStructSeqStructBis {
   sequence<StructShortBis> var_seq;
 };
 
-struct ContentBigSeqStruct {
+struct ContentStructBigSeqStruct {
   sequence<StructShort, 1000> var_seq;
 };
 
-struct ContentBigSeqStructBis {
+struct ContentStructBigSeqStructBis {
   sequence<StructShortBis, 1000> var_seq;
 };
 
-struct ContentMapStruct {
+struct ContentStructMapStruct {
   map<short, StructShort> var_map;
 };
 
-struct ContentMapStructBis {
+struct ContentStructMapStructBis {
   map<short, StructShortBis> var_map;
 };
 
-struct ContentBigMapStruct {
+struct ContentStructBigMapStruct {
   map<short, StructShort, 1000> var_map;
 };
 
-struct ContentBigMapStructBis {
+struct ContentStructBigMapStructBis {
   map<short, StructShortBis, 1000> var_map;
 };
 
-struct ContentArrayStruct {
+struct ContentStructArrayStruct {
   StructShort var_array[10];
 };
 
-struct ContentArrayStructBis {
+struct ContentStructArrayStructBis {
   StructShortBis var_array[10];
 };
 
-struct ContentBigArrayStruct {
+struct ContentStructBigArrayStruct {
   StructShort var_array[1000];
 };
 
-struct ContentBigArrayStructBis {
+struct ContentStructBigArrayStructBis {
   StructShortBis var_array[1000];
 };
 
