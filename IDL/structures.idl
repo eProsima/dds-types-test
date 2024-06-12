@@ -204,3 +204,40 @@ struct root
     root1 var_root1;
     root2 var_root2;
 };
+
+struct RegressionTest_TypeObject_InternalTimestamp_TypeIntrospectionExample
+{
+    long seconds;
+    long milliseconds;
+};
+
+struct RegressionTest_TypeObject_InternalPoints_TypeIntrospectionExample
+{
+    long x_member;
+    long y_member;
+    long z_member;
+    RegressionTest_TypeObject_InternalTimestamp_TypeIntrospectionExample t_member;
+};
+
+struct RegressionTest_TypeObject_InternalMsgDescriptor_TypeIntrospectionExample
+{
+    unsigned long id;
+    string topic;
+    RegressionTest_TypeObject_InternalTimestamp_TypeIntrospectionExample timestamp;
+};
+
+struct RegressionTest_TypeObject_InternalMessage_TypeIntrospectionExample
+{
+    RegressionTest_TypeObject_InternalMsgDescriptor_TypeIntrospectionExample descriptor;
+    string message;
+    RegressionTest_TypeObject_InternalTimestamp_TypeIntrospectionExample timestamps[2];
+};
+
+struct RegressionTest_TypeObject_SuperComplex_TypeIntrospectionExample
+{
+    unsigned long index;
+    RegressionTest_TypeObject_InternalPoints_TypeIntrospectionExample main_point;
+    sequence<RegressionTest_TypeObject_InternalPoints_TypeIntrospectionExample> internal_data;
+    sequence<RegressionTest_TypeObject_InternalPoints_TypeIntrospectionExample, 3> internal_data_bounded;
+    RegressionTest_TypeObject_InternalMessage_TypeIntrospectionExample messages[2];
+};
