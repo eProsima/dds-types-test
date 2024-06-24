@@ -497,3 +497,13 @@ struct UnionSeveralFieldsWithDefault
 {
     Union_Several_Fields_With_Default var_union_several_fields_with_default;
 };
+
+union DefaultAnnotation switch (@default(0) long)
+{
+    case 0:
+        octet a;
+    case 1:
+        short b;
+    default:
+        long c;
+};
