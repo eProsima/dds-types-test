@@ -26,6 +26,7 @@ const uint64 const_uint64 = 19;
 typedef short alias_short;
 const alias_short alias_const = 55;
 
+const InnerEnumHelper const_enum = InnerEnumHelper::ENUM_VALUE_1;
 
 module const_module1
 {
@@ -46,6 +47,7 @@ module const_module2
 {
     const short const_moduled = 22;
     const const_module1::alias_short_moduled alias_const_moduled = 2;
+    const short const_moduled_module1 = const_module1::const_moduled;
 
     struct Module2ConstsLiteralsStruct
     {
@@ -53,6 +55,7 @@ module const_module2
         short module2_array_literal_const_alias_const_moduled[alias_const_moduled];
         short module2_array_literal_const_scoped_moduled[const_module2::const_moduled];
         short module2_array_literal_module1_const_moduled[const_module1::const_moduled];
+        short module2_array_literal_const_moduled_module1[const_moduled_module1];
     };
 };
 
