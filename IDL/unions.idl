@@ -508,3 +508,12 @@ union DefaultAnnotation switch (@default(0) long)
     default:
         long c;
 };
+
+//! Test case for union discriminator's @default annotation with external value.
+union DefaultAnnotationExternalValue switch (@default(2) long)
+{
+    case 0:
+        octet a;
+    case 1:
+        short b;
+};
