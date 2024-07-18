@@ -96,3 +96,27 @@ struct KeyedInheritanceStruct : KeyedShortStruct
 struct InheritanceKeyedEmptyStruct : KeyedShortStruct
 {
 };
+
+@final
+struct KeyedFinal
+{
+    @id(2) @key long key_long;
+    @id(1) @key short key_short;
+    @id(0) @key string key_string;
+};
+
+@appendable
+struct KeyedAppendable
+{
+    @id(2) @key long key_long;
+    @id(1) @key short key_short;
+    @id(0) @key string key_string;
+};
+
+@mutable
+struct KeyedMutable
+{
+    @id(2) @key long key_long;
+    @id(1) @key short key_short;
+    @id(0) @key string key_string;
+};
