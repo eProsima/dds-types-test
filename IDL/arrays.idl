@@ -55,6 +55,11 @@ struct ArrayOctet
     octet var_array_octet[10];
 };
 
+struct ArrayUInt8
+{
+    uint8 var_array_uint8[10];
+};
+
 struct ArrayChar
 {
     char var_array_char[10];
