@@ -517,3 +517,10 @@ union DefaultAnnotationExternalValue switch (@default(2) long)
     case 1:
         short b;
 };
+
+//! Regression test for issue #21773. Note: union without default value.
+struct UnionShortExtraMember
+{
+    Union_Short var_union_short;
+    long var_long;
+};
