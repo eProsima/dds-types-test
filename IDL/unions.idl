@@ -536,7 +536,7 @@ struct UnionShortExtraMember
     long var_long;
 };
 
-//! Regression test for issue #21823. Note: union using a alias with scope.
+//! Regression test for issue #21823. Note: union using an alias with scope.
 struct UnionFixedStringAlias
 {
     Union_Fixed_String_In_Module_Alias var_union_fixed_string_in_module_alias;
