@@ -1,0 +1,21 @@
+module Test
+{
+    exception InnerEmptyException
+    {
+    };
+
+    exception InnerValueException
+    {
+        long value;
+    };
+
+};
+
+exception EmptyException
+{
+};
+
+exception ValueException
+{
+    long value;
+};
