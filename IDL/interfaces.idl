@@ -10,7 +10,7 @@ module calculator_example
     {
 	EVEN,  // return even numbers
         ODD,   // return odd numbers
-        PRIME  // return prime numbers
+        PRIME  // return positive prime numbers
     };
 
     interface Calculator
@@ -26,7 +26,7 @@ module calculator_example
 
         // Returns a feed of results with the n_results first elements of the Fibonacci sequence
         // E.g. for an input of 5, returns a feed with {1, 1, 2, 3, 5}
-        @feed long fibonacci_seq(in long n_results) raises (OverflowException);
+        @feed long fibonacci_seq(in unsigned long n_results) raises (OverflowException);
 
         // Waits for an input feed to finish and returns the sum of all the received values
         // E.g. for an input of {1, 2, 3, 4, 5} returns 15
