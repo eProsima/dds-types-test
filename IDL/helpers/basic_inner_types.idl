@@ -66,3 +66,17 @@ typedef InnerBitsetHelper inner_bitset_helper_alias;
 // String consts are checked here to avoid generating the related TypeObjectTest.
 const string const_string = "AAA";
 const wstring const_wstring = L"BBB";
+
+@extensibility(FINAL)
+struct InnerBasicPlainStructHelper
+{
+    long field1;
+};
+
+@extensibility(FINAL)
+struct InnerPlainStructHelper
+{
+    boolean field1;
+    long field2;
+    float field3;
+};

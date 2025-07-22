@@ -537,3 +537,16 @@ struct BoundedBigArrays
 {
     short var_array_big[41925];
 };
+
+@extensibility(FINAL)
+struct LargeBasicPlainArray
+{
+    octet field1;
+    InnerBasicPlainStructHelper var_large_basic_plain_array[6291456];
+};
+
+@extensibility(FINAL)
+struct LargePlainArray
+{
+    InnerPlainStructHelper var_large_plain_array[6291456];
+};
