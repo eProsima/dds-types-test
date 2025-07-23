@@ -142,6 +142,12 @@ struct BoundedBigSequences
     sequence<string, 256> var_unbounded_string_large_bounded_sequence;
 };
 
+@extensibility(FINAL)
+struct LargePlainSequence
+{
+    sequence<InnerPlainStructHelper, 6291456> var_large_plain_sequence;
+};
+
 // Regression test for issue #21978.
 //{{{
 module Common_Module
