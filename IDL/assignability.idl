@@ -1,0 +1,7 @@
+module Primitives
+{
+    struct Int8Struct
+    {
+        int8 a;
+    };
+};
