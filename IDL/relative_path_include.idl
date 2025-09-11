@@ -1,5 +1,5 @@
 #include "../IDL/helpers/basic_inner_types.idl"
-#include "typedef_only.idl"
+#include "../IDL/helpers/typedef_only.idl"
 
 struct RelativePathIncludeStruct
 {
