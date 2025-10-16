@@ -23,6 +23,11 @@ interface MyIf
 
     @feed
     MySt test3(in long id) raises (MyEx);
+	
+	void test4(@feed in MySt values);
+	
+	@feed
+	string test5(@feed in string messages);
 };
 
 struct MySt
