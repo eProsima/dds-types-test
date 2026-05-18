@@ -1,0 +1,66 @@
+typedef sequence<octet> OctetBufferAlias;
+typedef sequence<uint8> Uint8BufferAlias;
+
+@nested
+struct DirectBuffersStruct
+{
+    sequence<octet> var_octet_buffer;
+    sequence<uint8> var_uint8_buffer;
+};
+
+@nested
+struct AliasBuffersStruct
+{
+    OctetBufferAlias var_octet_buffer;
+    Uint8BufferAlias var_uint8_buffer;
+};
+
+union BufferUnionFirstMember switch (long)
+{
+    case 0:
+        sequence<octet> var_octet_buffer;
+    case 1:
+        long dummy;
+};
+
+union BufferUnionSecondMember switch (long)
+{
+    case 0:
+        long dummy;
+    case 1:
+        sequence<uint8> var_uint8_buffer;
+};
+
+@nested
+struct BufferStructWithUnions
+{
+    BufferUnionFirstMember first_member;
+    BufferUnionSecondMember second_member;
+};
+
+@nested
+struct BoundedBuffersStruct
+{
+    sequence<octet, 10> bounded_octet_buffer;
+    sequence<uint8, 10> bounded_uint8_buffer;
+};
+
+@nested
+struct BufferCollectionsStruct
+{
+    sequence<octet> var_octet_buffer_array[10];
+    sequence<uint8> var_uint8_buffer_array[10];
+    sequence<sequence<octet> > var_octet_buffer_sequence;
+    sequence<sequence<uint8> > var_uint8_buffer_sequence;
+    map<short, sequence<octet> > var_octet_buffer_map;
+    map<short, sequence<uint8> > var_uint8_buffer_map;
+};
+
+struct BufferTestStruct
+{
+    DirectBuffersStruct direct_buffers_struct;
+    AliasBuffersStruct alias_buffers_struct;
+    BufferStructWithUnions buffer_struct_with_unions;
+    BoundedBuffersStruct bounded_buffers_struct;
+    BufferCollectionsStruct buffer_collections_struct;
+};
