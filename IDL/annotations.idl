@@ -73,3 +73,50 @@ struct BasicAnnotationsStruct
         )
     short basic_annotations_member;
 };
+
+//{{{ @verbatim
+@verbatim(text="Verbatim text")
+struct VerbatimOnlyText
+{
+    long l;
+};
+
+@verbatim(language="Java", text="Verbatim text")
+struct VerbatimLanguageAndText
+{
+    long l;
+};
+
+@verbatim(language="Java", text="Verbatim text", placement="AFTER_DECLARATION")
+struct VerbatimLanguageTextAndPlacement
+{
+    long l;
+};
+//}}}
+
+//{{{@default_literal
+enum EnumWithDefaultLiteral
+{
+    A,
+    B,
+    @default_literal C,
+    D
+};
+
+struct StructUsingDefaultLiteral
+{
+    long l;
+    EnumWithDefaultLiteral e;
+};
+//}}}
+
+//{{{
+struct StructWithDefaults
+{
+    @default(0) long l;
+    @default(0xb) short s;
+    @default(02) unsigned long ul;
+    @default("Hello") string str;
+    @default(B) EnumWithDefaultLiteral e;
+};
+//}}}
