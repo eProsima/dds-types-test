@@ -116,6 +116,7 @@ struct StructWithDefaults
     @default(0) long l;
     @default(0xb) short s;
     @default(02) unsigned long ul;
+    @default(0.2) float f;
     @default("Hello") string str;
     @default(B) EnumWithDefaultLiteral e;
 };
