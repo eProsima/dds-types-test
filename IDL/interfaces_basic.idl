@@ -26,6 +26,6 @@ module basic_calculator
     };
 };
 
-struct StructForInterfacesTest
+struct StructForInterfacesBasicTest
 {
 };
