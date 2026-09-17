@@ -1,0 +1,191 @@
+@nested
+struct TryConstructInnerBoolStruct
+{
+    boolean value1;
+    unsigned short value2;
+};
+
+//{{{ Bounded string
+
+struct TryConstructString
+{
+    @try_construct string<5> var_string;
+};
+
+struct TryConstructStringDiscard
+{
+    @try_construct(DISCARD) string<5> var_string;
+};
+
+struct TryConstructStringUseDefault
+{
+    @try_construct(USE_DEFAULT) string<5> var_string;
+};
+
+struct TryConstructStringTrim
+{
+    @try_construct(TRIM) string<5> var_string;
+};
+
+//}}}
+
+//{{{ Bounded wide string
+
+struct TryConstructWString
+{
+    @try_construct wstring<5> var_wstring;
+};
+
+struct TryConstructWStringDiscard
+{
+    @try_construct(DISCARD) wstring<5> var_wstring;
+};
+
+struct TryConstructWStringUseDefault
+{
+    @try_construct(USE_DEFAULT) wstring<5> var_wstring;
+};
+
+struct TryConstructWStringTrim
+{
+    @try_construct(TRIM) wstring<5> var_wstring;
+};
+//}}}
+
+//{{{ Bounded sequence of primitives
+
+struct TryConstructSequenceLong
+{
+    @try_construct sequence<long, 3> var_sequence_long;
+};
+
+struct TryConstructSequenceLongDiscard
+{
+    @try_construct(DISCARD) sequence<long, 3> var_sequence_long;
+};
+
+struct TryConstructSequenceLongUseDefault
+{
+    @try_construct(USE_DEFAULT) sequence<long, 3> var_sequence_long;
+};
+
+struct TryConstructSequenceLongTrim
+{
+    @try_construct(TRIM) sequence<long, 3> var_sequence_long;
+};
+//}}}
+
+//{{{ Bounded sequence of non-primitives
+
+struct TryConstructSequenceString
+{
+    @try_construct sequence<string, 2> var_sequence_string;
+};
+
+struct TryConstructSequenceStringDiscard
+{
+    @try_construct(DISCARD) sequence<string, 2> var_sequence_string;
+};
+
+struct TryConstructSequenceStringUseDefault
+{
+    @try_construct(USE_DEFAULT) sequence<string, 2> var_sequence_string;
+};
+
+struct TryConstructSequenceStringTrim
+{
+    @try_construct(TRIM) sequence<string, 2> var_sequence_string;
+};
+//}}}
+
+//{{{ Bounded sequence of booleans
+
+struct TryConstructSequenceBoolean
+{
+    @try_construct sequence<boolean, 3> var_sequence_boolean;
+};
+
+struct TryConstructSequenceBooleanDiscard
+{
+    @try_construct(DISCARD) sequence<boolean, 3> var_sequence_boolean;
+};
+
+struct TryConstructSequenceBooleanUseDefault
+{
+    @try_construct(USE_DEFAULT) sequence<boolean, 3> var_sequence_boolean;
+};
+
+struct TryConstructSequenceBooleanTrim
+{
+    @try_construct(TRIM) sequence<boolean, 3> var_sequence_boolean;
+};
+//}}}
+
+//{{{ Bounded sequence of structures holding a boolean
+
+struct TryConstructSequenceStruct
+{
+    @try_construct sequence<TryConstructInnerBoolStruct, 2> var_sequence_struct;
+};
+
+struct TryConstructSequenceStructDiscard
+{
+    @try_construct(DISCARD) sequence<TryConstructInnerBoolStruct, 2> var_sequence_struct;
+};
+
+struct TryConstructSequenceStructUseDefault
+{
+    @try_construct(USE_DEFAULT) sequence<TryConstructInnerBoolStruct, 2> var_sequence_struct;
+};
+
+struct TryConstructSequenceStructTrim
+{
+    @try_construct(TRIM) sequence<TryConstructInnerBoolStruct, 2> var_sequence_struct;
+};
+//}}}
+
+//{{{ Bounded map with primitive values
+
+struct TryConstructMapLongLong
+{
+    @try_construct map<long, long, 2> var_map_long_long;
+};
+
+struct TryConstructMapLongLongDiscard
+{
+    @try_construct(DISCARD) map<long, long, 2> var_map_long_long;
+};
+
+struct TryConstructMapLongLongUseDefault
+{
+    @try_construct(USE_DEFAULT) map<long, long, 2> var_map_long_long;
+};
+
+struct TryConstructMapLongLongTrim
+{
+    @try_construct(TRIM) map<long, long, 2> var_map_long_long;
+};
+//}}}
+
+//{{{ Bounded map with non-primitive values
+
+struct TryConstructMapLongString
+{
+    @try_construct map<long, string, 2> var_map_long_string;
+};
+
+struct TryConstructMapLongStringDiscard
+{
+    @try_construct(DISCARD) map<long, string, 2> var_map_long_string;
+};
+
+struct TryConstructMapLongStringUseDefault
+{
+    @try_construct(USE_DEFAULT) map<long, string, 2> var_map_long_string;
+};
+
+struct TryConstructMapLongStringTrim
+{
+    @try_construct(TRIM) map<long, string, 2> var_map_long_string;
+};
+//}}}
