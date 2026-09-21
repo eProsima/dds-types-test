@@ -20,6 +20,15 @@ enum EnumWithValues
     ENUM_VALUE3
 };
 
+enum EnumWithMixedValues
+{
+    @value(1)
+    MIXED_VALUE1,
+    @value(5)
+    MIXED_VALUE2,
+    MIXED_VALUE3
+};
+
 struct EnumStructure
 {
     InnerEnumHelper var_InnerEnumHelper;
