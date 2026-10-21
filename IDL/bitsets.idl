@@ -34,3 +34,55 @@ struct BitsetStruct
     InnerTypedBitsetHelper3 var_InnerTypedBitsetHelper3;
     InnerTypedBitsetHelper4 var_InnerTypedBitsetHelper4;
 };
+
+bitset LeadingUnnamedBitsetHelper
+{
+    bitfield<3>;
+    bitfield<5> value;
+};
+
+bitset TrailingUnnamedBitsetHelper
+{
+    bitfield<3> value;
+    bitfield<6>;
+};
+
+bitset PaddedBaseBitsetHelper
+{
+    bitfield<3> base_value;
+    bitfield<6>;
+};
+
+bitset PaddedChildBitsetHelper : PaddedBaseBitsetHelper
+{
+    bitfield<4> child_value;
+};
+
+bitset UnnamedOnlyBitsetHelper
+{
+    bitfield<16>;
+};
+
+struct LeadingUnnamedBitsetStruct
+{
+    LeadingUnnamedBitsetHelper var_LeadingUnnamedBitsetHelper;
+    uint8 var_uint8;
+};
+
+struct TrailingUnnamedBitsetStruct
+{
+    TrailingUnnamedBitsetHelper var_TrailingUnnamedBitsetHelper;
+    uint8 var_uint8;
+};
+
+struct PaddedChildBitsetStruct
+{
+    PaddedChildBitsetHelper var_PaddedChildBitsetHelper;
+    uint8 var_uint8;
+};
+
+struct UnnamedOnlyBitsetStruct
+{
+    UnnamedOnlyBitsetHelper var_UnnamedOnlyBitsetHelper;
+    uint8 var_uint8;
+};
