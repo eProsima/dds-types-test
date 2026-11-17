@@ -541,3 +541,48 @@ struct UnionFixedStringAlias
 {
     Union_Fixed_String_In_Module_Alias var_union_fixed_string_in_module_alias;
 };
+
+//! Regression test: union discriminated by an enumeration defined in the same IDL file.
+enum Local_Enum_Discriminator
+{
+    LOCAL_ENUM_VALUE_1,
+    LOCAL_ENUM_VALUE_2
+};
+
+union Union_Discriminator_local_enum switch (Local_Enum_Discriminator)
+{
+    case LOCAL_ENUM_VALUE_1:
+        long first;
+    case LOCAL_ENUM_VALUE_2:
+        long long second;
+};
+
+struct UnionDiscriminatorLocalEnum
+{
+    Union_Discriminator_local_enum var_union_discriminator_local_enum;
+};
+
+//! Regression test: union discriminated by an enumeration defined in the same IDL file, inside a module.
+module Local_Enum_Discriminator_Module
+{
+    enum Module_Local_Enum_Discriminator
+    {
+        MODULE_LOCAL_ENUM_VALUE_1,
+        MODULE_LOCAL_ENUM_VALUE_2
+    };
+
+    union Union_Discriminator_module_local_enum switch (Module_Local_Enum_Discriminator)
+    {
+        case MODULE_LOCAL_ENUM_VALUE_1:
+            long first;
+        case MODULE_LOCAL_ENUM_VALUE_2:
+            long long second;
+        default:
+            octet third;
+    };
+
+    struct UnionDiscriminatorModuleLocalEnum
+    {
+        Union_Discriminator_module_local_enum var_union_discriminator_module_local_enum;
+    };
+};
