@@ -1,0 +1,42 @@
+// Members named as a previously defined type, accepted in standard mode.
+// The generated C++ has to qualify the type, as the member's accessor hides it inside the class scope.
+
+typedef long GlobalAlias;
+
+struct GlobalStruct
+{
+    long value;
+};
+
+struct GlobalMemberNamedAsType
+{
+    GlobalAlias GlobalAlias;
+    sequence<GlobalAlias> seq_alias;
+    GlobalStruct GlobalStruct;
+    sequence<GlobalStruct> seq_struct;
+};
+
+module scoped
+{
+    typedef long ModuleAlias;
+
+    struct ModuleStruct
+    {
+        long value;
+    };
+
+    struct ModuleMemberNamedAsType
+    {
+        ModuleAlias ModuleAlias;
+        sequence<ModuleAlias> seq_alias;
+        ModuleStruct ModuleStruct;
+        sequence<ModuleStruct> seq_struct;
+    };
+
+    union ModuleUnionNamedAsType switch (long)
+    {
+        case 1: ModuleAlias ModuleAlias;
+        case 2: ModuleStruct ModuleStruct;
+        case 3: sequence<ModuleStruct> seq_struct;
+    };
+};
