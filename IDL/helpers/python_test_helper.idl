@@ -1,0 +1,29 @@
+module optional_included_helper
+{
+    typedef sequence<char, 50> OptionalIncludedCharSequence;
+
+    struct OptionalIncludedHelper
+    {
+        long value;
+        string text;
+    };
+
+    // Uses the types in this IDL so their SWIG templates are instantiated in this module, not in the including one.
+    struct OptionalIncludedHelperUser
+    {
+        OptionalIncludedCharSequence chars;
+        sequence<OptionalIncludedHelper> helpers;
+    };
+};
+
+// Keep this module last: the Python package of this IDL is taken from the namespaces of its last structure.
+module helper_module_1
+{
+    module helper_module_2
+    {
+        struct ModuleStructHelper
+        {
+            long value;
+        };
+    };
+};

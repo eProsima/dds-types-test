@@ -1,0 +1,16 @@
+#include "helpers/python_test_helper.idl"
+
+struct ModuleStructIncludeStruct
+{
+    helper_module_1::helper_module_2::ModuleStructHelper value;
+};
+
+// Optional members whose types come from an included IDL. Their %extend methods (e.g. __deepcopy__ or the std::vector
+// ones) are only defined in the included module, so they must not be forwarded through C++ operator-> in Python.
+struct OptionalIncludedStruct
+{
+    @optional optional_included_helper::OptionalIncludedHelper helper;
+    @optional optional_included_helper::OptionalIncludedCharSequence chars;
+    @optional sequence<optional_included_helper::OptionalIncludedHelper> helpers;
+    @optional long primitive;
+};
