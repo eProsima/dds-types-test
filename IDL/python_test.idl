@@ -5,6 +5,61 @@ struct ModuleStructIncludeStruct
     helper_module_1::helper_module_2::ModuleStructHelper value;
 };
 
+// Types from an included IDL referenced from a class that hides their name. The C++ header has to qualify them only
+// as much as needed: a leading `::` breaks the SWIG wrappers of their containers (Python lists and dicts are rejected).
+
+// A member named as the first module of the type: functions do not hide the name before `::`.
+struct MemberNamedAsModule
+{
+    helper_module_1::helper_module_2::ModuleStructHelper helper_module_1;
+    sequence<helper_module_1::helper_module_2::ModuleStructHelper> helpers;
+    map<long, helper_module_1::helper_module_2::ModuleStructHelper> helpers_map;
+};
+
+module helper_module_1
+{
+    module helper_module_2
+    {
+        // A member named as the type hides it: referenced as `helper_module_2::ModuleStructHelper`.
+        struct MemberNamedAsIncludedType
+        {
+            ModuleStructHelper ModuleStructHelper;
+            sequence<ModuleStructHelper> helpers;
+            map<long, ModuleStructHelper> helpers_map;
+        };
+    };
+};
+
+module python_test_base
+{
+    struct ModuleStructHelper
+    {
+        string text;
+    };
+
+    // The name of the base class hides any other type with that name. No containers of it: their SWIG templates
+    // would be named as the ones of the base class.
+    struct DerivedFromIncludedType : helper_module_1::helper_module_2::ModuleStructHelper
+    {
+        ModuleStructHelper own;
+    };
+};
+
+module python_test_rpc
+{
+    struct RpcValue
+    {
+        long value;
+    };
+
+    // Operations hide the types named as them, even if they are declared after their use.
+    interface OperationNamedAsType
+    {
+        void set_value(in RpcValue value);
+        RpcValue RpcValue();
+    };
+};
+
 // Optional members whose types come from an included IDL. Their %extend methods (e.g. __deepcopy__ or the std::vector
 // ones) are only defined in the included module, so they must not be forwarded through C++ operator-> in Python.
 struct OptionalIncludedStruct
