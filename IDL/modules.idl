@@ -38,3 +38,31 @@ struct root
     root2 var_root2;
 };
 
+
+// A declaration in a scope between the current one and the global one hides the first module of a type. The C++ code
+// has to qualify it further (`hiding_types::HiddenByIntermediate`).
+module hiding_outer
+{
+    module hiding_types
+    {
+        struct HiddenByIntermediate
+        {
+            long value;
+        };
+    };
+
+    module hiding_inner
+    {
+        struct hiding_outer
+        {
+            long z;
+        };
+
+        struct IntermediateDeclarationHides
+        {
+            hiding_outer::hiding_types::HiddenByIntermediate value;
+            sequence<hiding_outer::hiding_types::HiddenByIntermediate> values;
+            map<long, hiding_outer::hiding_types::HiddenByIntermediate> values_map;
+        };
+    };
+};
